@@ -2,12 +2,12 @@
   "package_id": "BIOPHYSICAL_JOURNAL_FULL_SUBMISSION_PACKAGE_RC2",
   "release_id": "SOV-BIOPHYS-N1040-RC2-20261019",
   "git_release_tag": "v4.0.0-court-authority",
-  "total_files": 46,
+  "total_files": 47,
   "files": [
     {
       "relative_path": "01_Manuscript_and_Editorial/Cover_Letter_Biophysical_Journal.pdf",
-      "size_bytes": 58241,
-      "sha256": "10925EDCE04E8A56E4CA8BC254A5C2179F5E3BAF220247A447BBAADB8B936C08"
+      "size_bytes": 5995,
+      "sha256": "41F52244486BF1E9668356035D6AE685281D068B8C9AF3467EDAAD95BD06147B"
     },
     {
       "relative_path": "01_Manuscript_and_Editorial/Supporting_Information.pdf",
@@ -56,8 +56,8 @@
     },
     {
       "relative_path": "02_Figures/fig1_n1040_headline_scaling_law.tif",
-      "size_bytes": 276480206,
-      "sha256": "DE00BED6033CCE20F48029B59E76AA844C472D412F8122DD55CBB4708F67DAD5"
+      "size_bytes": 6688006,
+      "sha256": "8A003BD01A537E02C080CCB37509C330B8E3C76F629373AF916287ADA0934C42"
     },
     {
       "relative_path": "02_Figures/fig_meyer_octave_null_audit.png",
@@ -233,6 +233,11 @@
       "relative_path": "06_Governance_and_Peer_Reviews/docmesh_artifact_v4_0_0.yaml",
       "size_bytes": 4839,
       "sha256": "3E49BF69EFACA5C73B59C1BFB391A9740A935492CAA1A4B7E250B8FDC9B9EEC0"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/Declaration_of_Interests_Cell_Press_Form.pdf",
+      "size_bytes": 8725,
+      "sha256": "7230C25D541F3B732FAFF23193E68FD3CD4678266B250530E90CA2D90139F7A1"
     }
   ]
 }
