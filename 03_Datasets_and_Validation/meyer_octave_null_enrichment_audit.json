@@ -1,0 +1,1034 @@
+{
+  "audit_id": "SOV-MEYER-OCTAVE-NULL-AUDIT-20261018",
+  "generated_at": "2026-10-18T09:27:00-05:00",
+  "linked_manuscript_release": "SOV-BIOPHYS-N1040-RC1-20261018",
+  "mathematical_mechanism": {
+    "octave_fold_operator": "f_fold(X) = X * 2^(-floor(log2(X / 16)))  <=>  log2(X) mod 1",
+    "information_loss_mechanism": "Discards integer characteristic n = floor(log2(X/16)) carrying physical order-of-magnitude scale, wrapping distinct physical regimes onto the same [16, 32] Hz circle.",
+    "meyer_319_window_saturation_pct": 68.389,
+    "tolerance_hz": 0.04
+  },
+  "protein_vibration_benchmark_n1040": {
+    "unfolded_thz_law": {
+      "equation": "nu_1(THz) = 0.42338 * (<z> / R_g)^1.1194",
+      "r_squared": 0.8048,
+      "variance_explained_pct": 80.48,
+      "cv_10fold_r_squared": 0.8039,
+      "pearson_r": 0.8953,
+      "p_value": 0.0002,
+      "rmse_thz": 0.03539
+    },
+    "modulo_2_octave_folded_control": {
+      "range_hz": [
+        16.0,
+        32.0
+      ],
+      "r_squared_n1040": 0.0006,
+      "variance_explained_pct_n1040": 0.06,
+      "pearson_r_n1040": 0.0237,
+      "p_value_n1040": 0.4371,
+      "r_squared_n115": 0.0006,
+      "pearson_r_n115": -0.0237,
+      "p_value_n115": 0.8065,
+      "signal_reduction_factor": "1,341x reduction in explained variance (80.48% -> 0.06%)"
+    }
+  },
+  "catalog_audit_12_compounds": {
+    "tested_count": 12,
+    "matches_within_0_04_hz": 0,
+    "records": [
+      {
+        "substance_name": "Calcium Sulfate",
+        "pubchem_query": "calcium sulfate",
+        "pubchem_cid": 24497,
+        "formula": "CaO4S",
+        "molecular_weight_da": 136.14,
+        "octave_divisions_n": 3,
+        "meyer_folded_hz": 17.0175,
+        "vi_catalog_hz": 24.12,
+        "delta_hz": 7.1025,
+        "abs_delta_hz": 7.1025,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "L-Tyrosine",
+        "pubchem_query": "L-tyrosine",
+        "pubchem_cid": 6057,
+        "formula": "C9H11NO3",
+        "molecular_weight_da": 181.19,
+        "octave_divisions_n": 3,
+        "meyer_folded_hz": 22.6487,
+        "vi_catalog_hz": 24.32,
+        "delta_hz": 1.6713,
+        "abs_delta_hz": 1.6713,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Zinc Gluconate",
+        "pubchem_query": "zinc gluconate",
+        "pubchem_cid": 443445,
+        "formula": "C12H22O14Zn",
+        "molecular_weight_da": 455.7,
+        "octave_divisions_n": 4,
+        "meyer_folded_hz": 28.4812,
+        "vi_catalog_hz": 25.085,
+        "delta_hz": -3.3962,
+        "abs_delta_hz": 3.3962,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Magnesium Threonate",
+        "pubchem_query": "magnesium L-threonate",
+        "pubchem_cid": 45489777,
+        "formula": "C8H14MgO10",
+        "molecular_weight_da": 294.5,
+        "octave_divisions_n": 4,
+        "meyer_folded_hz": 18.4062,
+        "vi_catalog_hz": 25.07,
+        "delta_hz": 6.6638,
+        "abs_delta_hz": 6.6638,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Potassium Citrate",
+        "pubchem_query": "potassium citrate",
+        "pubchem_cid": 2735208,
+        "formula": "C6H7K3O8",
+        "molecular_weight_da": 324.41,
+        "octave_divisions_n": 4,
+        "meyer_folded_hz": 20.2756,
+        "vi_catalog_hz": 25.11,
+        "delta_hz": 4.8344,
+        "abs_delta_hz": 4.8344,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Norepinephrine Hydrotartrate",
+        "pubchem_query": "norepinephrine bitartrate",
+        "pubchem_cid": 3047796,
+        "formula": "C12H19NO10",
+        "molecular_weight_da": 337.28,
+        "octave_divisions_n": 4,
+        "meyer_folded_hz": 21.08,
+        "vi_catalog_hz": 24.11,
+        "delta_hz": 3.03,
+        "abs_delta_hz": 3.03,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Epinephrine Free Base",
+        "pubchem_query": "epinephrine",
+        "pubchem_cid": 5816,
+        "formula": "C9H13NO3",
+        "molecular_weight_da": 183.2,
+        "octave_divisions_n": 3,
+        "meyer_folded_hz": 22.9,
+        "vi_catalog_hz": 24.135,
+        "delta_hz": 1.235,
+        "abs_delta_hz": 1.235,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Cortisol Hydrocortisone",
+        "pubchem_query": "hydrocortisone",
+        "pubchem_cid": 5754,
+        "formula": "C21H30O5",
+        "molecular_weight_da": 362.5,
+        "octave_divisions_n": 4,
+        "meyer_folded_hz": 22.6562,
+        "vi_catalog_hz": 24.14,
+        "delta_hz": 1.4838,
+        "abs_delta_hz": 1.4838,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Acetylcholine Chloride",
+        "pubchem_query": "acetylcholine chloride",
+        "pubchem_cid": 6060,
+        "formula": "C7H16ClNO2",
+        "molecular_weight_da": 181.66,
+        "octave_divisions_n": 3,
+        "meyer_folded_hz": 22.7075,
+        "vi_catalog_hz": 27.84,
+        "delta_hz": 5.1325,
+        "abs_delta_hz": 5.1325,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Choline Bitartrate",
+        "pubchem_query": "choline bitartrate",
+        "pubchem_cid": 6900,
+        "formula": "C9H19NO7",
+        "molecular_weight_da": 253.25,
+        "octave_divisions_n": 3,
+        "meyer_folded_hz": 31.6562,
+        "vi_catalog_hz": 27.81,
+        "delta_hz": -3.8463,
+        "abs_delta_hz": 3.8463,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "Glutamate Monosodium",
+        "pubchem_query": "monosodium glutamate",
+        "pubchem_cid": 23689119,
+        "formula": "C5H10NNaO5",
+        "molecular_weight_da": 187.13,
+        "octave_divisions_n": 3,
+        "meyer_folded_hz": 23.3912,
+        "vi_catalog_hz": 24.26,
+        "delta_hz": 0.8688,
+        "abs_delta_hz": 0.8688,
+        "match_within_0_04_hz": false
+      },
+      {
+        "substance_name": "GABA 4-Aminobutanoic Acid",
+        "pubchem_query": "gamma-aminobutyric acid",
+        "pubchem_cid": 119,
+        "formula": "C4H9NO2",
+        "molecular_weight_da": 103.12,
+        "octave_divisions_n": 2,
+        "meyer_folded_hz": 25.78,
+        "vi_catalog_hz": 24.295,
+        "delta_hz": -1.485,
+        "abs_delta_hz": 1.485,
+        "match_within_0_04_hz": false
+      }
+    ]
+  },
+  "cross_corpus_coincidence_tests": [
+    {
+      "comparison": "Zapper (>=2 kHz) vs. Meyer (319)",
+      "sample_size_B": 10174,
+      "observed_hits": 6622,
+      "observed_hit_rate_pct": 65.09,
+      "expected_hits_log_uniform_null": 6957.89,
+      "expected_hit_rate_pct": 68.39,
+      "z_score": -7.162,
+      "enrichment_ratio": 0.9517,
+      "detailed_matches": [
+        {
+          "target_name": "Addison Disease",
+          "target_folded_hz": 29.297,
+          "meyer_name": "Valine",
+          "meyer_folded_hz": 29.288,
+          "delta_hz": 0.009
+        },
+        {
+          "target_name": "Addison Disease",
+          "target_folded_hz": 29.297,
+          "meyer_name": "Sparteine",
+          "meyer_folded_hz": 29.298,
+          "delta_hz": -0.001
+        },
+        {
+          "target_name": "Addison Disease",
+          "target_folded_hz": 29.297,
+          "meyer_name": "Ajoene",
+          "meyer_folded_hz": 29.3,
+          "delta_hz": -0.003
+        },
+        {
+          "target_name": "Addison Disease",
+          "target_folded_hz": 25.983,
+          "meyer_name": "Tomatidine",
+          "meyer_folded_hz": 25.981,
+          "delta_hz": 0.002
+        },
+        {
+          "target_name": "Addison Disease",
+          "target_folded_hz": 17.187,
+          "meyer_name": "Convallatoxin",
+          "meyer_folded_hz": 17.206,
+          "delta_hz": -0.019
+        },
+        {
+          "target_name": "Addison Disease",
+          "target_folded_hz": 19.62,
+          "meyer_name": "Dronabinol",
+          "meyer_folded_hz": 19.656,
+          "delta_hz": -0.036
+        },
+        {
+          "target_name": "Adenoma",
+          "target_folded_hz": 22.695,
+          "meyer_name": "Humulone",
+          "meyer_folded_hz": 22.656,
+          "delta_hz": 0.039
+        },
+        {
+          "target_name": "Adenoma",
+          "target_folded_hz": 25.635,
+          "meyer_name": "Octacosanol",
+          "meyer_folded_hz": 25.675,
+          "delta_hz": -0.04
+        },
+        {
+          "target_name": "Adenoma",
+          "target_folded_hz": 27.389,
+          "meyer_name": "Vitamin B5",
+          "meyer_folded_hz": 27.404,
+          "delta_hz": -0.015
+        },
+        {
+          "target_name": "Adenoma",
+          "target_folded_hz": 16.083,
+          "meyer_name": "Nomilin",
+          "meyer_folded_hz": 16.081,
+          "delta_hz": 0.002
+        },
+        {
+          "target_name": "Adenoma",
+          "target_folded_hz": 22.003,
+          "meyer_name": "Vitamin C",
+          "meyer_folded_hz": 22.015,
+          "delta_hz": -0.012
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 19.531,
+          "meyer_name": "Menthol",
+          "meyer_folded_hz": 19.532,
+          "delta_hz": -0.001
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 19.531,
+          "meyer_name": "Potassium",
+          "meyer_folded_hz": 19.549,
+          "delta_hz": -0.018
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 19.657,
+          "meyer_name": "Dronabinol",
+          "meyer_folded_hz": 19.656,
+          "delta_hz": 0.001
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 25.789,
+          "meyer_name": "Vincristine",
+          "meyer_folded_hz": 25.781,
+          "delta_hz": 0.008
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 25.789,
+          "meyer_name": "Alpha-lipoic acid",
+          "meyer_folded_hz": 25.788,
+          "delta_hz": 0.001
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 25.789,
+          "meyer_name": "Fucosterol",
+          "meyer_folded_hz": 25.794,
+          "delta_hz": -0.005
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 25.789,
+          "meyer_name": "alpha-Spinasterol",
+          "meyer_folded_hz": 25.794,
+          "delta_hz": -0.005
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 17.149,
+          "meyer_name": "Methysticin",
+          "meyer_folded_hz": 17.142,
+          "delta_hz": 0.007
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 17.149,
+          "meyer_name": "Trigonelline",
+          "meyer_folded_hz": 17.142,
+          "delta_hz": 0.007
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 17.149,
+          "meyer_name": "Cymarin",
+          "meyer_folded_hz": 17.147,
+          "delta_hz": 0.002
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 21.662,
+          "meyer_name": "Aucubin",
+          "meyer_folded_hz": 21.646,
+          "delta_hz": 0.016
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 21.662,
+          "meyer_name": "Ginkgolic acid",
+          "meyer_folded_hz": 21.656,
+          "delta_hz": 0.006
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 21.662,
+          "meyer_name": "Adenosine monophosphate",
+          "meyer_folded_hz": 21.701,
+          "delta_hz": -0.039
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 25.711,
+          "meyer_name": "Octacosanol",
+          "meyer_folded_hz": 25.675,
+          "delta_hz": 0.036
+        },
+        {
+          "target_name": "Adenomatous Polyposis Coli",
+          "target_folded_hz": 25.711,
+          "meyer_name": "Glycyrrhizic acid",
+          "meyer_folded_hz": 25.716,
+          "delta_hz": -0.005
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 18.311,
+          "meyer_name": "Lysine",
+          "meyer_folded_hz": 18.274,
+          "delta_hz": 0.037
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 18.311,
+          "meyer_name": "Lysine",
+          "meyer_folded_hz": 18.274,
+          "delta_hz": 0.037
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 16.785,
+          "meyer_name": "Coumestrol",
+          "meyer_folded_hz": 16.764,
+          "delta_hz": 0.021
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 16.785,
+          "meyer_name": "Formononetin",
+          "meyer_folded_hz": 16.766,
+          "delta_hz": 0.019
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 16.785,
+          "meyer_name": "Razoxane",
+          "meyer_folded_hz": 16.767,
+          "delta_hz": 0.018
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 16.785,
+          "meyer_name": "alpha-carotene",
+          "meyer_folded_hz": 16.778,
+          "delta_hz": 0.007
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 16.785,
+          "meyer_name": "beta-Carotene",
+          "meyer_folded_hz": 16.778,
+          "delta_hz": 0.007
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 16.785,
+          "meyer_name": "Senegenin",
+          "meyer_folded_hz": 16.784,
+          "delta_hz": 0.001
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 23.041,
+          "meyer_name": "Methyl gallate",
+          "meyer_folded_hz": 23.019,
+          "delta_hz": 0.022
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 23.041,
+          "meyer_name": "Curcumin",
+          "meyer_folded_hz": 23.025,
+          "delta_hz": 0.016
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 23.041,
+          "meyer_name": "Mitraphylline",
+          "meyer_folded_hz": 23.025,
+          "delta_hz": 0.016
+        },
+        {
+          "target_name": "Adenoviridae Infections",
+          "target_folded_hz": 23.041,
+          "meyer_name": "Chamazulene",
+          "meyer_folded_hz": 23.035,
+          "delta_hz": 0.006
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 19.531,
+          "meyer_name": "Menthol",
+          "meyer_folded_hz": 19.532,
+          "delta_hz": -0.001
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 19.531,
+          "meyer_name": "Potassium",
+          "meyer_folded_hz": 19.549,
+          "delta_hz": -0.018
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 17.168,
+          "meyer_name": "Methysticin",
+          "meyer_folded_hz": 17.142,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 17.168,
+          "meyer_name": "Trigonelline",
+          "meyer_folded_hz": 17.142,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 17.168,
+          "meyer_name": "Cymarin",
+          "meyer_folded_hz": 17.147,
+          "delta_hz": 0.021
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 17.168,
+          "meyer_name": "Convallatoxin",
+          "meyer_folded_hz": 17.206,
+          "delta_hz": -0.038
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 16.479,
+          "meyer_name": "Hygromycin B",
+          "meyer_folded_hz": 16.484,
+          "delta_hz": -0.005
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 21.672,
+          "meyer_name": "Aucubin",
+          "meyer_folded_hz": 21.646,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 21.672,
+          "meyer_name": "Ginkgolic acid",
+          "meyer_folded_hz": 21.656,
+          "delta_hz": 0.016
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 21.672,
+          "meyer_name": "Adenosine monophosphate",
+          "meyer_folded_hz": 21.701,
+          "delta_hz": -0.029
+        },
+        {
+          "target_name": "Adhesions, Pelvic",
+          "target_folded_hz": 21.584,
+          "meyer_name": "Pseudaconitine",
+          "meyer_folded_hz": 21.556,
+          "delta_hz": 0.028
+        },
+        {
+          "target_name": "Adie Syndrome",
+          "target_folded_hz": 21.191,
+          "meyer_name": "Vitamin B12",
+          "meyer_folded_hz": 21.178,
+          "delta_hz": 0.013
+        }
+      ]
+    },
+    {
+      "comparison": "Patent FIG. 11 vs. Meyer (319)",
+      "sample_size_B": 11,
+      "observed_hits": 6,
+      "observed_hit_rate_pct": 54.55,
+      "expected_hits_log_uniform_null": 7.52,
+      "expected_hit_rate_pct": 68.39,
+      "z_score": -0.987,
+      "enrichment_ratio": 0.7976,
+      "detailed_matches": [
+        {
+          "target_name": "Substance A",
+          "target_folded_hz": 28.0,
+          "meyer_name": "Astragalin",
+          "meyer_folded_hz": 28.025,
+          "delta_hz": -0.025
+        },
+        {
+          "target_name": "Substance A",
+          "target_folded_hz": 28.0,
+          "meyer_name": "Algestone Acetophenide",
+          "meyer_folded_hz": 28.038,
+          "delta_hz": -0.038
+        },
+        {
+          "target_name": "Microorganism A",
+          "target_folded_hz": 28.005,
+          "meyer_name": "Astragalin",
+          "meyer_folded_hz": 28.025,
+          "delta_hz": -0.02
+        },
+        {
+          "target_name": "Microorganism A",
+          "target_folded_hz": 28.005,
+          "meyer_name": "Algestone Acetophenide",
+          "meyer_folded_hz": 28.038,
+          "delta_hz": -0.033
+        },
+        {
+          "target_name": "Substance C",
+          "target_folded_hz": 31.453,
+          "meyer_name": "Medicagenic acid",
+          "meyer_folded_hz": 31.419,
+          "delta_hz": 0.034
+        },
+        {
+          "target_name": "Substance E",
+          "target_folded_hz": 21.896,
+          "meyer_name": "Gentianine",
+          "meyer_folded_hz": 21.898,
+          "delta_hz": -0.002
+        },
+        {
+          "target_name": "Substance E",
+          "target_folded_hz": 21.896,
+          "meyer_name": "Andrographolide",
+          "meyer_folded_hz": 21.9,
+          "delta_hz": -0.004
+        },
+        {
+          "target_name": "Microorganism D",
+          "target_folded_hz": 25.019,
+          "meyer_name": "alpha-Peltatin",
+          "meyer_folded_hz": 25.025,
+          "delta_hz": -0.006
+        },
+        {
+          "target_name": "Microorganism D",
+          "target_folded_hz": 25.019,
+          "meyer_name": "Angelic acid",
+          "meyer_folded_hz": 25.03,
+          "delta_hz": -0.011
+        },
+        {
+          "target_name": "Microorganism D",
+          "target_folded_hz": 25.019,
+          "meyer_name": "Campesterol",
+          "meyer_folded_hz": 25.044,
+          "delta_hz": -0.025
+        },
+        {
+          "target_name": "Substance J",
+          "target_folded_hz": 26.055,
+          "meyer_name": "Frangulin A",
+          "meyer_folded_hz": 26.025,
+          "delta_hz": 0.03
+        },
+        {
+          "target_name": "Substance J",
+          "target_folded_hz": 26.055,
+          "meyer_name": "Tigogenin",
+          "meyer_folded_hz": 26.038,
+          "delta_hz": 0.017
+        },
+        {
+          "target_name": "Substance J",
+          "target_folded_hz": 26.055,
+          "meyer_name": "Choline",
+          "meyer_folded_hz": 26.042,
+          "delta_hz": 0.013
+        },
+        {
+          "target_name": "Substance J",
+          "target_folded_hz": 26.055,
+          "meyer_name": "Stigmastanol",
+          "meyer_folded_hz": 26.044,
+          "delta_hz": 0.011
+        }
+      ]
+    },
+    {
+      "comparison": "Yoshie Frequencies vs. Meyer (319)",
+      "sample_size_B": 4,
+      "observed_hits": 4,
+      "observed_hit_rate_pct": 100.0,
+      "expected_hits_log_uniform_null": 2.74,
+      "expected_hit_rate_pct": 68.39,
+      "z_score": 1.36,
+      "enrichment_ratio": 1.4622,
+      "detailed_matches": [
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Eucalyptol",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Borneol",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Citronellal",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Geraniol",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Linalool",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Menthone",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 0.618 kHz",
+          "target_folded_hz": 19.312,
+          "meyer_name": "Nerol",
+          "meyer_folded_hz": 19.281,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Yoshie 1.054 kHz",
+          "target_folded_hz": 16.469,
+          "meyer_name": "Hygromycin B",
+          "meyer_folded_hz": 16.484,
+          "delta_hz": -0.015
+        },
+        {
+          "target_name": "Yoshie 5.229 kHz",
+          "target_folded_hz": 20.426,
+          "meyer_name": "Acetylcysteine",
+          "meyer_folded_hz": 20.4,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Yoshie 5.229 kHz",
+          "target_folded_hz": 20.426,
+          "meyer_name": "Ajmaline",
+          "meyer_folded_hz": 20.4,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Yoshie 5.229 kHz",
+          "target_folded_hz": 20.426,
+          "meyer_name": "Docosanol",
+          "meyer_folded_hz": 20.412,
+          "delta_hz": 0.014
+        },
+        {
+          "target_name": "Yoshie 100.41 kHz",
+          "target_folded_hz": 24.514,
+          "meyer_name": "alpha-Angelica lactone",
+          "meyer_folded_hz": 24.525,
+          "delta_hz": -0.011
+        },
+        {
+          "target_name": "Yoshie 100.41 kHz",
+          "target_folded_hz": 24.514,
+          "meyer_name": "1-Hexen-3-one",
+          "meyer_folded_hz": 24.535,
+          "delta_hz": -0.021
+        }
+      ]
+    },
+    {
+      "comparison": "20-Entry VI Catalog vs. Meyer (319)",
+      "sample_size_B": 20,
+      "observed_hits": 11,
+      "observed_hit_rate_pct": 55.0,
+      "expected_hits_log_uniform_null": 13.68,
+      "expected_hit_rate_pct": 68.39,
+      "z_score": -1.288,
+      "enrichment_ratio": 0.8042,
+      "detailed_matches": [
+        {
+          "target_name": "Dopamine Precursor Compound A",
+          "target_folded_hz": 24.28,
+          "meyer_name": "Isoferulic acid",
+          "meyer_folded_hz": 24.272,
+          "delta_hz": 0.008
+        },
+        {
+          "target_name": "Dopamine Precursor Compound A",
+          "target_folded_hz": 24.28,
+          "meyer_name": "Caffeine",
+          "meyer_folded_hz": 24.274,
+          "delta_hz": 0.006
+        },
+        {
+          "target_name": "Dopamine Precursor Compound A",
+          "target_folded_hz": 24.28,
+          "meyer_name": "Verbenalin",
+          "meyer_folded_hz": 24.275,
+          "delta_hz": 0.005
+        },
+        {
+          "target_name": "Dopamine Precursor Compound A",
+          "target_folded_hz": 24.28,
+          "meyer_name": "Magnesium",
+          "meyer_folded_hz": 24.305,
+          "delta_hz": -0.025
+        },
+        {
+          "target_name": "L-Tyrosine",
+          "target_folded_hz": 24.32,
+          "meyer_name": "Magnesium",
+          "meyer_folded_hz": 24.305,
+          "delta_hz": 0.015
+        },
+        {
+          "target_name": "Magnesium Threonate",
+          "target_folded_hz": 25.07,
+          "meyer_name": "Angelic acid",
+          "meyer_folded_hz": 25.03,
+          "delta_hz": 0.04
+        },
+        {
+          "target_name": "Magnesium Threonate",
+          "target_folded_hz": 25.07,
+          "meyer_name": "Campesterol",
+          "meyer_folded_hz": 25.044,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Potassium Citrate",
+          "target_folded_hz": 25.11,
+          "meyer_name": "Frangulin B",
+          "meyer_folded_hz": 25.15,
+          "delta_hz": -0.04
+        },
+        {
+          "target_name": "Candida Albicans Glycoprotein",
+          "target_folded_hz": 25.06,
+          "meyer_name": "alpha-Peltatin",
+          "meyer_folded_hz": 25.025,
+          "delta_hz": 0.035
+        },
+        {
+          "target_name": "Candida Albicans Glycoprotein",
+          "target_folded_hz": 25.06,
+          "meyer_name": "Angelic acid",
+          "meyer_folded_hz": 25.03,
+          "delta_hz": 0.03
+        },
+        {
+          "target_name": "Candida Albicans Glycoprotein",
+          "target_folded_hz": 25.06,
+          "meyer_name": "Campesterol",
+          "meyer_folded_hz": 25.044,
+          "delta_hz": 0.016
+        },
+        {
+          "target_name": "Streptococcus Pneumoniae Peptidoglycan",
+          "target_folded_hz": 25.075,
+          "meyer_name": "Campesterol",
+          "meyer_folded_hz": 25.044,
+          "delta_hz": 0.031
+        },
+        {
+          "target_name": "Helicobacter Pylori Urease",
+          "target_folded_hz": 24.27,
+          "meyer_name": "Isoferulic acid",
+          "meyer_folded_hz": 24.272,
+          "delta_hz": -0.002
+        },
+        {
+          "target_name": "Helicobacter Pylori Urease",
+          "target_folded_hz": 24.27,
+          "meyer_name": "Caffeine",
+          "meyer_folded_hz": 24.274,
+          "delta_hz": -0.004
+        },
+        {
+          "target_name": "Helicobacter Pylori Urease",
+          "target_folded_hz": 24.27,
+          "meyer_name": "Verbenalin",
+          "meyer_folded_hz": 24.275,
+          "delta_hz": -0.005
+        },
+        {
+          "target_name": "Helicobacter Pylori Urease",
+          "target_folded_hz": 24.27,
+          "meyer_name": "Magnesium",
+          "meyer_folded_hz": 24.305,
+          "delta_hz": -0.035
+        },
+        {
+          "target_name": "Choline Bitartrate",
+          "target_folded_hz": 27.81,
+          "meyer_name": "Apiole",
+          "meyer_folded_hz": 27.78,
+          "delta_hz": 0.03
+        },
+        {
+          "target_name": "Choline Bitartrate",
+          "target_folded_hz": 27.81,
+          "meyer_name": "Dillapiole",
+          "meyer_folded_hz": 27.78,
+          "delta_hz": 0.03
+        },
+        {
+          "target_name": "Choline Bitartrate",
+          "target_folded_hz": 27.81,
+          "meyer_name": "alpha-Bisabolol",
+          "meyer_folded_hz": 27.796,
+          "delta_hz": 0.014
+        },
+        {
+          "target_name": "Choline Bitartrate",
+          "target_folded_hz": 27.81,
+          "meyer_name": "Farnesol",
+          "meyer_folded_hz": 27.796,
+          "delta_hz": 0.014
+        },
+        {
+          "target_name": "Choline Bitartrate",
+          "target_folded_hz": 27.81,
+          "meyer_name": "Nerolidol",
+          "meyer_folded_hz": 27.796,
+          "delta_hz": 0.014
+        },
+        {
+          "target_name": "Choline Bitartrate",
+          "target_folded_hz": 27.81,
+          "meyer_name": "Patchouli alcohol",
+          "meyer_folded_hz": 27.796,
+          "delta_hz": 0.014
+        },
+        {
+          "target_name": "Glutamate Monosodium",
+          "target_folded_hz": 24.26,
+          "meyer_name": "Isoferulic acid",
+          "meyer_folded_hz": 24.272,
+          "delta_hz": -0.012
+        },
+        {
+          "target_name": "Glutamate Monosodium",
+          "target_folded_hz": 24.26,
+          "meyer_name": "Caffeine",
+          "meyer_folded_hz": 24.274,
+          "delta_hz": -0.014
+        },
+        {
+          "target_name": "Glutamate Monosodium",
+          "target_folded_hz": 24.26,
+          "meyer_name": "Verbenalin",
+          "meyer_folded_hz": 24.275,
+          "delta_hz": -0.015
+        },
+        {
+          "target_name": "GABA 4-Aminobutanoic Acid",
+          "target_folded_hz": 24.295,
+          "meyer_name": "Isoferulic acid",
+          "meyer_folded_hz": 24.272,
+          "delta_hz": 0.023
+        },
+        {
+          "target_name": "GABA 4-Aminobutanoic Acid",
+          "target_folded_hz": 24.295,
+          "meyer_name": "Caffeine",
+          "meyer_folded_hz": 24.274,
+          "delta_hz": 0.021
+        },
+        {
+          "target_name": "GABA 4-Aminobutanoic Acid",
+          "target_folded_hz": 24.295,
+          "meyer_name": "Verbenalin",
+          "meyer_folded_hz": 24.275,
+          "delta_hz": 0.02
+        },
+        {
+          "target_name": "GABA 4-Aminobutanoic Acid",
+          "target_folded_hz": 24.295,
+          "meyer_name": "Magnesium",
+          "meyer_folded_hz": 24.305,
+          "delta_hz": -0.01
+        },
+        {
+          "target_name": "Alpha-Synuclein Monomer",
+          "target_folded_hz": 24.3,
+          "meyer_name": "Isoferulic acid",
+          "meyer_folded_hz": 24.272,
+          "delta_hz": 0.028
+        },
+        {
+          "target_name": "Alpha-Synuclein Monomer",
+          "target_folded_hz": 24.3,
+          "meyer_name": "Caffeine",
+          "meyer_folded_hz": 24.274,
+          "delta_hz": 0.026
+        },
+        {
+          "target_name": "Alpha-Synuclein Monomer",
+          "target_folded_hz": 24.3,
+          "meyer_name": "Verbenalin",
+          "meyer_folded_hz": 24.275,
+          "delta_hz": 0.025
+        },
+        {
+          "target_name": "Alpha-Synuclein Monomer",
+          "target_folded_hz": 24.3,
+          "meyer_name": "Magnesium",
+          "meyer_folded_hz": 24.305,
+          "delta_hz": -0.005
+        }
+      ]
+    }
+  ],
+  "paired_nutrient_zapper_condition_test": {
+    "pairs_tested": 288,
+    "observed_hits": 1,
+    "expected_hits_null": 1.453,
+    "z_score": -0.376,
+    "hits": [
+      {
+        "nutrient": "Iron",
+        "meyer_folded_hz": 27.92,
+        "linked_zapper_condition": "Anemia, Iron-Deficiency",
+        "matched_zapper_folded_hz": [
+          27.93
+        ]
+      }
+    ]
+  }
+}

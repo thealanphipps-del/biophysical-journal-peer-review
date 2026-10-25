@@ -1,0 +1,3300 @@
+{
+  "schema": "TASK-SPEC-HOMETREE-ATFH-001",
+  "docket": "TASK-PAT-2026-ROOT-UTILITY",
+  "generated_at": 1792206868,
+  "source_systems": {
+    "vocal_imaging": "vi.pqr.info (v3.2.0) / vocalimaging_server.py",
+    "dsp_engine": "dsp.pqr.info (v0.3.2)",
+    "hometree_substrate": "atfh.pqr.info / neo4j-hometree (hometree-graph-svc:7687)",
+    "structure_viewer": "sidecar://science/biomolecular_structure_viewer/ui.html"
+  },
+  "total_biomolecular_entries": 11,
+  "total_atfh_claim_clusters": 11,
+  "proteins_and_biomolecules": [
+    {
+      "vi_id": "SUB-007",
+      "vi_alt_ids": [
+        "SUB-007B"
+      ],
+      "vi_name": "Acetylcholine Synthetase",
+      "biomolecular_canonical_name": "Choline O-acetyltransferase (ChAT)",
+      "category": "Enzyme (Protein)",
+      "vi_mw_da": 68000.0,
+      "uniprot_canonical_mw_da": 82565.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 26.16,
+        "extended_clinical_hz": 42.16
+      },
+      "conditions": [
+        {
+          "id": "PROF-002",
+          "cond_id": "COND-002",
+          "name": "Alzheimer's & Cognitive Tauopathy",
+          "weight": 92.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P28329",
+      "gene_symbol": "CHAT",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P28329-F1",
+      "pdb_ids": [
+        "2FY2",
+        "2FY3",
+        "2FY4"
+      ],
+      "key_functional_residues": {
+        "active_site_his": {
+          "auth_asym_id": "A",
+          "auth_seq_id": 442,
+          "label": "Catalytic Histidine (His442) in CoA/Choline transfer tunnel"
+        },
+        "coa_binding_region": {
+          "auth_asym_id": "A",
+          "start_auth_seq_id": 435,
+          "end_auth_seq_id": 450,
+          "label": "Acyl-CoA catalytic pocket"
+        }
+      },
+      "cube_coords": {
+        "x": 14,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 16.6016,
+          "octave_shifts": -12,
+          "formula": "68000.0 * 2^(-12)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 20.1575,
+          "octave_shifts": -12,
+          "formula": "82565.0 * 2^(-12)"
+        },
+        "delta_vi_vs_meyer_hz": 9.5584
+      },
+      "addr5d": {
+        "x": 14,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-ERLEXOGITRSWACAADNLZDMIPDZI",
+        "structure_hash": "sha256:3c6e656c5d188a08c74f1f9740d4688a14d91c0a6601c97f8a942c84bd74b5ee",
+        "nft_id": "NFT-PROT-P28329-SUB-007"
+      },
+      "local_cif_artifact": "2FY2.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "2FY2.cif",
+        "resolved_ca_residues": 585,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 24.78,
+        "mean_coordination_number": 9.08,
+        "mean_b_factor_or_plddt": 19.99,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.22952,
+          "lambda_2_hinge": 0.42623,
+          "lambda_3_torsion": 0.72834,
+          "lambda_cat_pocket": 1.63592,
+          "catalytic_mode_index": 10,
+          "catalytic_pocket_overlap": 0.0051
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.1645,
+          "nu_2_thz": 0.2241,
+          "nu_3_thz": 0.293,
+          "nu_cat_thz": 0.4391
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 19.1485,
+          "f_lambda1_octave_shift": -33,
+          "f_lambda2_hz": 26.094,
+          "f_lambda3_hz": 17.0552,
+          "f_lambda_cat_hz": 25.5606,
+          "f_lambda_cat_octave_shift": -34,
+          "f_3d_centroid_hz": 21.9646,
+          "f_3d_range_hz": [
+            17.0552,
+            26.094
+          ],
+          "f_3d_bandwidth_hz": 9.0388
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-007",
+        "vi_name": "Acetylcholine Synthetase",
+        "uniprot_id": "P28329",
+        "cif_file": "2FY2.cif",
+        "n_ca": 585,
+        "vi_catalog_beta_hz": 26.16,
+        "nearest_3d_mode_hz": 26.094,
+        "abs_delta_nearest_hz": 0.066,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 29.6626,
+          "7.0A": 16.9143,
+          "7.5A": 19.1485,
+          "8.0A": 21.4177,
+          "8.5A": 24.089
+        },
+        "f_cat_by_rc": {
+          "6.5A": 26.5948,
+          "7.0A": 22.2172,
+          "7.5A": 25.5606,
+          "8.0A": 28.0971,
+          "8.5A": 20.9367
+        },
+        "f_lambda1_mean_hz": 22.2464,
+        "f_lambda1_sd_hz": 4.9272,
+        "f_lambda1_cv_pct": 22.15,
+        "f_cat_mean_hz": 24.6813,
+        "f_cat_sd_hz": 3.0082,
+        "f_cat_cv_pct": 12.19,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.05,
+            "lambda_1": 0.1377,
+            "lambda_2": 0.26019,
+            "lambda_3": 0.44275,
+            "lambda_cat": 0.44275,
+            "f_lambda1_hz": 29.6626,
+            "f_lambda2_hz": 20.3873,
+            "f_lambda3_hz": 26.5948,
+            "f_lambda_cat_hz": 26.5948,
+            "f_modes_sorted_hz": [
+              20.3873,
+              26.5948,
+              26.5948,
+              29.6626
+            ],
+            "f_range_hz": [
+              20.3873,
+              29.6626
+            ],
+            "f_centroid_hz": 25.8099
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.15,
+            "lambda_1": 0.17909,
+            "lambda_2": 0.33714,
+            "lambda_3": 0.57034,
+            "lambda_cat": 1.23596,
+            "f_lambda1_hz": 16.9143,
+            "f_lambda2_hz": 23.2074,
+            "f_lambda3_hz": 30.1846,
+            "f_lambda_cat_hz": 22.2172,
+            "f_modes_sorted_hz": [
+              16.9143,
+              22.2172,
+              23.2074,
+              30.1846
+            ],
+            "f_range_hz": [
+              16.9143,
+              30.1846
+            ],
+            "f_centroid_hz": 23.1309
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 9.08,
+            "lambda_1": 0.22952,
+            "lambda_2": 0.42623,
+            "lambda_3": 0.72834,
+            "lambda_cat": 1.63592,
+            "f_lambda1_hz": 19.1485,
+            "f_lambda2_hz": 26.094,
+            "f_lambda3_hz": 17.0552,
+            "f_lambda_cat_hz": 25.5606,
+            "f_modes_sorted_hz": [
+              17.0552,
+              19.1485,
+              25.5606,
+              26.094
+            ],
+            "f_range_hz": [
+              17.0552,
+              26.094
+            ],
+            "f_centroid_hz": 21.9646
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.94,
+            "lambda_1": 0.28715,
+            "lambda_2": 0.53592,
+            "lambda_3": 0.88309,
+            "lambda_cat": 1.97672,
+            "f_lambda1_hz": 21.4177,
+            "f_lambda2_hz": 29.2596,
+            "f_lambda3_hz": 18.7798,
+            "f_lambda_cat_hz": 28.0971,
+            "f_modes_sorted_hz": [
+              18.7798,
+              21.4177,
+              28.0971,
+              29.2596
+            ],
+            "f_range_hz": [
+              18.7798,
+              29.2596
+            ],
+            "f_centroid_hz": 24.3886
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 11.4,
+            "lambda_1": 0.36325,
+            "lambda_2": 0.66901,
+            "lambda_3": 1.09758,
+            "lambda_cat": 1.09758,
+            "f_lambda1_hz": 24.089,
+            "f_lambda2_hz": 16.3457,
+            "f_lambda3_hz": 20.9367,
+            "f_lambda_cat_hz": 20.9367,
+            "f_modes_sorted_hz": [
+              16.3457,
+              20.9367,
+              20.9367,
+              24.089
+            ],
+            "f_range_hz": [
+              16.3457,
+              24.089
+            ],
+            "f_centroid_hz": 20.577
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-008",
+      "vi_alt_ids": [
+        "SUB-008B",
+        "DEMO-016"
+      ],
+      "vi_name": "Tau Protein Isoform 1",
+      "vi_alt_names": [
+        "Tau Protein Microtubule Complex"
+      ],
+      "biomolecular_canonical_name": "Microtubule-associated protein tau (MAPT)",
+      "category": "Protein",
+      "vi_mw_da": 45000.0,
+      "uniprot_canonical_mw_da": 78928.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 26.44,
+        "extended_clinical_hz": 42.44,
+        "demo_client_hz": 27.88
+      },
+      "conditions": [
+        {
+          "id": "PROF-002",
+          "cond_id": "COND-002",
+          "name": "Alzheimer's & Cognitive Tauopathy",
+          "weight": 94.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P10636",
+      "gene_symbol": "MAPT",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P10636-F1",
+      "pdb_ids": [
+        "5O3L",
+        "5O3O",
+        "6HRE"
+      ],
+      "key_functional_residues": {
+        "paired_helical_filament_core": {
+          "auth_asym_id": "A",
+          "start_auth_seq_id": 306,
+          "end_auth_seq_id": 378,
+          "label": "PHF6 (VQIVYK) amyloidogenic core (R3-R4 repeats)"
+        }
+      },
+      "cube_coords": {
+        "x": 15,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 21.9727,
+          "octave_shifts": -11,
+          "formula": "45000.0 * 2^(-11)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 19.2695,
+          "octave_shifts": -12,
+          "formula": "78928.0 * 2^(-12)"
+        },
+        "delta_vi_vs_meyer_hz": 4.4673
+      },
+      "addr5d": {
+        "x": 15,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-E0EFDIL0WWD0RGTUCTHXVW0XINP",
+        "structure_hash": "sha256:4b3a913f0f68f5b21a55827779f0d6481f7473a2e2a484c8f5b07b7050f8da3d",
+        "nft_id": "NFT-PROT-P10636-SUB-008"
+      },
+      "local_cif_artifact": "5O3L.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "5O3L.cif",
+        "resolved_ca_residues": 73,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 22.58,
+        "mean_coordination_number": 4.33,
+        "mean_b_factor_or_plddt": 0.0,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.08978,
+          "lambda_2_hinge": 0.31583,
+          "lambda_3_torsion": 0.48687,
+          "lambda_cat_pocket": 4.54244,
+          "catalytic_mode_index": 15,
+          "catalytic_pocket_overlap": 1.0
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.1029,
+          "nu_2_thz": 0.1929,
+          "nu_3_thz": 0.2396,
+          "nu_cat_thz": 0.7317
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 23.9512,
+          "f_lambda1_octave_shift": -32,
+          "f_lambda2_hz": 22.4619,
+          "f_lambda3_hz": 27.8886,
+          "f_lambda_cat_hz": 21.2963,
+          "f_lambda_cat_octave_shift": -35,
+          "f_3d_centroid_hz": 23.8995,
+          "f_3d_range_hz": [
+            21.2963,
+            27.8886
+          ],
+          "f_3d_bandwidth_hz": 6.5923
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-008",
+        "vi_name": "Tau Protein Isoform 1",
+        "uniprot_id": "P10636",
+        "cif_file": "5O3L.cif",
+        "n_ca": 73,
+        "vi_catalog_beta_hz": 26.44,
+        "nearest_3d_mode_hz": 27.8886,
+        "abs_delta_nearest_hz": 1.4486,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 17.7588,
+          "7.0A": 21.3676,
+          "7.5A": 23.9512,
+          "8.0A": 25.7921,
+          "8.5A": 27.5165
+        },
+        "f_cat_by_rc": {
+          "6.5A": 17.7588,
+          "7.0A": 30.4101,
+          "7.5A": 21.2963,
+          "8.0A": 26.4546,
+          "8.5A": 21.516
+        },
+        "f_lambda1_mean_hz": 23.2772,
+        "f_lambda1_sd_hz": 3.8357,
+        "f_lambda1_cv_pct": 16.48,
+        "f_cat_mean_hz": 23.4872,
+        "f_cat_sd_hz": 4.9556,
+        "f_cat_cv_pct": 21.1,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 2.85,
+            "lambda_1": 0.04935,
+            "lambda_2": 0.1594,
+            "lambda_3": 0.3102,
+            "lambda_cat": 0.04935,
+            "f_lambda1_hz": 17.7588,
+            "f_lambda2_hz": 31.9145,
+            "f_lambda3_hz": 22.2606,
+            "f_lambda_cat_hz": 17.7588,
+            "f_modes_sorted_hz": [
+              17.7588,
+              17.7588,
+              22.2606,
+              31.9145
+            ],
+            "f_range_hz": [
+              17.7588,
+              31.9145
+            ],
+            "f_centroid_hz": 22.4232
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 3.75,
+            "lambda_1": 0.07145,
+            "lambda_2": 0.24676,
+            "lambda_3": 0.39246,
+            "lambda_cat": 2.31557,
+            "f_lambda1_hz": 21.3676,
+            "f_lambda2_hz": 19.8542,
+            "f_lambda3_hz": 25.0391,
+            "f_lambda_cat_hz": 30.4101,
+            "f_modes_sorted_hz": [
+              19.8542,
+              21.3676,
+              25.0391,
+              30.4101
+            ],
+            "f_range_hz": [
+              19.8542,
+              30.4101
+            ],
+            "f_centroid_hz": 24.1677
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 4.33,
+            "lambda_1": 0.08978,
+            "lambda_2": 0.31583,
+            "lambda_3": 0.48687,
+            "lambda_cat": 4.54244,
+            "f_lambda1_hz": 23.9512,
+            "f_lambda2_hz": 22.4619,
+            "f_lambda3_hz": 27.8886,
+            "f_lambda_cat_hz": 21.2963,
+            "f_modes_sorted_hz": [
+              21.2963,
+              22.4619,
+              23.9512,
+              27.8886
+            ],
+            "f_range_hz": [
+              21.2963,
+              27.8886
+            ],
+            "f_centroid_hz": 23.8995
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 4.58,
+            "lambda_1": 0.10411,
+            "lambda_2": 0.36423,
+            "lambda_3": 0.56241,
+            "lambda_cat": 1.75237,
+            "f_lambda1_hz": 25.7921,
+            "f_lambda2_hz": 24.1216,
+            "f_lambda3_hz": 29.9741,
+            "f_lambda_cat_hz": 26.4546,
+            "f_modes_sorted_hz": [
+              24.1216,
+              25.7921,
+              26.4546,
+              29.9741
+            ],
+            "f_range_hz": [
+              24.1216,
+              29.9741
+            ],
+            "f_centroid_hz": 26.5856
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 4.74,
+            "lambda_1": 0.11849,
+            "lambda_2": 0.4143,
+            "lambda_3": 0.65849,
+            "lambda_cat": 4.63666,
+            "f_lambda1_hz": 27.5165,
+            "f_lambda2_hz": 25.7262,
+            "f_lambda3_hz": 16.2167,
+            "f_lambda_cat_hz": 21.516,
+            "f_modes_sorted_hz": [
+              16.2167,
+              21.516,
+              25.7262,
+              27.5165
+            ],
+            "f_range_hz": [
+              16.2167,
+              27.5165
+            ],
+            "f_centroid_hz": 22.7438
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-009",
+      "vi_alt_ids": [
+        "DEMO-015"
+      ],
+      "vi_name": "Beta-Amyloid Peptide 42",
+      "vi_alt_names": [
+        "Amyloid Beta Peptide Fragment"
+      ],
+      "biomolecular_canonical_name": "Amyloid-beta precursor protein / A\u03b242 peptide (APP)",
+      "category": "Protein / Peptide",
+      "vi_mw_da": 4514.1,
+      "uniprot_canonical_mw_da": 4514.04,
+      "frequencies_hz": {
+        "beta_octave_hz": 26.82,
+        "extended_clinical_hz": 42.82,
+        "demo_client_hz": 27.86
+      },
+      "conditions": [
+        {
+          "id": "PROF-002",
+          "cond_id": "COND-002",
+          "name": "Alzheimer's & Cognitive Tauopathy",
+          "weight": 90.0,
+          "role": "Direct Imbalance (Symptom)"
+        }
+      ],
+      "uniprot_id": "P05067",
+      "gene_symbol": "APP",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P05067-F1",
+      "pdb_ids": [
+        "1IYT",
+        "2BEG",
+        "5OQV"
+      ],
+      "key_functional_residues": {
+        "abeta42_cleavage_span": {
+          "auth_asym_id": "A",
+          "start_auth_seq_id": 672,
+          "end_auth_seq_id": 713,
+          "label": "A\u03b21-42 fibrillar beta-sheet peptide region (APP 672-713)"
+        }
+      },
+      "cube_coords": {
+        "x": 16,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 17.6332,
+          "octave_shifts": -8,
+          "formula": "4514.1 * 2^(-8)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 17.633,
+          "octave_shifts": -8,
+          "formula": "4514.04 * 2^(-8)"
+        },
+        "delta_vi_vs_meyer_hz": 9.1868
+      },
+      "addr5d": {
+        "x": 16,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-FHYFKCSLFWFPMBBESUXCQAVXBQK",
+        "structure_hash": "sha256:c0c5cc204106b02cfb2bcf81cc004513941c13cec0c9246fe0113ed7d9b40ec1",
+        "nft_id": "NFT-PROT-P05067-SUB-009"
+      },
+      "local_cif_artifact": "1IYT.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "1IYT.cif",
+        "resolved_ca_residues": 42,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 15.98,
+        "mean_coordination_number": 7.1,
+        "mean_b_factor_or_plddt": 0.0,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.33692,
+          "lambda_2_hinge": 1.14347,
+          "lambda_3_torsion": 2.43559,
+          "lambda_cat_pocket": 15.43563,
+          "catalytic_mode_index": 12,
+          "catalytic_pocket_overlap": 0.5314
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.1993,
+          "nu_2_thz": 0.3671,
+          "nu_3_thz": 0.5358,
+          "nu_cat_thz": 1.3489
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 23.1995,
+          "f_lambda1_octave_shift": -33,
+          "f_lambda2_hz": 21.3698,
+          "f_lambda3_hz": 31.1882,
+          "f_lambda_cat_hz": 19.6287,
+          "f_lambda_cat_octave_shift": -36,
+          "f_3d_centroid_hz": 23.8466,
+          "f_3d_range_hz": [
+            19.6287,
+            31.1882
+          ],
+          "f_3d_bandwidth_hz": 11.5595
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-009",
+        "vi_name": "Beta-Amyloid Peptide 42",
+        "uniprot_id": "P05067",
+        "cif_file": "1IYT.cif",
+        "n_ca": 42,
+        "vi_catalog_beta_hz": 26.82,
+        "nearest_3d_mode_hz": 23.1995,
+        "abs_delta_nearest_hz": 3.6205,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 19.4253,
+          "7.0A": 21.4768,
+          "7.5A": 23.1995,
+          "8.0A": 24.975,
+          "8.5A": 28.6364
+        },
+        "f_cat_by_rc": {
+          "6.5A": 17.2496,
+          "7.0A": 18.2087,
+          "7.5A": 19.6287,
+          "8.0A": 20.9666,
+          "8.5A": 18.8502
+        },
+        "f_lambda1_mean_hz": 23.5426,
+        "f_lambda1_sd_hz": 3.512,
+        "f_lambda1_cv_pct": 14.92,
+        "f_cat_mean_hz": 18.9808,
+        "f_cat_sd_hz": 1.4119,
+        "f_cat_cv_pct": 7.44,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.48,
+            "lambda_1": 0.23621,
+            "lambda_2": 0.74504,
+            "lambda_3": 1.4615,
+            "lambda_cat": 0.74504,
+            "f_lambda1_hz": 19.4253,
+            "f_lambda2_hz": 17.2496,
+            "f_lambda3_hz": 24.1595,
+            "f_lambda_cat_hz": 17.2496,
+            "f_modes_sorted_hz": [
+              17.2496,
+              17.2496,
+              19.4253,
+              24.1595
+            ],
+            "f_range_hz": [
+              17.2496,
+              24.1595
+            ],
+            "f_centroid_hz": 19.521
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 6.9,
+            "lambda_1": 0.28874,
+            "lambda_2": 0.977,
+            "lambda_3": 2.03539,
+            "lambda_cat": 13.28311,
+            "f_lambda1_hz": 21.4768,
+            "f_lambda2_hz": 19.7531,
+            "f_lambda3_hz": 28.511,
+            "f_lambda_cat_hz": 18.2087,
+            "f_modes_sorted_hz": [
+              18.2087,
+              19.7531,
+              21.4768,
+              28.511
+            ],
+            "f_range_hz": [
+              18.2087,
+              28.511
+            ],
+            "f_centroid_hz": 21.9874
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 7.1,
+            "lambda_1": 0.33692,
+            "lambda_2": 1.14347,
+            "lambda_3": 2.43559,
+            "lambda_cat": 15.43563,
+            "f_lambda1_hz": 23.1995,
+            "f_lambda2_hz": 21.3698,
+            "f_lambda3_hz": 31.1882,
+            "f_lambda_cat_hz": 19.6287,
+            "f_modes_sorted_hz": [
+              19.6287,
+              21.3698,
+              23.1995,
+              31.1882
+            ],
+            "f_range_hz": [
+              19.6287,
+              31.1882
+            ],
+            "f_centroid_hz": 23.8466
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 7.24,
+            "lambda_1": 0.39046,
+            "lambda_2": 1.35836,
+            "lambda_3": 2.88133,
+            "lambda_cat": 17.61163,
+            "f_lambda1_hz": 24.975,
+            "f_lambda2_hz": 23.2914,
+            "f_lambda3_hz": 16.9611,
+            "f_lambda_cat_hz": 20.9666,
+            "f_modes_sorted_hz": [
+              16.9611,
+              20.9666,
+              23.2914,
+              24.975
+            ],
+            "f_range_hz": [
+              16.9611,
+              24.975
+            ],
+            "f_centroid_hz": 21.5485
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 8.05,
+            "lambda_1": 0.51333,
+            "lambda_2": 1.70819,
+            "lambda_3": 3.55888,
+            "lambda_cat": 3.55888,
+            "f_lambda1_hz": 28.6364,
+            "f_lambda2_hz": 26.119,
+            "f_lambda3_hz": 18.8502,
+            "f_lambda_cat_hz": 18.8502,
+            "f_modes_sorted_hz": [
+              18.8502,
+              18.8502,
+              26.119,
+              28.6364
+            ],
+            "f_range_hz": [
+              18.8502,
+              28.6364
+            ],
+            "f_centroid_hz": 23.1139
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "DEMO-020",
+      "vi_alt_ids": [],
+      "vi_name": "Alpha-Synuclein Monomer",
+      "biomolecular_canonical_name": "Alpha-synuclein (SNCA)",
+      "category": "Protein",
+      "vi_mw_da": 14460.0,
+      "uniprot_canonical_mw_da": 14460.1,
+      "frequencies_hz": {
+        "beta_octave_hz": 24.3,
+        "demo_client_hz": 24.3
+      },
+      "conditions": [
+        {
+          "id": "PROF-001",
+          "cond_id": "COND-001",
+          "name": "Parkinson's Disease Complex",
+          "weight": 92.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P37840",
+      "gene_symbol": "SNCA",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P37840-F1",
+      "pdb_ids": [
+        "1XQ8",
+        "2N0A",
+        "6A6B"
+      ],
+      "key_functional_residues": {
+        "nac_amyloid_domain": {
+          "auth_asym_id": "A",
+          "start_auth_seq_id": 61,
+          "end_auth_seq_id": 95,
+          "label": "NAC (Non-Amyloid-Beta Component) aggregation core"
+        }
+      },
+      "cube_coords": {
+        "x": 17,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 28.2422,
+          "octave_shifts": -9,
+          "formula": "14460.0 * 2^(-9)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 28.2424,
+          "octave_shifts": -9,
+          "formula": "14460.1 * 2^(-9)"
+        },
+        "delta_vi_vs_meyer_hz": 3.9422
+      },
+      "addr5d": {
+        "x": 17,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-FQRFQXYHCHTAQJEBJXHTQQBKGZW",
+        "structure_hash": "sha256:e7ad25d36e633deb8eed864feea83f4260cf66a35b932fc41defb346cff44090",
+        "nft_id": "NFT-PROT-P37840-DEMO-020"
+      },
+      "local_cif_artifact": "1XQ8.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "1XQ8.cif",
+        "resolved_ca_residues": 140,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 46.98,
+        "mean_coordination_number": 6.67,
+        "mean_b_factor_or_plddt": 4.08,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.01623,
+          "lambda_2_hinge": 0.06277,
+          "lambda_3_torsion": 0.17648,
+          "lambda_cat_pocket": 0.06277,
+          "catalytic_mode_index": 2,
+          "catalytic_pocket_overlap": 0.412
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.0437,
+          "nu_2_thz": 0.086,
+          "nu_3_thz": 0.1442,
+          "nu_cat_thz": 0.086
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 20.3689,
+          "f_lambda1_octave_shift": -31,
+          "f_lambda2_hz": 20.0274,
+          "f_lambda3_hz": 16.7909,
+          "f_lambda_cat_hz": 20.0274,
+          "f_lambda_cat_octave_shift": -32,
+          "f_3d_centroid_hz": 19.3037,
+          "f_3d_range_hz": [
+            16.7909,
+            20.3689
+          ],
+          "f_3d_bandwidth_hz": 3.578
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "DEMO-020",
+        "vi_name": "Alpha-Synuclein Monomer",
+        "uniprot_id": "P37840",
+        "cif_file": "1XQ8.cif",
+        "n_ca": 140,
+        "vi_catalog_beta_hz": 24.3,
+        "nearest_3d_mode_hz": 20.3689,
+        "abs_delta_nearest_hz": 3.9311,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 16.0967,
+          "7.0A": 18.5073,
+          "7.5A": 20.3689,
+          "8.0A": 22.3009,
+          "8.5A": 24.6321
+        },
+        "f_cat_by_rc": {
+          "6.5A": 31.1206,
+          "7.0A": 18.1476,
+          "7.5A": 20.0274,
+          "8.0A": 21.7923,
+          "8.5A": 24.1829
+        },
+        "f_lambda1_mean_hz": 20.3812,
+        "f_lambda1_sd_hz": 3.3024,
+        "f_lambda1_cv_pct": 16.2,
+        "f_cat_mean_hz": 23.0542,
+        "f_cat_sd_hz": 5.0292,
+        "f_cat_cv_pct": 21.81,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 5.77,
+            "lambda_1": 0.01014,
+            "lambda_2": 0.03789,
+            "lambda_3": 0.10895,
+            "lambda_cat": 0.03789,
+            "f_lambda1_hz": 16.0967,
+            "f_lambda2_hz": 31.1206,
+            "f_lambda3_hz": 26.3855,
+            "f_lambda_cat_hz": 31.1206,
+            "f_modes_sorted_hz": [
+              16.0967,
+              26.3855,
+              31.1206,
+              31.1206
+            ],
+            "f_range_hz": [
+              16.0967,
+              31.1206
+            ],
+            "f_centroid_hz": 26.1808
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 6.37,
+            "lambda_1": 0.0134,
+            "lambda_2": 0.05154,
+            "lambda_3": 0.14477,
+            "lambda_cat": 0.05154,
+            "f_lambda1_hz": 18.5073,
+            "f_lambda2_hz": 18.1476,
+            "f_lambda3_hz": 30.4151,
+            "f_lambda_cat_hz": 18.1476,
+            "f_modes_sorted_hz": [
+              18.1476,
+              18.1476,
+              18.5073,
+              30.4151
+            ],
+            "f_range_hz": [
+              18.1476,
+              30.4151
+            ],
+            "f_centroid_hz": 21.3044
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 6.67,
+            "lambda_1": 0.01623,
+            "lambda_2": 0.06277,
+            "lambda_3": 0.17648,
+            "lambda_cat": 0.06277,
+            "f_lambda1_hz": 20.3689,
+            "f_lambda2_hz": 20.0274,
+            "f_lambda3_hz": 16.7909,
+            "f_lambda_cat_hz": 20.0274,
+            "f_modes_sorted_hz": [
+              16.7909,
+              20.0274,
+              20.0274,
+              20.3689
+            ],
+            "f_range_hz": [
+              16.7909,
+              20.3689
+            ],
+            "f_centroid_hz": 19.3037
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 6.89,
+            "lambda_1": 0.01946,
+            "lambda_2": 0.07432,
+            "lambda_3": 0.21463,
+            "lambda_cat": 0.07432,
+            "f_lambda1_hz": 22.3009,
+            "f_lambda2_hz": 21.7923,
+            "f_lambda3_hz": 18.5169,
+            "f_lambda_cat_hz": 21.7923,
+            "f_modes_sorted_hz": [
+              18.5169,
+              21.7923,
+              21.7923,
+              22.3009
+            ],
+            "f_range_hz": [
+              18.5169,
+              22.3009
+            ],
+            "f_centroid_hz": 21.1006
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 7.24,
+            "lambda_1": 0.02374,
+            "lambda_2": 0.09152,
+            "lambda_3": 0.26439,
+            "lambda_cat": 0.09152,
+            "f_lambda1_hz": 24.6321,
+            "f_lambda2_hz": 24.1829,
+            "f_lambda3_hz": 20.5512,
+            "f_lambda_cat_hz": 24.1829,
+            "f_modes_sorted_hz": [
+              20.5512,
+              24.1829,
+              24.1829,
+              24.6321
+            ],
+            "f_range_hz": [
+              20.5512,
+              24.6321
+            ],
+            "f_centroid_hz": 23.3873
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-019",
+      "vi_alt_ids": [],
+      "vi_name": "Glutathione Peroxidase",
+      "biomolecular_canonical_name": "Glutathione peroxidase 1 (GPX1 homotetramer)",
+      "category": "Antioxidant Enzyme (Protein)",
+      "vi_mw_da": 84000.0,
+      "uniprot_canonical_mw_da": 22088.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 25.4,
+        "extended_clinical_hz": 55.4
+      },
+      "conditions": [
+        {
+          "id": "PROF-004",
+          "cond_id": "COND-004",
+          "name": "Toxic Heavy Metal Burden",
+          "weight": 75.0,
+          "role": "Direct Imbalance (Symptom)"
+        },
+        {
+          "id": "COND-007",
+          "cond_id": "COND-007",
+          "name": "Photosynthetic Metabolic Stress",
+          "weight": 70.0,
+          "role": "Direct Imbalance (Symptom)"
+        },
+        {
+          "id": "COND-010",
+          "cond_id": "COND-010",
+          "name": "Sub-Harmonic Hepatic Clearance",
+          "weight": 85.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P07203",
+      "gene_symbol": "GPX1",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P07203-F1",
+      "pdb_ids": [
+        "2F8A"
+      ],
+      "key_functional_residues": {
+        "selenocysteine_triad": {
+          "auth_asym_id": "A",
+          "residues": [
+            49,
+            83,
+            160
+          ],
+          "label": "Catalytic Selenocysteine Sec49 / Gln83 / Trp160 redox triad"
+        }
+      },
+      "cube_coords": {
+        "x": 18,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 20.5078,
+          "octave_shifts": -12,
+          "formula": "84000.0 * 2^(-12)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 21.5703,
+          "octave_shifts": -10,
+          "formula": "22088.0 * 2^(-10)"
+        },
+        "delta_vi_vs_meyer_hz": 4.8922
+      },
+      "addr5d": {
+        "x": 18,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-FZKFXSBNPEA0EDIOACEV0KUFVDY",
+        "structure_hash": "sha256:327234663f49ccbd3743b6380e8a4d3000564adc7e8d4a600c9018016f45c14c",
+        "nft_id": "NFT-PROT-P07203-SUB-019"
+      },
+      "local_cif_artifact": "2F8A.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "2F8A.cif",
+        "resolved_ca_residues": 186,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 15.27,
+        "mean_coordination_number": 8.55,
+        "mean_b_factor_or_plddt": 17.32,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.92992,
+          "lambda_2_hinge": 1.01975,
+          "lambda_3_torsion": 1.34905,
+          "lambda_cat_pocket": 5.62707,
+          "catalytic_mode_index": 15,
+          "catalytic_pocket_overlap": 0.0488
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.3311,
+          "nu_2_thz": 0.3467,
+          "nu_3_thz": 0.3988,
+          "nu_cat_thz": 0.8144
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 19.2713,
+          "f_lambda1_octave_shift": -34,
+          "f_lambda2_hz": 20.1807,
+          "f_lambda3_hz": 23.2115,
+          "f_lambda_cat_hz": 23.7028,
+          "f_lambda_cat_octave_shift": -35,
+          "f_3d_centroid_hz": 21.5916,
+          "f_3d_range_hz": [
+            19.2713,
+            23.7028
+          ],
+          "f_3d_bandwidth_hz": 4.4315
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-019",
+        "vi_name": "Glutathione Peroxidase",
+        "uniprot_id": "P07203",
+        "cif_file": "2F8A.cif",
+        "n_ca": 186,
+        "vi_catalog_beta_hz": 25.4,
+        "nearest_3d_mode_hz": 23.7028,
+        "abs_delta_nearest_hz": 1.6972,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 29.5663,
+          "7.0A": 17.0509,
+          "7.5A": 19.2713,
+          "8.0A": 21.7815,
+          "8.5A": 24.5438
+        },
+        "f_cat_by_rc": {
+          "6.5A": 30.6594,
+          "7.0A": 30.1412,
+          "7.5A": 23.7028,
+          "8.0A": 20.6795,
+          "8.5A": 23.0026
+        },
+        "f_lambda1_mean_hz": 22.4428,
+        "f_lambda1_sd_hz": 4.8664,
+        "f_lambda1_cv_pct": 21.68,
+        "f_cat_mean_hz": 25.6371,
+        "f_cat_sd_hz": 4.4936,
+        "f_cat_cv_pct": 17.53,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.62,
+            "lambda_1": 0.54721,
+            "lambda_2": 0.60129,
+            "lambda_3": 0.78692,
+            "lambda_cat": 2.35369,
+            "f_lambda1_hz": 29.5663,
+            "f_lambda2_hz": 30.9929,
+            "f_lambda3_hz": 17.7278,
+            "f_lambda_cat_hz": 30.6594,
+            "f_modes_sorted_hz": [
+              17.7278,
+              29.5663,
+              30.6594,
+              30.9929
+            ],
+            "f_range_hz": [
+              17.7278,
+              30.9929
+            ],
+            "f_centroid_hz": 27.2366
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.71,
+            "lambda_1": 0.72797,
+            "lambda_2": 0.81285,
+            "lambda_3": 1.07638,
+            "lambda_cat": 2.2748,
+            "f_lambda1_hz": 17.0509,
+            "f_lambda2_hz": 18.0175,
+            "f_lambda3_hz": 20.7335,
+            "f_lambda_cat_hz": 30.1412,
+            "f_modes_sorted_hz": [
+              17.0509,
+              18.0175,
+              20.7335,
+              30.1412
+            ],
+            "f_range_hz": [
+              17.0509,
+              30.1412
+            ],
+            "f_centroid_hz": 21.4858
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.55,
+            "lambda_1": 0.92992,
+            "lambda_2": 1.01975,
+            "lambda_3": 1.34905,
+            "lambda_cat": 5.62707,
+            "f_lambda1_hz": 19.2713,
+            "f_lambda2_hz": 20.1807,
+            "f_lambda3_hz": 23.2115,
+            "f_lambda_cat_hz": 23.7028,
+            "f_modes_sorted_hz": [
+              19.2713,
+              20.1807,
+              23.2115,
+              23.7028
+            ],
+            "f_range_hz": [
+              19.2713,
+              23.7028
+            ],
+            "f_centroid_hz": 21.5916
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.58,
+            "lambda_1": 1.18795,
+            "lambda_2": 1.25942,
+            "lambda_3": 1.68443,
+            "lambda_cat": 4.28315,
+            "f_lambda1_hz": 21.7815,
+            "f_lambda2_hz": 22.4272,
+            "f_lambda3_hz": 25.9367,
+            "f_lambda_cat_hz": 20.6795,
+            "f_modes_sorted_hz": [
+              20.6795,
+              21.7815,
+              22.4272,
+              25.9367
+            ],
+            "f_range_hz": [
+              20.6795,
+              25.9367
+            ],
+            "f_centroid_hz": 22.7062
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.96,
+            "lambda_1": 1.50836,
+            "lambda_2": 1.58933,
+            "lambda_3": 2.16338,
+            "lambda_cat": 5.29951,
+            "f_lambda1_hz": 24.5438,
+            "f_lambda2_hz": 25.194,
+            "f_lambda3_hz": 29.3937,
+            "f_lambda_cat_hz": 23.0026,
+            "f_modes_sorted_hz": [
+              23.0026,
+              24.5438,
+              25.194,
+              29.3937
+            ],
+            "f_range_hz": [
+              23.0026,
+              29.3937
+            ],
+            "f_centroid_hz": 25.5335
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-020",
+      "vi_alt_ids": [],
+      "vi_name": "Superoxide Dismutase",
+      "biomolecular_canonical_name": "Superoxide dismutase [Cu-Zn] (SOD1 homodimer)",
+      "category": "Enzyme (Protein)",
+      "vi_mw_da": 32500.0,
+      "uniprot_canonical_mw_da": 15936.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 25.92,
+        "extended_clinical_hz": 56.12
+      },
+      "conditions": [
+        {
+          "id": "COND-006",
+          "cond_id": "COND-006",
+          "name": "Chlorosis Synthesis Deficiency",
+          "weight": 85.0,
+          "role": "Direct Imbalance (Symptom)"
+        },
+        {
+          "id": "COND-007",
+          "cond_id": "COND-007",
+          "name": "Photosynthetic Metabolic Stress",
+          "weight": 92.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P00441",
+      "gene_symbol": "SOD1",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P00441-F1",
+      "pdb_ids": [
+        "1PU0",
+        "2C9V",
+        "1SPD"
+      ],
+      "key_functional_residues": {
+        "cu_zn_active_site": {
+          "auth_asym_id": "A",
+          "residues": [
+            46,
+            48,
+            63,
+            71,
+            80,
+            83,
+            120
+          ],
+          "label": "Cu/Zn catalytic coordination sphere (His46, His48, His63, His71, His80, Asp83, His120)"
+        }
+      },
+      "cube_coords": {
+        "x": 19,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 31.7383,
+          "octave_shifts": -10,
+          "formula": "32500.0 * 2^(-10)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 31.125,
+          "octave_shifts": -9,
+          "formula": "15936.0 * 2^(-9)"
+        },
+        "delta_vi_vs_meyer_hz": 5.8183
+      },
+      "addr5d": {
+        "x": 19,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-GHDGDMIJIIRNUZMDEJLFU0OIRWG",
+        "structure_hash": "sha256:e1b459b0b220edeef05071a83ed7b94bac84f558adbfe461389bf0559581e2ae",
+        "nft_id": "NFT-PROT-P00441-SUB-020"
+      },
+      "local_cif_artifact": "1PU0.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "1PU0.cif",
+        "resolved_ca_residues": 153,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 13.98,
+        "mean_coordination_number": 9.63,
+        "mean_b_factor_or_plddt": 26.5,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 1.09725,
+          "lambda_2_hinge": 1.42905,
+          "lambda_3_torsion": 1.91524,
+          "lambda_cat_pocket": 7.86285,
+          "catalytic_mode_index": 14,
+          "catalytic_pocket_overlap": 0.0591
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.3596,
+          "nu_2_thz": 0.4104,
+          "nu_3_thz": 0.4751,
+          "nu_cat_thz": 0.9627
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 20.9335,
+          "f_lambda1_octave_shift": -34,
+          "f_lambda2_hz": 23.8898,
+          "f_lambda3_hz": 27.6567,
+          "f_lambda_cat_hz": 28.0188,
+          "f_lambda_cat_octave_shift": -35,
+          "f_3d_centroid_hz": 25.1247,
+          "f_3d_range_hz": [
+            20.9335,
+            28.0188
+          ],
+          "f_3d_bandwidth_hz": 7.0853
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-020",
+        "vi_name": "Superoxide Dismutase",
+        "uniprot_id": "P00441",
+        "cif_file": "1PU0.cif",
+        "n_ca": 153,
+        "vi_catalog_beta_hz": 25.92,
+        "nearest_3d_mode_hz": 27.6567,
+        "abs_delta_nearest_hz": 1.7367,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 31.767,
+          "7.0A": 18.2269,
+          "7.5A": 20.9335,
+          "8.0A": 23.2214,
+          "8.5A": 26.1489
+        },
+        "f_cat_by_rc": {
+          "6.5A": 21.324,
+          "7.0A": 24.8855,
+          "7.5A": 28.0188,
+          "8.0A": 31.1013,
+          "8.5A": 17.5091
+        },
+        "f_lambda1_mean_hz": 24.0595,
+        "f_lambda1_sd_hz": 5.2025,
+        "f_lambda1_cv_pct": 21.62,
+        "f_cat_mean_hz": 24.5677,
+        "f_cat_sd_hz": 5.3629,
+        "f_cat_cv_pct": 21.83,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.07,
+            "lambda_1": 0.6317,
+            "lambda_2": 0.85475,
+            "lambda_3": 1.13646,
+            "lambda_cat": 4.55428,
+            "f_lambda1_hz": 31.767,
+            "f_lambda2_hz": 18.476,
+            "f_lambda3_hz": 21.3043,
+            "f_lambda_cat_hz": 21.324,
+            "f_modes_sorted_hz": [
+              18.476,
+              21.3043,
+              21.324,
+              31.767
+            ],
+            "f_range_hz": [
+              18.476,
+              31.767
+            ],
+            "f_centroid_hz": 23.2178
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.44,
+            "lambda_1": 0.83186,
+            "lambda_2": 1.13544,
+            "lambda_3": 1.48717,
+            "lambda_cat": 6.20261,
+            "f_lambda1_hz": 18.2269,
+            "f_lambda2_hz": 21.2946,
+            "f_lambda3_hz": 24.3708,
+            "f_lambda_cat_hz": 24.8855,
+            "f_modes_sorted_hz": [
+              18.2269,
+              21.2946,
+              24.3708,
+              24.8855
+            ],
+            "f_range_hz": [
+              18.2269,
+              24.8855
+            ],
+            "f_centroid_hz": 22.1944
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 9.63,
+            "lambda_1": 1.09725,
+            "lambda_2": 1.42905,
+            "lambda_3": 1.91524,
+            "lambda_cat": 7.86285,
+            "f_lambda1_hz": 20.9335,
+            "f_lambda2_hz": 23.8898,
+            "f_lambda3_hz": 27.6567,
+            "f_lambda_cat_hz": 28.0188,
+            "f_modes_sorted_hz": [
+              20.9335,
+              23.8898,
+              27.6567,
+              28.0188
+            ],
+            "f_range_hz": [
+              20.9335,
+              28.0188
+            ],
+            "f_centroid_hz": 25.1247
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 10.82,
+            "lambda_1": 1.3502,
+            "lambda_2": 1.78814,
+            "lambda_3": 2.47914,
+            "lambda_cat": 9.68814,
+            "f_lambda1_hz": 23.2214,
+            "f_lambda2_hz": 26.7233,
+            "f_lambda3_hz": 31.4659,
+            "f_lambda_cat_hz": 31.1013,
+            "f_modes_sorted_hz": [
+              23.2214,
+              26.7233,
+              31.1013,
+              31.4659
+            ],
+            "f_range_hz": [
+              23.2214,
+              31.4659
+            ],
+            "f_centroid_hz": 28.128
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 12.38,
+            "lambda_1": 1.7121,
+            "lambda_2": 2.22276,
+            "lambda_3": 3.17473,
+            "lambda_cat": 12.28207,
+            "f_lambda1_hz": 26.1489,
+            "f_lambda2_hz": 29.7944,
+            "f_lambda3_hz": 17.8038,
+            "f_lambda_cat_hz": 17.5091,
+            "f_modes_sorted_hz": [
+              17.5091,
+              17.8038,
+              26.1489,
+              29.7944
+            ],
+            "f_range_hz": [
+              17.5091,
+              29.7944
+            ],
+            "f_centroid_hz": 22.8141
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-015",
+      "vi_alt_ids": [],
+      "vi_name": "Salmonella Surface Antigen Protein",
+      "biomolecular_canonical_name": "Flagellin / Phase-1 filament surface antigen FliC",
+      "category": "Microorganism Protein Antigen",
+      "vi_mw_da": 52000.0,
+      "uniprot_canonical_mw_da": 51612.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 25.1,
+        "extended_clinical_hz": 25.1
+      },
+      "conditions": [
+        {
+          "id": "PROF-005",
+          "cond_id": "COND-005",
+          "name": "Salmonella Enterica Colonization",
+          "weight": 120.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P06179",
+      "gene_symbol": "fliC",
+      "organism": "Salmonella typhimurium",
+      "alphafold_id": "AF-P06179-F1",
+      "pdb_ids": [
+        "1UCU",
+        "3A5X"
+      ],
+      "key_functional_residues": {
+        "tlr5_recognition_domain": {
+          "auth_asym_id": "A",
+          "start_auth_seq_id": 89,
+          "end_auth_seq_id": 100,
+          "label": "Conserved D1 domain TLR5 innate immune recognition epitope"
+        }
+      },
+      "cube_coords": {
+        "x": 20,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 25.3906,
+          "octave_shifts": -11,
+          "formula": "52000.0 * 2^(-11)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 25.2012,
+          "octave_shifts": -11,
+          "formula": "51612.0 * 2^(-11)"
+        },
+        "delta_vi_vs_meyer_hz": 0.2906
+      },
+      "addr5d": {
+        "x": 20,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-GPXGKGMSB0TWSLYZSNSQBKYAGAY",
+        "structure_hash": "sha256:381648b668202af28556bd9c1733a524f597fa06902726ee90c74aeea3655054",
+        "nft_id": "NFT-PROT-P06179-SUB-015"
+      },
+      "local_cif_artifact": "1UCU.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "1UCU.cif",
+        "resolved_ca_residues": 494,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 49.16,
+        "mean_coordination_number": 8.55,
+        "mean_b_factor_or_plddt": 10.0,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.0317,
+          "lambda_2_hinge": 0.08508,
+          "lambda_3_torsion": 0.2092,
+          "lambda_cat_pocket": 1.56427,
+          "catalytic_mode_index": 11,
+          "catalytic_pocket_overlap": 0.0741
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.0611,
+          "nu_2_thz": 0.1001,
+          "nu_3_thz": 0.157,
+          "nu_cat_thz": 0.4294
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 28.4665,
+          "f_lambda1_octave_shift": -31,
+          "f_lambda2_hz": 23.3163,
+          "f_lambda3_hz": 18.2812,
+          "f_lambda_cat_hz": 24.9945,
+          "f_lambda_cat_octave_shift": -34,
+          "f_3d_centroid_hz": 23.7646,
+          "f_3d_range_hz": [
+            18.2812,
+            28.4665
+          ],
+          "f_3d_bandwidth_hz": 10.1853
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-015",
+        "vi_name": "Salmonella Surface Antigen Protein",
+        "uniprot_id": "P06179",
+        "cif_file": "1UCU.cif",
+        "n_ca": 494,
+        "vi_catalog_beta_hz": 25.1,
+        "nearest_3d_mode_hz": 24.9945,
+        "abs_delta_nearest_hz": 0.1055,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 22.7707,
+          "7.0A": 25.7107,
+          "7.5A": 28.4665,
+          "8.0A": 31.2007,
+          "8.5A": 17.5898
+        },
+        "f_cat_by_rc": {
+          "6.5A": 19.6523,
+          "7.0A": 22.3394,
+          "7.5A": 24.9945,
+          "8.0A": 28.5484,
+          "8.5A": 31.8739
+        },
+        "f_lambda1_mean_hz": 25.1477,
+        "f_lambda1_sd_hz": 5.2617,
+        "f_lambda1_cv_pct": 20.92,
+        "f_cat_mean_hz": 25.4817,
+        "f_cat_sd_hz": 4.8569,
+        "f_cat_cv_pct": 19.06,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.91,
+            "lambda_1": 0.02029,
+            "lambda_2": 0.05266,
+            "lambda_3": 0.13281,
+            "lambda_cat": 0.96705,
+            "f_lambda1_hz": 22.7707,
+            "f_lambda2_hz": 18.3431,
+            "f_lambda3_hz": 29.1318,
+            "f_lambda_cat_hz": 19.6523,
+            "f_modes_sorted_hz": [
+              18.3431,
+              19.6523,
+              22.7707,
+              29.1318
+            ],
+            "f_range_hz": [
+              18.3431,
+              29.1318
+            ],
+            "f_centroid_hz": 22.4745
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.8,
+            "lambda_1": 0.02586,
+            "lambda_2": 0.06883,
+            "lambda_3": 0.17087,
+            "lambda_cat": 1.24959,
+            "f_lambda1_hz": 25.7107,
+            "f_lambda2_hz": 20.9718,
+            "f_lambda3_hz": 16.5214,
+            "f_lambda_cat_hz": 22.3394,
+            "f_modes_sorted_hz": [
+              16.5214,
+              20.9718,
+              22.3394,
+              25.7107
+            ],
+            "f_range_hz": [
+              16.5214,
+              25.7107
+            ],
+            "f_centroid_hz": 21.3858
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.55,
+            "lambda_1": 0.0317,
+            "lambda_2": 0.08508,
+            "lambda_3": 0.2092,
+            "lambda_cat": 1.56427,
+            "f_lambda1_hz": 28.4665,
+            "f_lambda2_hz": 23.3163,
+            "f_lambda3_hz": 18.2812,
+            "f_lambda_cat_hz": 24.9945,
+            "f_modes_sorted_hz": [
+              18.2812,
+              23.3163,
+              24.9945,
+              28.4665
+            ],
+            "f_range_hz": [
+              18.2812,
+              28.4665
+            ],
+            "f_centroid_hz": 23.7646
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.33,
+            "lambda_1": 0.03809,
+            "lambda_2": 0.10384,
+            "lambda_3": 0.2541,
+            "lambda_cat": 2.04073,
+            "f_lambda1_hz": 31.2007,
+            "f_lambda2_hz": 25.7588,
+            "f_lambda3_hz": 20.1476,
+            "f_lambda_cat_hz": 28.5484,
+            "f_modes_sorted_hz": [
+              20.1476,
+              25.7588,
+              28.5484,
+              31.2007
+            ],
+            "f_range_hz": [
+              20.1476,
+              31.2007
+            ],
+            "f_centroid_hz": 26.4139
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.66,
+            "lambda_1": 0.04842,
+            "lambda_2": 0.13282,
+            "lambda_3": 0.32179,
+            "lambda_cat": 2.54385,
+            "f_lambda1_hz": 17.5898,
+            "f_lambda2_hz": 29.1327,
+            "f_lambda3_hz": 22.673,
+            "f_lambda_cat_hz": 31.8739,
+            "f_modes_sorted_hz": [
+              17.5898,
+              22.673,
+              29.1327,
+              31.8739
+            ],
+            "f_range_hz": [
+              17.5898,
+              31.8739
+            ],
+            "f_centroid_hz": 25.3173
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-017",
+      "vi_alt_ids": [
+        "DEMO-007"
+      ],
+      "vi_name": "Candida Albicans Mannoprotein",
+      "vi_alt_names": [
+        "Candida Albicans Glycoprotein"
+      ],
+      "biomolecular_canonical_name": "Cell wall mannoprotein 65 kDa (MP65)",
+      "category": "Microorganism Glycoprotein",
+      "vi_mw_da": 65000.0,
+      "uniprot_canonical_mw_da": 40274.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 25.45,
+        "extended_clinical_hz": 38.45,
+        "demo_client_hz": 25.06
+      },
+      "conditions": [
+        {
+          "id": "PROF-005",
+          "cond_id": "COND-005",
+          "name": "Enteric Pathogen & Microbial Overgrowth",
+          "weight": 80.0,
+          "role": "Direct Imbalance (Symptom)"
+        }
+      ],
+      "uniprot_id": "Q59XX2",
+      "gene_symbol": "MP65",
+      "organism": "Candida albicans",
+      "alphafold_id": "AF-Q59XX2-F1",
+      "pdb_ids": [
+        "5MHT"
+      ],
+      "key_functional_residues": {
+        "gh17_glucanase_domain": {
+          "auth_asym_id": "A",
+          "start_auth_seq_id": 120,
+          "end_auth_seq_id": 350,
+          "label": "GH17 family beta-glucanase / adhesin catalytic domain"
+        }
+      },
+      "cube_coords": {
+        "x": 21,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 31.7383,
+          "octave_shifts": -11,
+          "formula": "65000.0 * 2^(-11)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 19.665,
+          "octave_shifts": -11,
+          "formula": "40274.0 * 2^(-11)"
+        },
+        "delta_vi_vs_meyer_hz": 6.2883
+      },
+      "addr5d": {
+        "x": 21,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-GYQGRASCUIOUQNVRUTHFXGSMAXH",
+        "structure_hash": "sha256:2638c42ced652936262a91541852a3ad5ad1417789069f5c9dc7b4237ad875e5",
+        "nft_id": "NFT-PROT-Q59XX2-SUB-017"
+      },
+      "local_cif_artifact": "5MHT.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "5MHT.cif",
+        "resolved_ca_residues": 327,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 20.54,
+        "mean_coordination_number": 8.42,
+        "mean_b_factor_or_plddt": 11.58,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.30725,
+          "lambda_2_hinge": 0.71983,
+          "lambda_3_torsion": 0.84124,
+          "lambda_cat_pocket": 1.45262,
+          "catalytic_mode_index": 6,
+          "catalytic_pocket_overlap": 0.9896
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.1903,
+          "nu_2_thz": 0.2913,
+          "nu_3_thz": 0.3149,
+          "nu_cat_thz": 0.4138
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 22.1547,
+          "f_lambda1_octave_shift": -33,
+          "f_lambda2_hz": 16.9552,
+          "f_lambda3_hz": 18.3295,
+          "f_lambda_cat_hz": 24.086,
+          "f_lambda_cat_octave_shift": -34,
+          "f_3d_centroid_hz": 20.3813,
+          "f_3d_range_hz": [
+            16.9552,
+            24.086
+          ],
+          "f_3d_bandwidth_hz": 7.1308
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-017",
+        "vi_name": "Candida Albicans Mannoprotein",
+        "uniprot_id": "Q59XX2",
+        "cif_file": "5MHT.cif",
+        "n_ca": 327,
+        "vi_catalog_beta_hz": 25.45,
+        "nearest_3d_mode_hz": 24.086,
+        "abs_delta_nearest_hz": 1.364,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 16.682,
+          "7.0A": 19.6501,
+          "7.5A": 22.1547,
+          "8.0A": 24.8855,
+          "8.5A": 27.3439
+        },
+        "f_cat_by_rc": {
+          "6.5A": 18.5802,
+          "7.0A": 21.7405,
+          "7.5A": 24.086,
+          "8.0A": 19.8058,
+          "8.5A": 21.5887
+        },
+        "f_lambda1_mean_hz": 22.1432,
+        "f_lambda1_sd_hz": 4.2014,
+        "f_lambda1_cv_pct": 18.97,
+        "f_cat_mean_hz": 21.1602,
+        "f_cat_sd_hz": 2.0959,
+        "f_cat_cv_pct": 9.9,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.17,
+            "lambda_1": 0.1742,
+            "lambda_2": 0.44862,
+            "lambda_3": 0.50383,
+            "lambda_cat": 0.86441,
+            "f_lambda1_hz": 16.682,
+            "f_lambda2_hz": 26.7707,
+            "f_lambda3_hz": 28.3702,
+            "f_lambda_cat_hz": 18.5802,
+            "f_modes_sorted_hz": [
+              16.682,
+              18.5802,
+              26.7707,
+              28.3702
+            ],
+            "f_range_hz": [
+              16.682,
+              28.3702
+            ],
+            "f_centroid_hz": 22.6008
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.5,
+            "lambda_1": 0.24171,
+            "lambda_2": 0.58199,
+            "lambda_3": 0.6907,
+            "lambda_cat": 1.18348,
+            "f_lambda1_hz": 19.6501,
+            "f_lambda2_hz": 30.4913,
+            "f_lambda3_hz": 16.6086,
+            "f_lambda_cat_hz": 21.7405,
+            "f_modes_sorted_hz": [
+              16.6086,
+              19.6501,
+              21.7405,
+              30.4913
+            ],
+            "f_range_hz": [
+              16.6086,
+              30.4913
+            ],
+            "f_centroid_hz": 22.1226
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.42,
+            "lambda_1": 0.30725,
+            "lambda_2": 0.71983,
+            "lambda_3": 0.84124,
+            "lambda_cat": 1.45262,
+            "f_lambda1_hz": 22.1547,
+            "f_lambda2_hz": 16.9552,
+            "f_lambda3_hz": 18.3295,
+            "f_lambda_cat_hz": 24.086,
+            "f_modes_sorted_hz": [
+              16.9552,
+              18.3295,
+              22.1547,
+              24.086
+            ],
+            "f_range_hz": [
+              16.9552,
+              24.086
+            ],
+            "f_centroid_hz": 20.3813
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.36,
+            "lambda_1": 0.38766,
+            "lambda_2": 0.87954,
+            "lambda_3": 1.05497,
+            "lambda_cat": 3.92887,
+            "f_lambda1_hz": 24.8855,
+            "f_lambda2_hz": 18.7421,
+            "f_lambda3_hz": 20.5263,
+            "f_lambda_cat_hz": 19.8058,
+            "f_modes_sorted_hz": [
+              18.7421,
+              19.8058,
+              20.5263,
+              24.8855
+            ],
+            "f_range_hz": [
+              18.7421,
+              24.8855
+            ],
+            "f_centroid_hz": 20.9899
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.29,
+            "lambda_1": 0.46804,
+            "lambda_2": 1.07026,
+            "lambda_3": 1.29185,
+            "lambda_cat": 4.66804,
+            "f_lambda1_hz": 27.3439,
+            "f_lambda2_hz": 20.6745,
+            "f_lambda3_hz": 22.714,
+            "f_lambda_cat_hz": 21.5887,
+            "f_modes_sorted_hz": [
+              20.6745,
+              21.5887,
+              22.714,
+              27.3439
+            ],
+            "f_range_hz": [
+              20.6745,
+              27.3439
+            ],
+            "f_centroid_hz": 23.0803
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "DEMO-010",
+      "vi_alt_ids": [],
+      "vi_name": "Helicobacter Pylori Urease",
+      "biomolecular_canonical_name": "Urease subunit beta (UreB)",
+      "category": "Microorganism Enzyme (Protein)",
+      "vi_mw_da": 61684.0,
+      "uniprot_canonical_mw_da": 61684.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 24.27,
+        "demo_client_hz": 24.27
+      },
+      "conditions": [
+        {
+          "id": "PROF-005",
+          "cond_id": "COND-005",
+          "name": "Enteric Pathogen & Microbial Overgrowth",
+          "weight": 85.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P69996",
+      "gene_symbol": "ureB",
+      "organism": "Helicobacter pylori",
+      "alphafold_id": "AF-P69996-F1",
+      "pdb_ids": [
+        "1E9Z",
+        "1E9Y"
+      ],
+      "key_functional_residues": {
+        "nickel_metallocenter": {
+          "auth_asym_id": "B",
+          "residues": [
+            136,
+            138,
+            221,
+            248,
+            274,
+            362
+          ],
+          "label": "Bi-nickel active site (His136, His138, Kcx219, His248, His274, Asp362)"
+        }
+      },
+      "cube_coords": {
+        "x": 22,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 30.1191,
+          "octave_shifts": -11,
+          "formula": "61684.0 * 2^(-11)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 30.1191,
+          "octave_shifts": -11,
+          "formula": "61684.0 * 2^(-11)"
+        },
+        "delta_vi_vs_meyer_hz": 5.8491
+      },
+      "addr5d": {
+        "x": 22,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-HGJGXVY0CGIRD0UMIJVYQWQZOWG",
+        "structure_hash": "sha256:d870552488ab77cf1c708e434e45c68a909df7ad3f62d3581590ee9818abf848",
+        "nft_id": "NFT-PROT-P69996-DEMO-010"
+      },
+      "local_cif_artifact": "1E9Z.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "1E9Z.cif",
+        "resolved_ca_residues": 568,
+        "chain_analyzed": "B",
+        "radius_of_gyration_angstrom": 23.65,
+        "mean_coordination_number": 9.68,
+        "mean_b_factor_or_plddt": 17.34,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.29357,
+          "lambda_2_hinge": 0.50612,
+          "lambda_3_torsion": 0.70331,
+          "lambda_cat_pocket": 1.96331,
+          "catalytic_mode_index": 10,
+          "catalytic_pocket_overlap": 0.0185
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.186,
+          "nu_2_thz": 0.2443,
+          "nu_3_thz": 0.2879,
+          "nu_cat_thz": 0.4811
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 21.6559,
+          "f_lambda1_octave_shift": -33,
+          "f_lambda2_hz": 28.4345,
+          "f_lambda3_hz": 16.7596,
+          "f_lambda_cat_hz": 28.0016,
+          "f_lambda_cat_octave_shift": -34,
+          "f_3d_centroid_hz": 23.7129,
+          "f_3d_range_hz": [
+            16.7596,
+            28.4345
+          ],
+          "f_3d_bandwidth_hz": 11.6749
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "DEMO-010",
+        "vi_name": "Helicobacter Pylori Urease",
+        "uniprot_id": "P69996",
+        "cif_file": "1E9Z.cif",
+        "n_ca": 568,
+        "vi_catalog_beta_hz": 24.27,
+        "nearest_3d_mode_hz": 21.6559,
+        "abs_delta_nearest_hz": 2.6141,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 16.8822,
+          "7.0A": 19.2822,
+          "7.5A": 21.6559,
+          "8.0A": 24.4275,
+          "8.5A": 27.6113
+        },
+        "f_cat_by_rc": {
+          "6.5A": 21.7078,
+          "7.0A": 25.0469,
+          "7.5A": 28.0016,
+          "8.0A": 31.4418,
+          "8.5A": 18.1783
+        },
+        "f_lambda1_mean_hz": 21.9718,
+        "f_lambda1_sd_hz": 4.2152,
+        "f_lambda1_cv_pct": 19.18,
+        "f_cat_mean_hz": 24.8753,
+        "f_cat_sd_hz": 5.1915,
+        "f_cat_cv_pct": 20.87,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.12,
+            "lambda_1": 0.17841,
+            "lambda_2": 0.30991,
+            "lambda_3": 0.42022,
+            "lambda_cat": 1.17993,
+            "f_lambda1_hz": 16.8822,
+            "f_lambda2_hz": 22.2502,
+            "f_lambda3_hz": 25.9095,
+            "f_lambda_cat_hz": 21.7078,
+            "f_modes_sorted_hz": [
+              16.8822,
+              21.7078,
+              22.2502,
+              25.9095
+            ],
+            "f_range_hz": [
+              16.8822,
+              25.9095
+            ],
+            "f_centroid_hz": 21.6874
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.57,
+            "lambda_1": 0.23274,
+            "lambda_2": 0.41045,
+            "lambda_3": 0.5609,
+            "lambda_cat": 1.57084,
+            "f_lambda1_hz": 19.2822,
+            "f_lambda2_hz": 25.6065,
+            "f_lambda3_hz": 29.9337,
+            "f_lambda_cat_hz": 25.0469,
+            "f_modes_sorted_hz": [
+              19.2822,
+              25.0469,
+              25.6065,
+              29.9337
+            ],
+            "f_range_hz": [
+              19.2822,
+              29.9337
+            ],
+            "f_centroid_hz": 24.9673
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 9.68,
+            "lambda_1": 0.29357,
+            "lambda_2": 0.50612,
+            "lambda_3": 0.70331,
+            "lambda_cat": 1.96331,
+            "f_lambda1_hz": 21.6559,
+            "f_lambda2_hz": 28.4345,
+            "f_lambda3_hz": 16.7596,
+            "f_lambda_cat_hz": 28.0016,
+            "f_modes_sorted_hz": [
+              16.7596,
+              21.6559,
+              28.0016,
+              28.4345
+            ],
+            "f_range_hz": [
+              16.7596,
+              28.4345
+            ],
+            "f_centroid_hz": 23.7129
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 10.96,
+            "lambda_1": 0.37352,
+            "lambda_2": 0.61462,
+            "lambda_3": 0.88059,
+            "lambda_cat": 2.47535,
+            "f_lambda1_hz": 24.4275,
+            "f_lambda2_hz": 31.3344,
+            "f_lambda3_hz": 18.7532,
+            "f_lambda_cat_hz": 31.4418,
+            "f_modes_sorted_hz": [
+              18.7532,
+              24.4275,
+              31.3344,
+              31.4418
+            ],
+            "f_range_hz": [
+              18.7532,
+              31.4418
+            ],
+            "f_centroid_hz": 26.4892
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 13.02,
+            "lambda_1": 0.47724,
+            "lambda_2": 0.77846,
+            "lambda_3": 1.12621,
+            "lambda_cat": 3.30969,
+            "f_lambda1_hz": 27.6113,
+            "f_lambda2_hz": 17.6322,
+            "f_lambda3_hz": 21.208,
+            "f_lambda_cat_hz": 18.1783,
+            "f_modes_sorted_hz": [
+              17.6322,
+              18.1783,
+              21.208,
+              27.6113
+            ],
+            "f_range_hz": [
+              17.6322,
+              27.6113
+            ],
+            "f_centroid_hz": 21.1575
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-018",
+      "vi_alt_ids": [],
+      "vi_name": "Chlorophyll Synthesis Enzyme",
+      "biomolecular_canonical_name": "Protochlorophyllide reductase, chloroplastic (PORA) / Chlorophyll a (893.5 Da)",
+      "category": "Plant Biochemical / Enzyme",
+      "vi_mw_da": 893.5,
+      "uniprot_canonical_mw_da": 43123.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 25.8,
+        "extended_clinical_hz": 55.8
+      },
+      "conditions": [
+        {
+          "id": "COND-006",
+          "cond_id": "COND-006",
+          "name": "Chlorosis Synthesis Deficiency",
+          "weight": 95.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        },
+        {
+          "id": "COND-007",
+          "cond_id": "COND-007",
+          "name": "Photosynthetic Metabolic Stress",
+          "weight": 90.0,
+          "role": "Direct Imbalance (Symptom)"
+        }
+      ],
+      "uniprot_id": "Q42536",
+      "gene_symbol": "PORA",
+      "organism": "Arabidopsis thaliana",
+      "alphafold_id": "AF-Q42536-F1",
+      "pdb_ids": [
+        "6R48"
+      ],
+      "key_functional_residues": {
+        "nadph_pchlide_site": {
+          "auth_asym_id": "A",
+          "residues": [
+            193,
+            275,
+            279
+          ],
+          "label": "SDR catalytic triad (Ser193, Tyr275, Lys279)"
+        }
+      },
+      "cube_coords": {
+        "x": 23,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 27.9219,
+          "octave_shifts": -5,
+          "formula": "893.5 * 2^(-5)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 21.0562,
+          "octave_shifts": -11,
+          "formula": "43123.0 * 2^(-11)"
+        },
+        "delta_vi_vs_meyer_hz": 2.1219
+      },
+      "addr5d": {
+        "x": 23,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-HPCHDQDMMYYMJJXJGNSGDC0GFGD",
+        "structure_hash": "sha256:cf48d7b89b666fabc26a568b590bf5c33f8bba5076a531f9a8a5baa75b4ee8b0",
+        "nft_id": "NFT-PROT-Q42536-SUB-018"
+      },
+      "local_cif_artifact": "6R48.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "6R48.cif",
+        "resolved_ca_residues": 294,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 18.02,
+        "mean_coordination_number": 8.91,
+        "mean_b_factor_or_plddt": 22.03,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.49162,
+          "lambda_2_hinge": 0.66295,
+          "lambda_3_torsion": 1.11717,
+          "lambda_cat_pocket": 2.30457,
+          "catalytic_mode_index": 8,
+          "catalytic_pocket_overlap": 0.0215
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.2407,
+          "nu_2_thz": 0.2795,
+          "nu_3_thz": 0.3629,
+          "nu_cat_thz": 0.5212
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 28.0242,
+          "f_lambda1_octave_shift": -33,
+          "f_lambda2_hz": 16.2716,
+          "f_lambda3_hz": 21.1226,
+          "f_lambda_cat_hz": 30.3378,
+          "f_lambda_cat_octave_shift": -34,
+          "f_3d_centroid_hz": 23.9391,
+          "f_3d_range_hz": [
+            16.2716,
+            30.3378
+          ],
+          "f_3d_bandwidth_hz": 14.0662
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-018",
+        "vi_name": "Chlorophyll Synthesis Enzyme",
+        "uniprot_id": "Q42536",
+        "cif_file": "6R48.cif",
+        "n_ca": 294,
+        "vi_catalog_beta_hz": 25.8,
+        "nearest_3d_mode_hz": 28.0242,
+        "abs_delta_nearest_hz": 2.2242,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 22.1934,
+          "7.0A": 25.1122,
+          "7.5A": 28.0242,
+          "8.0A": 30.9826,
+          "8.5A": 17.2205
+        },
+        "f_cat_by_rc": {
+          "6.5A": 16.9398,
+          "7.0A": 18.9224,
+          "7.5A": 30.3378,
+          "8.0A": 23.5928,
+          "8.5A": 26.8099
+        },
+        "f_lambda1_mean_hz": 24.7066,
+        "f_lambda1_sd_hz": 5.3131,
+        "f_lambda1_cv_pct": 21.5,
+        "f_cat_mean_hz": 23.3205,
+        "f_cat_sd_hz": 5.5125,
+        "f_cat_cv_pct": 23.64,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.13,
+            "lambda_1": 0.30832,
+            "lambda_2": 0.40489,
+            "lambda_3": 0.71852,
+            "lambda_cat": 0.71852,
+            "f_lambda1_hz": 22.1934,
+            "f_lambda2_hz": 25.4325,
+            "f_lambda3_hz": 16.9398,
+            "f_lambda_cat_hz": 16.9398,
+            "f_modes_sorted_hz": [
+              16.9398,
+              16.9398,
+              22.1934,
+              25.4325
+            ],
+            "f_range_hz": [
+              16.9398,
+              25.4325
+            ],
+            "f_centroid_hz": 20.3764
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.07,
+            "lambda_1": 0.39476,
+            "lambda_2": 0.53197,
+            "lambda_3": 0.89655,
+            "lambda_cat": 0.89655,
+            "f_lambda1_hz": 25.1122,
+            "f_lambda2_hz": 29.1515,
+            "f_lambda3_hz": 18.9224,
+            "f_lambda_cat_hz": 18.9224,
+            "f_modes_sorted_hz": [
+              18.9224,
+              18.9224,
+              25.1122,
+              29.1515
+            ],
+            "f_range_hz": [
+              18.9224,
+              29.1515
+            ],
+            "f_centroid_hz": 23.0271
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.91,
+            "lambda_1": 0.49162,
+            "lambda_2": 0.66295,
+            "lambda_3": 1.11717,
+            "lambda_cat": 2.30457,
+            "f_lambda1_hz": 28.0242,
+            "f_lambda2_hz": 16.2716,
+            "f_lambda3_hz": 21.1226,
+            "f_lambda_cat_hz": 30.3378,
+            "f_modes_sorted_hz": [
+              16.2716,
+              21.1226,
+              28.0242,
+              30.3378
+            ],
+            "f_range_hz": [
+              16.2716,
+              30.3378
+            ],
+            "f_centroid_hz": 23.9391
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 10.0,
+            "lambda_1": 0.60089,
+            "lambda_2": 0.83046,
+            "lambda_3": 1.39373,
+            "lambda_cat": 1.39373,
+            "f_lambda1_hz": 30.9826,
+            "f_lambda2_hz": 18.2116,
+            "f_lambda3_hz": 23.5928,
+            "f_lambda_cat_hz": 23.5928,
+            "f_modes_sorted_hz": [
+              18.2116,
+              23.5928,
+              23.5928,
+              30.9826
+            ],
+            "f_range_hz": [
+              18.2116,
+              30.9826
+            ],
+            "f_centroid_hz": 24.095
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 11.59,
+            "lambda_1": 0.74253,
+            "lambda_2": 1.08258,
+            "lambda_3": 1.79975,
+            "lambda_cat": 1.79975,
+            "f_lambda1_hz": 17.2205,
+            "f_lambda2_hz": 20.7931,
+            "f_lambda3_hz": 26.8099,
+            "f_lambda_cat_hz": 26.8099,
+            "f_modes_sorted_hz": [
+              17.2205,
+              20.7931,
+              26.8099,
+              26.8099
+            ],
+            "f_range_hz": [
+              17.2205,
+              26.8099
+            ],
+            "f_centroid_hz": 22.9083
+          }
+        }
+      }
+    },
+    {
+      "vi_id": "SUB-006",
+      "vi_alt_ids": [],
+      "vi_name": "L-Tyrosine",
+      "biomolecular_canonical_name": "L-Tyrosine -> Tyrosine 3-monooxygenase (TH)",
+      "category": "Amino Acid (Protein Monomer & Catecholamine Precursor)",
+      "vi_mw_da": 181.19,
+      "uniprot_canonical_mw_da": 55533.0,
+      "frequencies_hz": {
+        "beta_octave_hz": 24.32,
+        "extended_clinical_hz": 24.32
+      },
+      "conditions": [
+        {
+          "id": "PROF-001",
+          "cond_id": "COND-001",
+          "name": "Parkinson's Disease Complex",
+          "weight": 82.0,
+          "role": "Etiologic Trigger (Root Cause)"
+        }
+      ],
+      "uniprot_id": "P07101",
+      "gene_symbol": "TH",
+      "organism": "Homo sapiens",
+      "alphafold_id": "AF-P07101-F1",
+      "pdb_ids": [
+        "2XSN",
+        "1TOH"
+      ],
+      "chembl_id": "CHEMBL925",
+      "pubchem_cid": 6057,
+      "key_functional_residues": {
+        "fe_biopterin_pocket": {
+          "auth_asym_id": "A",
+          "residues": [
+            331,
+            336,
+            376
+          ],
+          "label": "Non-heme Fe(II) catalytic binding triad (His331, His336, Glu376)"
+        }
+      },
+      "cube_coords": {
+        "x": 24,
+        "y": 22,
+        "face": 2
+      },
+      "meyer_octave_folding": {
+        "vi_mw_folded": {
+          "folded_hz": 22.6487,
+          "octave_shifts": -3,
+          "formula": "181.19 * 2^(-3)"
+        },
+        "uniprot_mw_folded": {
+          "folded_hz": 27.1157,
+          "octave_shifts": -11,
+          "formula": "55533.0 * 2^(-11)"
+        },
+        "delta_vi_vs_meyer_hz": 1.6713
+      },
+      "addr5d": {
+        "x": 24,
+        "y": 22,
+        "face": 2,
+        "saevcode": "SAEV-HXWHKKHSRROABNDKIVOSWUHQSMT",
+        "structure_hash": "sha256:188678e83a6f8fbfb93371bcc0839ab15021e493a73a823d0b7855a31f1d5776",
+        "nft_id": "NFT-PROT-P07101-SUB-006"
+      },
+      "local_cif_artifact": "2XSN.cif",
+      "gnm_3d_normal_modes": {
+        "cif_file": "2XSN.cif",
+        "resolved_ca_residues": 335,
+        "chain_analyzed": "A",
+        "radius_of_gyration_angstrom": 20.19,
+        "mean_coordination_number": 8.62,
+        "mean_b_factor_or_plddt": 45.46,
+        "cutoff_rc_angstrom": 7.5,
+        "eigenvalues": {
+          "lambda_1_breathing": 0.17465,
+          "lambda_2_hinge": 0.58746,
+          "lambda_3_torsion": 0.71551,
+          "lambda_cat_pocket": 2.9913,
+          "catalytic_mode_index": 14,
+          "catalytic_pocket_overlap": 0.0132
+        },
+        "physical_thz_modes": {
+          "nu_1_thz": 0.1435,
+          "nu_2_thz": 0.2631,
+          "nu_3_thz": 0.2904,
+          "nu_cat_thz": 0.5938
+        },
+        "octave_folded_vocal_hz": {
+          "f_lambda1_hz": 16.7032,
+          "f_lambda1_octave_shift": -33,
+          "f_lambda2_hz": 30.6344,
+          "f_lambda3_hz": 16.9043,
+          "f_lambda_cat_hz": 17.2818,
+          "f_lambda_cat_octave_shift": -35,
+          "f_3d_centroid_hz": 20.3809,
+          "f_3d_range_hz": [
+            16.7032,
+            30.6344
+          ],
+          "f_3d_bandwidth_hz": 13.9312
+        }
+      },
+      "reviewer2_sensitivity": {
+        "vi_id": "SUB-006",
+        "vi_name": "L-Tyrosine",
+        "uniprot_id": "P07101",
+        "cif_file": "2XSN.cif",
+        "n_ca": 335,
+        "vi_catalog_beta_hz": 24.32,
+        "nearest_3d_mode_hz": 30.6344,
+        "abs_delta_nearest_hz": 6.3144,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 27.064,
+          "7.0A": 30.0832,
+          "7.5A": 16.7032,
+          "8.0A": 18.4961,
+          "8.5A": 20.8482
+        },
+        "f_cat_by_rc": {
+          "6.5A": 27.0027,
+          "7.0A": 30.7926,
+          "7.5A": 17.2818,
+          "8.0A": 19.5162,
+          "8.5A": 20.9951
+        },
+        "f_lambda1_mean_hz": 22.6389,
+        "f_lambda1_sd_hz": 5.714,
+        "f_lambda1_cv_pct": 25.24,
+        "f_cat_mean_hz": 23.1177,
+        "f_cat_sd_hz": 5.602,
+        "f_cat_cv_pct": 24.23,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.8,
+            "lambda_1": 0.11463,
+            "lambda_2": 0.35992,
+            "lambda_3": 0.45643,
+            "lambda_cat": 0.45643,
+            "f_lambda1_hz": 27.064,
+            "f_lambda2_hz": 23.9786,
+            "f_lambda3_hz": 27.0027,
+            "f_lambda_cat_hz": 27.0027,
+            "f_modes_sorted_hz": [
+              23.9786,
+              27.0027,
+              27.0027,
+              27.064
+            ],
+            "f_range_hz": [
+              23.9786,
+              27.064
+            ],
+            "f_centroid_hz": 26.262
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.77,
+            "lambda_1": 0.14163,
+            "lambda_2": 0.46605,
+            "lambda_3": 0.57896,
+            "lambda_cat": 2.37419,
+            "f_lambda1_hz": 30.0832,
+            "f_lambda2_hz": 27.2858,
+            "f_lambda3_hz": 30.4119,
+            "f_lambda_cat_hz": 30.7926,
+            "f_modes_sorted_hz": [
+              27.2858,
+              30.0832,
+              30.4119,
+              30.7926
+            ],
+            "f_range_hz": [
+              27.2858,
+              30.7926
+            ],
+            "f_centroid_hz": 29.6434
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.62,
+            "lambda_1": 0.17465,
+            "lambda_2": 0.58746,
+            "lambda_3": 0.71551,
+            "lambda_cat": 2.9913,
+            "f_lambda1_hz": 16.7032,
+            "f_lambda2_hz": 30.6344,
+            "f_lambda3_hz": 16.9043,
+            "f_lambda_cat_hz": 17.2818,
+            "f_modes_sorted_hz": [
+              16.7032,
+              16.9043,
+              17.2818,
+              30.6344
+            ],
+            "f_range_hz": [
+              16.7032,
+              30.6344
+            ],
+            "f_centroid_hz": 20.3809
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.56,
+            "lambda_1": 0.21415,
+            "lambda_2": 0.73159,
+            "lambda_3": 0.88911,
+            "lambda_cat": 3.8148,
+            "f_lambda1_hz": 18.4961,
+            "f_lambda2_hz": 17.0931,
+            "f_lambda3_hz": 18.8437,
+            "f_lambda_cat_hz": 19.5162,
+            "f_modes_sorted_hz": [
+              17.0931,
+              18.4961,
+              18.8437,
+              19.5162
+            ],
+            "f_range_hz": [
+              17.0931,
+              19.5162
+            ],
+            "f_centroid_hz": 18.4873
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.85,
+            "lambda_1": 0.27208,
+            "lambda_2": 0.908,
+            "lambda_3": 1.10372,
+            "lambda_cat": 1.10372,
+            "f_lambda1_hz": 20.8482,
+            "f_lambda2_hz": 19.0428,
+            "f_lambda3_hz": 20.9951,
+            "f_lambda_cat_hz": 20.9951,
+            "f_modes_sorted_hz": [
+              19.0428,
+              20.8482,
+              20.9951,
+              20.9951
+            ],
+            "f_range_hz": [
+              19.0428,
+              20.9951
+            ],
+            "f_centroid_hz": 20.4703
+          }
+        }
+      }
+    }
+  ],
+  "atfh_claim_clusters": [
+    {
+      "claim_id": "sha256_2bd37941ebcdbfa7def51be2861eb263c533872f0bd15544a49b18c6c2b9c633",
+      "subject_entity_id": "urn:vi:substance:SUB-007",
+      "subject_name": "Acetylcholine Synthetase",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P28329-F1",
+      "object_uniprot_id": "P28329",
+      "object_pdb_ids": [
+        "2FY2",
+        "2FY3",
+        "2FY4"
+      ],
+      "addr5d_saevcode": "SAEV-ERLEXOGITRSWACAADNLZDMIPDZI",
+      "nft_id": "NFT-PROT-P28329-SUB-007",
+      "evidence_cloud": [
+        "sha256:3c6e656c5d188a08c74f1f9740d4688a14d91c0a6601c97f8a942c84bd74b5ee",
+        "https://alphafold.ebi.ac.uk/files/AF-P28329-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P28329.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_1d1a7fdb2843ce79faea0d630f529b00",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_6da66767680d595c1042645ce4dcccf2",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_5c6b356096ae22f80aeba064d7b2f72b38d4d2103796e9e8ea96d1d3ff79fb4a",
+      "subject_entity_id": "urn:vi:substance:SUB-008",
+      "subject_name": "Tau Protein Isoform 1",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P10636-F1",
+      "object_uniprot_id": "P10636",
+      "object_pdb_ids": [
+        "5O3L",
+        "5O3O",
+        "6HRE"
+      ],
+      "addr5d_saevcode": "SAEV-E0EFDIL0WWD0RGTUCTHXVW0XINP",
+      "nft_id": "NFT-PROT-P10636-SUB-008",
+      "evidence_cloud": [
+        "sha256:4b3a913f0f68f5b21a55827779f0d6481f7473a2e2a484c8f5b07b7050f8da3d",
+        "https://alphafold.ebi.ac.uk/files/AF-P10636-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P10636.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_12f2544df2a84215e0479ac649e78fcd",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_aee7181335e3dbdd1374723f2307859c",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_659c8b6bfeda5c23c666271395f752b07643bd5e8c50b7524ed6215217967ab9",
+      "subject_entity_id": "urn:vi:substance:SUB-009",
+      "subject_name": "Beta-Amyloid Peptide 42",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P05067-F1",
+      "object_uniprot_id": "P05067",
+      "object_pdb_ids": [
+        "1IYT",
+        "2BEG",
+        "5OQV"
+      ],
+      "addr5d_saevcode": "SAEV-FHYFKCSLFWFPMBBESUXCQAVXBQK",
+      "nft_id": "NFT-PROT-P05067-SUB-009",
+      "evidence_cloud": [
+        "sha256:c0c5cc204106b02cfb2bcf81cc004513941c13cec0c9246fe0113ed7d9b40ec1",
+        "https://alphafold.ebi.ac.uk/files/AF-P05067-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P05067.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_dec28400c62b605236b5545ebfeec8e8",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_79be30fec238c1f4cb624afdf9b60c50",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_da2b632eb2fc15caae7ba3b7928d3804a3374deefa54cf1b2ac3c1537608ba4f",
+      "subject_entity_id": "urn:vi:substance:DEMO-020",
+      "subject_name": "Alpha-Synuclein Monomer",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P37840-F1",
+      "object_uniprot_id": "P37840",
+      "object_pdb_ids": [
+        "1XQ8",
+        "2N0A",
+        "6A6B"
+      ],
+      "addr5d_saevcode": "SAEV-FQRFQXYHCHTAQJEBJXHTQQBKGZW",
+      "nft_id": "NFT-PROT-P37840-DEMO-020",
+      "evidence_cloud": [
+        "sha256:e7ad25d36e633deb8eed864feea83f4260cf66a35b932fc41defb346cff44090",
+        "https://alphafold.ebi.ac.uk/files/AF-P37840-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P37840.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_aaf9e18d323f1d149baed3c7f9bca28b",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_d498382963a936744fe145971e63a05d",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_b69a8f0eb11768ca06adb24406c6001802f258089442c1cc630912da764c67c8",
+      "subject_entity_id": "urn:vi:substance:SUB-019",
+      "subject_name": "Glutathione Peroxidase",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P07203-F1",
+      "object_uniprot_id": "P07203",
+      "object_pdb_ids": [
+        "2F8A"
+      ],
+      "addr5d_saevcode": "SAEV-FZKFXSBNPEA0EDIOACEV0KUFVDY",
+      "nft_id": "NFT-PROT-P07203-SUB-019",
+      "evidence_cloud": [
+        "sha256:327234663f49ccbd3743b6380e8a4d3000564adc7e8d4a600c9018016f45c14c",
+        "https://alphafold.ebi.ac.uk/files/AF-P07203-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P07203.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_8af06b2d4df4812486d1a9fb9115749d",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_c634be7d224f261f4f6d30980226c3c6",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_f3253896f95175876835ee87a26e4cea0bfea0e851d6a22bde0730a63177edf0",
+      "subject_entity_id": "urn:vi:substance:SUB-020",
+      "subject_name": "Superoxide Dismutase",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P00441-F1",
+      "object_uniprot_id": "P00441",
+      "object_pdb_ids": [
+        "1PU0",
+        "2C9V",
+        "1SPD"
+      ],
+      "addr5d_saevcode": "SAEV-GHDGDMIJIIRNUZMDEJLFU0OIRWG",
+      "nft_id": "NFT-PROT-P00441-SUB-020",
+      "evidence_cloud": [
+        "sha256:e1b459b0b220edeef05071a83ed7b94bac84f558adbfe461389bf0559581e2ae",
+        "https://alphafold.ebi.ac.uk/files/AF-P00441-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P00441.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_0ff7ec64b1c6f21b622af12aa224d185",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_8ac1366001838d5e1e6844cbd1059c56",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_d76a339377196cf7bf894e215f0ab789890bc5f587b0043030fa37f763fc6a2a",
+      "subject_entity_id": "urn:vi:substance:SUB-015",
+      "subject_name": "Salmonella Surface Antigen Protein",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P06179-F1",
+      "object_uniprot_id": "P06179",
+      "object_pdb_ids": [
+        "1UCU",
+        "3A5X"
+      ],
+      "addr5d_saevcode": "SAEV-GPXGKGMSB0TWSLYZSNSQBKYAGAY",
+      "nft_id": "NFT-PROT-P06179-SUB-015",
+      "evidence_cloud": [
+        "sha256:381648b668202af28556bd9c1733a524f597fa06902726ee90c74aeea3655054",
+        "https://alphafold.ebi.ac.uk/files/AF-P06179-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P06179.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_e38724786909ccb9a6df1ed332047fc1",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_253c61733eb2b524048224e4710d56f5",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_71d94bd99d120780688ede49f66aadc14e3eb180a34353ecef78323c79f1378a",
+      "subject_entity_id": "urn:vi:substance:SUB-017",
+      "subject_name": "Candida Albicans Mannoprotein",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-Q59XX2-F1",
+      "object_uniprot_id": "Q59XX2",
+      "object_pdb_ids": [
+        "5MHT"
+      ],
+      "addr5d_saevcode": "SAEV-GYQGRASCUIOUQNVRUTHFXGSMAXH",
+      "nft_id": "NFT-PROT-Q59XX2-SUB-017",
+      "evidence_cloud": [
+        "sha256:2638c42ced652936262a91541852a3ad5ad1417789069f5c9dc7b4237ad875e5",
+        "https://alphafold.ebi.ac.uk/files/AF-Q59XX2-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/Q59XX2.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_390c8ea3020f77ad9a0b3d63a95bdeb0",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_c28942b2839312431f5987db78ecf60c",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.94,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.136875,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_4555e26d11914e5aa6c6f3a4b3b1a0fadaee20f774a13545307dc63f72446e8b",
+      "subject_entity_id": "urn:vi:substance:DEMO-010",
+      "subject_name": "Helicobacter Pylori Urease",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P69996-F1",
+      "object_uniprot_id": "P69996",
+      "object_pdb_ids": [
+        "1E9Z",
+        "1E9Y"
+      ],
+      "addr5d_saevcode": "SAEV-HGJGXVY0CGIRD0UMIJVYQWQZOWG",
+      "nft_id": "NFT-PROT-P69996-DEMO-010",
+      "evidence_cloud": [
+        "sha256:d870552488ab77cf1c708e434e45c68a909df7ad3f62d3581590ee9818abf848",
+        "https://alphafold.ebi.ac.uk/files/AF-P69996-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P69996.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_4bc79a0c457586b0c4ad4ace4234d8c2",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_ed413ca88d567f0851da44deed7fe6df",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_29ddd04c5b882952f41887b2bf5e4fe766bf10355a33e8f38442911a9e7aa1e1",
+      "subject_entity_id": "urn:vi:substance:SUB-018",
+      "subject_name": "Chlorophyll Synthesis Enzyme",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-Q42536-F1",
+      "object_uniprot_id": "Q42536",
+      "object_pdb_ids": [
+        "6R48"
+      ],
+      "addr5d_saevcode": "SAEV-HPCHDQDMMYYMJJXJGNSGDC0GFGD",
+      "nft_id": "NFT-PROT-Q42536-SUB-018",
+      "evidence_cloud": [
+        "sha256:cf48d7b89b666fabc26a568b590bf5c33f8bba5076a531f9a8a5baa75b4ee8b0",
+        "https://alphafold.ebi.ac.uk/files/AF-Q42536-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/Q42536.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_e16613aaaec8cda4f470fc5d423b9257",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_1d690fbfd04434eb1c95ca74574dad55",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    },
+    {
+      "claim_id": "sha256_35768f2e9a45743d33a414bf823daba0e8237fe0041ce4c4555600c8de788ed1",
+      "subject_entity_id": "urn:vi:substance:SUB-006",
+      "subject_name": "L-Tyrosine",
+      "predicate": "CROSS_LINKS_3D_STRUCTURE",
+      "object_entity_id": "urn:alphafold:AF-P07101-F1",
+      "object_uniprot_id": "P07101",
+      "object_pdb_ids": [
+        "2XSN",
+        "1TOH"
+      ],
+      "addr5d_saevcode": "SAEV-HXWHKKHSRROABNDKIVOSWUHQSMT",
+      "nft_id": "NFT-PROT-P07101-SUB-006",
+      "evidence_cloud": [
+        "sha256:188678e83a6f8fbfb93371bcc0839ab15021e493a73a823d0b7855a31f1d5776",
+        "https://alphafold.ebi.ac.uk/files/AF-P07101-F1-model_v6.cif",
+        "https://rest.uniprot.org/uniprotkb/P07101.json"
+      ],
+      "verifiers": [
+        {
+          "id": "v_vocalimaging_dsp_v3_2",
+          "sig": "ed25519_30468770ced77a646d32439a07387f87",
+          "weight": 1.0
+        },
+        {
+          "id": "v_alphafold_uniprot_ssot",
+          "sig": "ed25519_265b3d6fba752fa34ecc038515bda7d4",
+          "weight": 1.0
+        }
+      ],
+      "consensus_metrics": {
+        "confidence": 0.985,
+        "total_verifier_weight": 2.0,
+        "epoch_created": 90,
+        "epoch_current": 95,
+        "epoch_expiry": 180,
+        "alpha": 0.015,
+        "d_trust": 0.090114,
+        "admissible": true
+      }
+    }
+  ]
+}

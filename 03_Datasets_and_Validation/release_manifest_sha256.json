@@ -1,0 +1,60 @@
+{
+  "release_id": "SOV-BIOPHYS-N1040-RC2-20261019",
+  "seed": 20261018,
+  "author": "Alan Phipps",
+  "affiliation": "Independent Computational Biophysics Researcher, Quitman, Texas 75783, USA",
+  "email": "alan.phipps@pqr.info",
+  "orcid": "0009-0003-9289-854X",
+  "files": [
+    {
+      "path": "biophysical_journal_manuscript.pdf",
+      "size_bytes": 939779,
+      "sha256": "09785EB7FB3119304F85387C6217E6DC62593D34E993CC67007F13FDE9FE4F2B"
+    },
+    {
+      "path": "Cover_Letter_Biophysical_Journal.pdf",
+      "size_bytes": 58241,
+      "sha256": "10925EDCE04E8A56E4CA8BC254A5C2179F5E3BAF220247A447BBAADB8B936C08"
+    },
+    {
+      "path": "Supporting_Information.pdf",
+      "size_bytes": 87319,
+      "sha256": "C821DD23E8A76A4B8301D4A7CA8C9CFC20F146281D586F4753F4CBB839802B07"
+    },
+    {
+      "path": "fig1_n1040_headline_scaling_law.png",
+      "size_bytes": 3626086,
+      "sha256": "AB2A8A59089543BA7B6A328873E320668BA26FDB2612D44B41A86AF619D5AAAC"
+    },
+    {
+      "path": "pdb_1000_cohort_dataset.csv",
+      "size_bytes": 211163,
+      "sha256": "BACC312957020463F51869410CCA5553974DCB56A3605AFC7F5F2DA6D146C330"
+    },
+    {
+      "path": "pdb_1000_cohort_validation.json",
+      "size_bytes": 816011,
+      "sha256": "6481453E1C2BA56B7272249F1696587ADC0BA0FC689E1517567AF6C679B1DFB4"
+    },
+    {
+      "path": "scripts/run_proteome_validation.py",
+      "size_bytes": 23947,
+      "sha256": "2765BF9F81C7D9313F312BA0471B6ABDC4435733DDBDF706D49D251B4FD670ED"
+    },
+    {
+      "path": "scripts/generate_figure1_scaling.py",
+      "size_bytes": 10946,
+      "sha256": "A01994F7C66D0BB108DEEFCEC5569DC093FCE7782A1A50F0638D385BC6885D6B"
+    },
+    {
+      "path": "scripts/evaluate_hinge_and_controls.py",
+      "size_bytes": 11664,
+      "sha256": "FFA04DDBA2DD8275CD65E6437CA957C64328DB20BF190F970711DE4E3DE9ABF0"
+    },
+    {
+      "path": "scripts/kirchhoff_laplacian_solver.py",
+      "size_bytes": 12937,
+      "sha256": "C9FCAEDEF1B549490480F062DF820E2F88A1E0917E9FB47B0A21305A56F4E8B0"
+    }
+  ]
+}

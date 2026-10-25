@@ -1,0 +1,70 @@
+apiVersion: kontextkube.io/v1alpha1
+kind: DocumentationArtifact
+metadata:
+  name: rfc-vi-0004-spectral-governance-court-authority
+  namespace: apex-cortex
+  labels:
+    releaseTag: v4.0.0-court-authority
+    ticketId: TKT-0275
+    governanceRule: RULE-VI-27
+spec:
+  ticketId: "TKT-0275"
+  kind: "GovernanceSpec"
+  schemaVersion: "4.0.0"
+  sourceOfTruth: "spec"
+  specPath: "C:/Users/theal/.gemini/antigravity/scratch/apex1.predator.run/wiki_docs/RFC-VI-0004_spectral_governance_and_rule_vi_27_spec.md"
+  specSha256: "66EC19668841D6301975F0E9FAAB073E3F2832CA6303CF74217215A21B4DEA59"
+  invariants:
+    RULE_VI_26: "Deterministic Reconstruction from L1 to L7 within <= 1e-12 tolerance"
+    RULE_VI_27: "No computational result may be promoted from Layer 4 (Scientific Hypothesis) to Layer 5 (Biological Conclusion) without externally referenced empirical evidence."
+    RULE_VI_28: "Passing integration tests demonstrates conformance to the implementation specification, but does not by itself establish continuous production operability."
+  bindings:
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/engine/chain_of_custody.py"
+      checksum: "5D5E937190FDC68C3B9A1C8A91CEC18080B3281FAD9F55135DE4B28FA60D6084"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/engine/unknown_hit_identifier.py"
+      checksum: "42A34C695B08E27ADCBDC6675B09F89ED1F557B5B3B3C89A421337F327A3873E"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/engine/candidate_pools.py"
+      checksum: "654974718933FC495E9C054452F925D831B170CC87C00766799996A8C95BA26D"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/engine/marker_credibility_audit.py"
+      checksum: "E9AEECB5F118E8F2F144891305219C43401ADF76E4DA42F91F9ED50A3C16F3AD"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/engine/scale_erasure.py"
+      checksum: "D5EB4917DDFA59BCE4419F27338F5DB52323611D022075DF4DE3214EB98A7DD0"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/catalog/audited_marker_registry.json"
+      checksum: "D0A487ADA422C3E9CF9744F11736BC63F1AB42F075CA1E5C2F4A8310266A4231"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/integration/vocalimaging_server_v3_4.py"
+      checksum: "ADB4DDA06734B3FC09EFEED3E0AEA1C1BBDDF24989813EF5D119C7B5BC6DB5CF"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/integration/vi_index_v3_4.html"
+      checksum: "4F45E8BDFC432234DFF0BA79671DC912742582FF86232A94FB570C47E6B992F4"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/tests/test_m5_chain_of_custody.py"
+      checksum: "AFE0EDC0012ADCD41D1D590BD4BCD3E770549F5C09C482822765FDB489C8541C"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/release_certification_v4_0_0/GOVERNANCE_MEMORANDUM_RULE_VI_27.md"
+      checksum: "EB46FE3C0B09DF4A16C5D19665315A77F8ACB976CF6E9CA4AEEE0CA48E22F13E"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/release_certification_v4_0_0/SCIENTIFIC_VALIDATION_SEPARATION.md"
+      checksum: "F337F808F4CAAA6EDA126AE3B947B1C31EEFC85E05930F8B68B8162C01D74169"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/spectral_discovery_and_audit/release_certification_v4_0_0/RELEASE_MANIFEST_V4_0_0.json"
+      checksum: "F0063A56D64AB7D10CFCD409479608FEB42AD1E275F5640D59F6E4685EB25EAA"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/apex1.predator.run/SovAreAgentn1/src/components/CoreResonanceSanctuary.tsx"
+      checksum: "9826D700B33F98DA49BF78F02AAC4FA330CB640CF221477B73F1B400C730D0B8"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/apex1.predator.run/SovAreAgentn1/src/services/multiLLMProofChainEngine.ts"
+      checksum: "23FF4E139015B46F2C7CDFE3A898D8051D773DEFC993D64C88AEF1FF46950058"
+    - targetType: "filepath"
+      targetUri: "C:/Users/theal/.gemini/antigravity/scratch/apex1.predator.run/SovAreAgentn1/server.ts"
+      checksum: "95DACE908D97EB527957B59481A8D976F21F08CAEAF4F7A1C76B9F5D8C6A59C5"
+status:
+  driftStatus: "IN_SYNC"
+  driftScore: 0.0
+  lastReconciledAt: "2026-10-20T11:08:30Z"

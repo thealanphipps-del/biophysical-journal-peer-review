@@ -1,0 +1,2018 @@
+{
+  "schema": "PEER-REVIEW-VALIDATION-PACKAGE-v1.0",
+  "manuscript_positioning_statement": "This work introduces a structural vibrational mapping framework and reports preliminary correspondences between octave-normalized protein eigenmodes and frequency values derived from prior physiological frequency classification systems. The existence, magnitude, and biological significance of these associations remain hypotheses requiring independent validation.",
+  "intellectual_lineage_and_attribution": {
+    "prior_art": {
+      "inventor": "Vickie A. Dean",
+      "assignee": "Dean Enterprises, LLC",
+      "patent_family_title": "Detection of Conditions from Sound",
+      "us_patents": [
+        "US 8,346,559 B2 (issued Jan 1, 2013)",
+        "US 9,223,863 B2 (issued Dec 29, 2015)"
+      ],
+      "priority_applications": [
+        "US Provisional App. 61/015,535 (filed Dec 20, 2007)",
+        "US App. Pub. 2013/0096844",
+        "PCT/US2008/087564 (WO 2009/086033 A1)"
+      ],
+      "citations": [
+        "https://patents.justia.com/inventor/vickie-a-dean",
+        "https://uspto.report/patent/app/20130096844",
+        "https://patents.justia.com/assignee/dean-enterprises-llc"
+      ],
+      "scope": "Transforming sound recordings into frequency-domain representations, identifying zero-slope signatures and frequency ranges across octaves, and comparing frequency patterns with physiological profiles."
+    },
+    "present_contribution": {
+      "author": "Alan Phipps",
+      "roles": [
+        "Conceptualization",
+        "Mathematical framework development",
+        "Software implementation",
+        "Data analysis",
+        "Visualization",
+        "Manuscript preparation"
+      ],
+      "scope": "Deriving collective vibrational eigenmode signatures directly from experimentally resolved 3D biomolecular structures (.cif) via Gaussian Network Models (GNM) and Kirchhoff Contact Laplacian spectral graph theory, plus Attributed Temporal Fact Hypergraph (HomeTree ATFH) cross-linking."
+    },
+    "synthesis_equation": "Dean Physiological Frequency Profiling + Protein Structural Biology + Gaussian Network Models + Spectral Graph Theory = Structural Vibrational Frequency Mapping"
+  },
+  "statistical_significance": {
+    "n_proteins_evaluated": 11,
+    "observed_span_inclusion_rate": "7/11 (63.6%)",
+    "observed_mean_abs_deviation_nearest_mode_hz": 2.2838,
+    "nearest_eigenmode_vs_prior_catalog": {
+      "n": 11,
+      "pearson_r": 0.2364,
+      "pearson_95_ci": [
+        -0.5707,
+        0.9386
+      ],
+      "pearson_p_two_tailed": 0.48575,
+      "spearman_rho": 0.3182,
+      "spearman_95_ci": [
+        -0.4818,
+        0.8636
+      ],
+      "spearman_p_two_tailed": 0.34787
+    },
+    "catalytic_mode_fcat_vs_prior_catalog": {
+      "n": 11,
+      "pearson_r": 0.1024,
+      "pearson_95_ci": [
+        -0.6823,
+        0.7816
+      ],
+      "pearson_p_two_tailed": 0.75572,
+      "spearman_rho": 0.0182,
+      "spearman_95_ci": [
+        -0.6364,
+        0.7182
+      ],
+      "spearman_p_two_tailed": 0.966
+    },
+    "biophysical_unfolded_scaling_1_over_Rg_vs_nu1_THz": {
+      "n": 11,
+      "pearson_r": 0.9067,
+      "pearson_95_ci": [
+        0.7432,
+        0.9867
+      ],
+      "pearson_p_two_tailed": 0.0004,
+      "spearman_rho": 0.8818,
+      "spearman_95_ci": [
+        0.5545,
+        1.0
+      ],
+      "spearman_p_two_tailed": 0.0009
+    },
+    "biophysical_packing_mean_z_vs_nu1_THz": {
+      "n": 11,
+      "pearson_r": 0.5013,
+      "pearson_95_ci": [
+        0.0235,
+        0.7846
+      ],
+      "pearson_p_two_tailed": 0.12279,
+      "spearman_rho": 0.4,
+      "spearman_95_ci": [
+        -0.1545,
+        0.8548
+      ],
+      "spearman_p_two_tailed": 0.22888
+    },
+    "meyer_1d_uniprot_mw_vs_prior_catalog": {
+      "n": 11,
+      "pearson_r": -0.7045,
+      "pearson_95_ci": [
+        -0.9861,
+        -0.2197
+      ],
+      "pearson_p_two_tailed": 0.0202,
+      "spearman_rho": -0.7091,
+      "spearman_95_ci": [
+        -0.9636,
+        0.0
+      ],
+      "spearman_p_two_tailed": 0.0199
+    }
+  },
+  "negative_controls": {
+    "random_seed": 20261018,
+    "control_A_shuffled_eigenvalue_assignments": {
+      "trials": 2000,
+      "null_mean_abs_delta_hz": 2.1869,
+      "null_sd_abs_delta_hz": 0.213,
+      "null_mean_span_hits": 7.74,
+      "observed_mean_abs_delta_hz": 2.2838,
+      "p_value_permutation": 0.67416
+    },
+    "control_B_randomized_3d_polymer_coordinates": {
+      "trials": 250,
+      "null_mean_abs_delta_hz": 1.706,
+      "null_sd_abs_delta_hz": 0.4063,
+      "null_mean_pearson_r": 0.3539,
+      "observed_mean_abs_delta_hz": 2.2838,
+      "p_value_vs_random_3d_coords": 0.9243
+    },
+    "control_C_rewired_contact_laplacian_graphs": {
+      "trials": 250,
+      "null_mean_abs_delta_hz": 2.5219,
+      "null_sd_abs_delta_hz": 0.4358,
+      "observed_mean_abs_delta_hz": 2.2838,
+      "p_value_vs_rewired_graphs": 0.29482
+    }
+  },
+  "blind_validation_set": {
+    "count": 4,
+    "span_inclusion_rate": "4/4",
+    "mean_prediction_error_hz": 2.9182,
+    "cases": [
+      {
+        "blind_id": "BLIND-001",
+        "protein_name": "Human Cu/Zn Superoxide Dismutase Homodimer \u2014 Independent Chain B (PDB 1PU0)",
+        "cif_file": "1PU0.cif",
+        "chain": "B",
+        "catalytic_residues": [
+          46,
+          48,
+          63,
+          71,
+          80,
+          83,
+          120
+        ],
+        "held_out_reference_hz": 25.92,
+        "rationale": "Out-of-sample biological assembly subunit (Chain B crystallographic partner with independent thermal B-factors and crystal packing contacts)",
+        "resolved_ca": 153,
+        "predicted_3d_range_hz": [
+          21.2159,
+          27.525
+        ],
+        "predicted_f_lambda1_hz": 21.2159,
+        "predicted_f_cat_hz": 24.7176,
+        "predicted_nearest_mode_hz": 24.7176,
+        "prediction_error_hz": 1.2024,
+        "within_predicted_3d_span": true
+      },
+      {
+        "blind_id": "BLIND-002",
+        "protein_name": "Alzheimer's Tau Paired Helical Filament \u2014 Independent Protofilament Chain B (PDB 5O3L)",
+        "cif_file": "5O3L.cif",
+        "chain": "B",
+        "catalytic_residues": [
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324,
+          325,
+          326,
+          327,
+          328,
+          329,
+          330,
+          331,
+          332,
+          333,
+          334,
+          335,
+          336,
+          337,
+          338,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375,
+          376,
+          377,
+          378
+        ],
+        "held_out_reference_hz": 26.44,
+        "rationale": "Symmetric protofilament partner (Chain B) in cryo-EM PHF fibril stack",
+        "resolved_ca": 73,
+        "predicted_3d_range_hz": [
+          22.4617,
+          27.8874
+        ],
+        "predicted_f_lambda1_hz": 23.951,
+        "predicted_f_cat_hz": 26.3085,
+        "predicted_nearest_mode_hz": 26.3085,
+        "prediction_error_hz": 0.1315,
+        "within_predicted_3d_span": true
+      },
+      {
+        "blind_id": "BLIND-003",
+        "protein_name": "Helicobacter pylori Urease Catalytic Subunit \u2014 Independent Subunit Chain A (PDB 1E9Z)",
+        "cif_file": "1E9Z.cif",
+        "chain": "A",
+        "catalytic_residues": [
+          68,
+          70,
+          136
+        ],
+        "held_out_reference_hz": 24.27,
+        "rationale": "Out-of-sample UreA structural partner subunit (26.5 kDa, 238 CA residues) never used in UreB (Chain B) evaluation",
+        "resolved_ca": 238,
+        "predicted_3d_range_hz": [
+          16.5598,
+          28.3882
+        ],
+        "predicted_f_lambda1_hz": 18.8801,
+        "predicted_f_cat_hz": 17.5534,
+        "predicted_nearest_mode_hz": 28.3882,
+        "prediction_error_hz": 4.1182,
+        "within_predicted_3d_span": true
+      },
+      {
+        "blind_id": "BLIND-004",
+        "protein_name": "Human Tyrosine Hydroxylase Tetramer \u2014 Independent Subunit Chain B (PDB 2XSN)",
+        "cif_file": "2XSN.cif",
+        "chain": "B",
+        "catalytic_residues": [
+          331,
+          336,
+          376
+        ],
+        "held_out_reference_hz": 24.32,
+        "rationale": "Out-of-sample Chain B catalytic/tetramerization protomer in 2XSN homotetramer",
+        "resolved_ca": 336,
+        "predicted_3d_range_hz": [
+          16.2235,
+          30.5407
+        ],
+        "predicted_f_lambda1_hz": 16.2235,
+        "predicted_f_cat_hz": 17.3478,
+        "predicted_nearest_mode_hz": 30.5407,
+        "prediction_error_hz": 6.2207,
+        "within_predicted_3d_span": true
+      }
+    ]
+  },
+  "sensitivity_analysis_rc_6_5_to_8_5_A": {
+    "rc_grid_angstroms": [
+      6.5,
+      7.0,
+      7.5,
+      8.0,
+      8.5
+    ],
+    "mean_f_lambda1_cv_pct_across_catalog": 19.9,
+    "mean_f_cat_cv_pct_across_catalog": 18.15,
+    "proteins": [
+      {
+        "vi_id": "SUB-007",
+        "vi_name": "Acetylcholine Synthetase",
+        "uniprot_id": "P28329",
+        "cif_file": "2FY2.cif",
+        "n_ca": 585,
+        "vi_catalog_beta_hz": 26.16,
+        "nearest_3d_mode_hz": 26.094,
+        "abs_delta_nearest_hz": 0.066,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 29.6626,
+          "7.0A": 16.9143,
+          "7.5A": 19.1485,
+          "8.0A": 21.4177,
+          "8.5A": 24.089
+        },
+        "f_cat_by_rc": {
+          "6.5A": 26.5948,
+          "7.0A": 22.2172,
+          "7.5A": 25.5606,
+          "8.0A": 28.0971,
+          "8.5A": 20.9367
+        },
+        "f_lambda1_mean_hz": 22.2464,
+        "f_lambda1_sd_hz": 4.9272,
+        "f_lambda1_cv_pct": 22.15,
+        "f_cat_mean_hz": 24.6813,
+        "f_cat_sd_hz": 3.0082,
+        "f_cat_cv_pct": 12.19,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.05,
+            "lambda_1": 0.1377,
+            "lambda_2": 0.26019,
+            "lambda_3": 0.44275,
+            "lambda_cat": 0.44275,
+            "f_lambda1_hz": 29.6626,
+            "f_lambda2_hz": 20.3873,
+            "f_lambda3_hz": 26.5948,
+            "f_lambda_cat_hz": 26.5948,
+            "f_modes_sorted_hz": [
+              20.3873,
+              26.5948,
+              26.5948,
+              29.6626
+            ],
+            "f_range_hz": [
+              20.3873,
+              29.6626
+            ],
+            "f_centroid_hz": 25.8099
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.15,
+            "lambda_1": 0.17909,
+            "lambda_2": 0.33714,
+            "lambda_3": 0.57034,
+            "lambda_cat": 1.23596,
+            "f_lambda1_hz": 16.9143,
+            "f_lambda2_hz": 23.2074,
+            "f_lambda3_hz": 30.1846,
+            "f_lambda_cat_hz": 22.2172,
+            "f_modes_sorted_hz": [
+              16.9143,
+              22.2172,
+              23.2074,
+              30.1846
+            ],
+            "f_range_hz": [
+              16.9143,
+              30.1846
+            ],
+            "f_centroid_hz": 23.1309
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 9.08,
+            "lambda_1": 0.22952,
+            "lambda_2": 0.42623,
+            "lambda_3": 0.72834,
+            "lambda_cat": 1.63592,
+            "f_lambda1_hz": 19.1485,
+            "f_lambda2_hz": 26.094,
+            "f_lambda3_hz": 17.0552,
+            "f_lambda_cat_hz": 25.5606,
+            "f_modes_sorted_hz": [
+              17.0552,
+              19.1485,
+              25.5606,
+              26.094
+            ],
+            "f_range_hz": [
+              17.0552,
+              26.094
+            ],
+            "f_centroid_hz": 21.9646
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.94,
+            "lambda_1": 0.28715,
+            "lambda_2": 0.53592,
+            "lambda_3": 0.88309,
+            "lambda_cat": 1.97672,
+            "f_lambda1_hz": 21.4177,
+            "f_lambda2_hz": 29.2596,
+            "f_lambda3_hz": 18.7798,
+            "f_lambda_cat_hz": 28.0971,
+            "f_modes_sorted_hz": [
+              18.7798,
+              21.4177,
+              28.0971,
+              29.2596
+            ],
+            "f_range_hz": [
+              18.7798,
+              29.2596
+            ],
+            "f_centroid_hz": 24.3886
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 11.4,
+            "lambda_1": 0.36325,
+            "lambda_2": 0.66901,
+            "lambda_3": 1.09758,
+            "lambda_cat": 1.09758,
+            "f_lambda1_hz": 24.089,
+            "f_lambda2_hz": 16.3457,
+            "f_lambda3_hz": 20.9367,
+            "f_lambda_cat_hz": 20.9367,
+            "f_modes_sorted_hz": [
+              16.3457,
+              20.9367,
+              20.9367,
+              24.089
+            ],
+            "f_range_hz": [
+              16.3457,
+              24.089
+            ],
+            "f_centroid_hz": 20.577
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-008",
+        "vi_name": "Tau Protein Isoform 1",
+        "uniprot_id": "P10636",
+        "cif_file": "5O3L.cif",
+        "n_ca": 73,
+        "vi_catalog_beta_hz": 26.44,
+        "nearest_3d_mode_hz": 27.8886,
+        "abs_delta_nearest_hz": 1.4486,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 17.7588,
+          "7.0A": 21.3676,
+          "7.5A": 23.9512,
+          "8.0A": 25.7921,
+          "8.5A": 27.5165
+        },
+        "f_cat_by_rc": {
+          "6.5A": 17.7588,
+          "7.0A": 30.4101,
+          "7.5A": 21.2963,
+          "8.0A": 26.4546,
+          "8.5A": 21.516
+        },
+        "f_lambda1_mean_hz": 23.2772,
+        "f_lambda1_sd_hz": 3.8357,
+        "f_lambda1_cv_pct": 16.48,
+        "f_cat_mean_hz": 23.4872,
+        "f_cat_sd_hz": 4.9556,
+        "f_cat_cv_pct": 21.1,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 2.85,
+            "lambda_1": 0.04935,
+            "lambda_2": 0.1594,
+            "lambda_3": 0.3102,
+            "lambda_cat": 0.04935,
+            "f_lambda1_hz": 17.7588,
+            "f_lambda2_hz": 31.9145,
+            "f_lambda3_hz": 22.2606,
+            "f_lambda_cat_hz": 17.7588,
+            "f_modes_sorted_hz": [
+              17.7588,
+              17.7588,
+              22.2606,
+              31.9145
+            ],
+            "f_range_hz": [
+              17.7588,
+              31.9145
+            ],
+            "f_centroid_hz": 22.4232
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 3.75,
+            "lambda_1": 0.07145,
+            "lambda_2": 0.24676,
+            "lambda_3": 0.39246,
+            "lambda_cat": 2.31557,
+            "f_lambda1_hz": 21.3676,
+            "f_lambda2_hz": 19.8542,
+            "f_lambda3_hz": 25.0391,
+            "f_lambda_cat_hz": 30.4101,
+            "f_modes_sorted_hz": [
+              19.8542,
+              21.3676,
+              25.0391,
+              30.4101
+            ],
+            "f_range_hz": [
+              19.8542,
+              30.4101
+            ],
+            "f_centroid_hz": 24.1677
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 4.33,
+            "lambda_1": 0.08978,
+            "lambda_2": 0.31583,
+            "lambda_3": 0.48687,
+            "lambda_cat": 4.54244,
+            "f_lambda1_hz": 23.9512,
+            "f_lambda2_hz": 22.4619,
+            "f_lambda3_hz": 27.8886,
+            "f_lambda_cat_hz": 21.2963,
+            "f_modes_sorted_hz": [
+              21.2963,
+              22.4619,
+              23.9512,
+              27.8886
+            ],
+            "f_range_hz": [
+              21.2963,
+              27.8886
+            ],
+            "f_centroid_hz": 23.8995
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 4.58,
+            "lambda_1": 0.10411,
+            "lambda_2": 0.36423,
+            "lambda_3": 0.56241,
+            "lambda_cat": 1.75237,
+            "f_lambda1_hz": 25.7921,
+            "f_lambda2_hz": 24.1216,
+            "f_lambda3_hz": 29.9741,
+            "f_lambda_cat_hz": 26.4546,
+            "f_modes_sorted_hz": [
+              24.1216,
+              25.7921,
+              26.4546,
+              29.9741
+            ],
+            "f_range_hz": [
+              24.1216,
+              29.9741
+            ],
+            "f_centroid_hz": 26.5856
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 4.74,
+            "lambda_1": 0.11849,
+            "lambda_2": 0.4143,
+            "lambda_3": 0.65849,
+            "lambda_cat": 4.63666,
+            "f_lambda1_hz": 27.5165,
+            "f_lambda2_hz": 25.7262,
+            "f_lambda3_hz": 16.2167,
+            "f_lambda_cat_hz": 21.516,
+            "f_modes_sorted_hz": [
+              16.2167,
+              21.516,
+              25.7262,
+              27.5165
+            ],
+            "f_range_hz": [
+              16.2167,
+              27.5165
+            ],
+            "f_centroid_hz": 22.7438
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-009",
+        "vi_name": "Beta-Amyloid Peptide 42",
+        "uniprot_id": "P05067",
+        "cif_file": "1IYT.cif",
+        "n_ca": 42,
+        "vi_catalog_beta_hz": 26.82,
+        "nearest_3d_mode_hz": 23.1995,
+        "abs_delta_nearest_hz": 3.6205,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 19.4253,
+          "7.0A": 21.4768,
+          "7.5A": 23.1995,
+          "8.0A": 24.975,
+          "8.5A": 28.6364
+        },
+        "f_cat_by_rc": {
+          "6.5A": 17.2496,
+          "7.0A": 18.2087,
+          "7.5A": 19.6287,
+          "8.0A": 20.9666,
+          "8.5A": 18.8502
+        },
+        "f_lambda1_mean_hz": 23.5426,
+        "f_lambda1_sd_hz": 3.512,
+        "f_lambda1_cv_pct": 14.92,
+        "f_cat_mean_hz": 18.9808,
+        "f_cat_sd_hz": 1.4119,
+        "f_cat_cv_pct": 7.44,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.48,
+            "lambda_1": 0.23621,
+            "lambda_2": 0.74504,
+            "lambda_3": 1.4615,
+            "lambda_cat": 0.74504,
+            "f_lambda1_hz": 19.4253,
+            "f_lambda2_hz": 17.2496,
+            "f_lambda3_hz": 24.1595,
+            "f_lambda_cat_hz": 17.2496,
+            "f_modes_sorted_hz": [
+              17.2496,
+              17.2496,
+              19.4253,
+              24.1595
+            ],
+            "f_range_hz": [
+              17.2496,
+              24.1595
+            ],
+            "f_centroid_hz": 19.521
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 6.9,
+            "lambda_1": 0.28874,
+            "lambda_2": 0.977,
+            "lambda_3": 2.03539,
+            "lambda_cat": 13.28311,
+            "f_lambda1_hz": 21.4768,
+            "f_lambda2_hz": 19.7531,
+            "f_lambda3_hz": 28.511,
+            "f_lambda_cat_hz": 18.2087,
+            "f_modes_sorted_hz": [
+              18.2087,
+              19.7531,
+              21.4768,
+              28.511
+            ],
+            "f_range_hz": [
+              18.2087,
+              28.511
+            ],
+            "f_centroid_hz": 21.9874
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 7.1,
+            "lambda_1": 0.33692,
+            "lambda_2": 1.14347,
+            "lambda_3": 2.43559,
+            "lambda_cat": 15.43563,
+            "f_lambda1_hz": 23.1995,
+            "f_lambda2_hz": 21.3698,
+            "f_lambda3_hz": 31.1882,
+            "f_lambda_cat_hz": 19.6287,
+            "f_modes_sorted_hz": [
+              19.6287,
+              21.3698,
+              23.1995,
+              31.1882
+            ],
+            "f_range_hz": [
+              19.6287,
+              31.1882
+            ],
+            "f_centroid_hz": 23.8466
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 7.24,
+            "lambda_1": 0.39046,
+            "lambda_2": 1.35836,
+            "lambda_3": 2.88133,
+            "lambda_cat": 17.61163,
+            "f_lambda1_hz": 24.975,
+            "f_lambda2_hz": 23.2914,
+            "f_lambda3_hz": 16.9611,
+            "f_lambda_cat_hz": 20.9666,
+            "f_modes_sorted_hz": [
+              16.9611,
+              20.9666,
+              23.2914,
+              24.975
+            ],
+            "f_range_hz": [
+              16.9611,
+              24.975
+            ],
+            "f_centroid_hz": 21.5485
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 8.05,
+            "lambda_1": 0.51333,
+            "lambda_2": 1.70819,
+            "lambda_3": 3.55888,
+            "lambda_cat": 3.55888,
+            "f_lambda1_hz": 28.6364,
+            "f_lambda2_hz": 26.119,
+            "f_lambda3_hz": 18.8502,
+            "f_lambda_cat_hz": 18.8502,
+            "f_modes_sorted_hz": [
+              18.8502,
+              18.8502,
+              26.119,
+              28.6364
+            ],
+            "f_range_hz": [
+              18.8502,
+              28.6364
+            ],
+            "f_centroid_hz": 23.1139
+          }
+        }
+      },
+      {
+        "vi_id": "DEMO-020",
+        "vi_name": "Alpha-Synuclein Monomer",
+        "uniprot_id": "P37840",
+        "cif_file": "1XQ8.cif",
+        "n_ca": 140,
+        "vi_catalog_beta_hz": 24.3,
+        "nearest_3d_mode_hz": 20.3689,
+        "abs_delta_nearest_hz": 3.9311,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 16.0967,
+          "7.0A": 18.5073,
+          "7.5A": 20.3689,
+          "8.0A": 22.3009,
+          "8.5A": 24.6321
+        },
+        "f_cat_by_rc": {
+          "6.5A": 31.1206,
+          "7.0A": 18.1476,
+          "7.5A": 20.0274,
+          "8.0A": 21.7923,
+          "8.5A": 24.1829
+        },
+        "f_lambda1_mean_hz": 20.3812,
+        "f_lambda1_sd_hz": 3.3024,
+        "f_lambda1_cv_pct": 16.2,
+        "f_cat_mean_hz": 23.0542,
+        "f_cat_sd_hz": 5.0292,
+        "f_cat_cv_pct": 21.81,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 5.77,
+            "lambda_1": 0.01014,
+            "lambda_2": 0.03789,
+            "lambda_3": 0.10895,
+            "lambda_cat": 0.03789,
+            "f_lambda1_hz": 16.0967,
+            "f_lambda2_hz": 31.1206,
+            "f_lambda3_hz": 26.3855,
+            "f_lambda_cat_hz": 31.1206,
+            "f_modes_sorted_hz": [
+              16.0967,
+              26.3855,
+              31.1206,
+              31.1206
+            ],
+            "f_range_hz": [
+              16.0967,
+              31.1206
+            ],
+            "f_centroid_hz": 26.1808
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 6.37,
+            "lambda_1": 0.0134,
+            "lambda_2": 0.05154,
+            "lambda_3": 0.14477,
+            "lambda_cat": 0.05154,
+            "f_lambda1_hz": 18.5073,
+            "f_lambda2_hz": 18.1476,
+            "f_lambda3_hz": 30.4151,
+            "f_lambda_cat_hz": 18.1476,
+            "f_modes_sorted_hz": [
+              18.1476,
+              18.1476,
+              18.5073,
+              30.4151
+            ],
+            "f_range_hz": [
+              18.1476,
+              30.4151
+            ],
+            "f_centroid_hz": 21.3044
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 6.67,
+            "lambda_1": 0.01623,
+            "lambda_2": 0.06277,
+            "lambda_3": 0.17648,
+            "lambda_cat": 0.06277,
+            "f_lambda1_hz": 20.3689,
+            "f_lambda2_hz": 20.0274,
+            "f_lambda3_hz": 16.7909,
+            "f_lambda_cat_hz": 20.0274,
+            "f_modes_sorted_hz": [
+              16.7909,
+              20.0274,
+              20.0274,
+              20.3689
+            ],
+            "f_range_hz": [
+              16.7909,
+              20.3689
+            ],
+            "f_centroid_hz": 19.3037
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 6.89,
+            "lambda_1": 0.01946,
+            "lambda_2": 0.07432,
+            "lambda_3": 0.21463,
+            "lambda_cat": 0.07432,
+            "f_lambda1_hz": 22.3009,
+            "f_lambda2_hz": 21.7923,
+            "f_lambda3_hz": 18.5169,
+            "f_lambda_cat_hz": 21.7923,
+            "f_modes_sorted_hz": [
+              18.5169,
+              21.7923,
+              21.7923,
+              22.3009
+            ],
+            "f_range_hz": [
+              18.5169,
+              22.3009
+            ],
+            "f_centroid_hz": 21.1006
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 7.24,
+            "lambda_1": 0.02374,
+            "lambda_2": 0.09152,
+            "lambda_3": 0.26439,
+            "lambda_cat": 0.09152,
+            "f_lambda1_hz": 24.6321,
+            "f_lambda2_hz": 24.1829,
+            "f_lambda3_hz": 20.5512,
+            "f_lambda_cat_hz": 24.1829,
+            "f_modes_sorted_hz": [
+              20.5512,
+              24.1829,
+              24.1829,
+              24.6321
+            ],
+            "f_range_hz": [
+              20.5512,
+              24.6321
+            ],
+            "f_centroid_hz": 23.3873
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-019",
+        "vi_name": "Glutathione Peroxidase",
+        "uniprot_id": "P07203",
+        "cif_file": "2F8A.cif",
+        "n_ca": 186,
+        "vi_catalog_beta_hz": 25.4,
+        "nearest_3d_mode_hz": 23.7028,
+        "abs_delta_nearest_hz": 1.6972,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 29.5663,
+          "7.0A": 17.0509,
+          "7.5A": 19.2713,
+          "8.0A": 21.7815,
+          "8.5A": 24.5438
+        },
+        "f_cat_by_rc": {
+          "6.5A": 30.6594,
+          "7.0A": 30.1412,
+          "7.5A": 23.7028,
+          "8.0A": 20.6795,
+          "8.5A": 23.0026
+        },
+        "f_lambda1_mean_hz": 22.4428,
+        "f_lambda1_sd_hz": 4.8664,
+        "f_lambda1_cv_pct": 21.68,
+        "f_cat_mean_hz": 25.6371,
+        "f_cat_sd_hz": 4.4936,
+        "f_cat_cv_pct": 17.53,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.62,
+            "lambda_1": 0.54721,
+            "lambda_2": 0.60129,
+            "lambda_3": 0.78692,
+            "lambda_cat": 2.35369,
+            "f_lambda1_hz": 29.5663,
+            "f_lambda2_hz": 30.9929,
+            "f_lambda3_hz": 17.7278,
+            "f_lambda_cat_hz": 30.6594,
+            "f_modes_sorted_hz": [
+              17.7278,
+              29.5663,
+              30.6594,
+              30.9929
+            ],
+            "f_range_hz": [
+              17.7278,
+              30.9929
+            ],
+            "f_centroid_hz": 27.2366
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.71,
+            "lambda_1": 0.72797,
+            "lambda_2": 0.81285,
+            "lambda_3": 1.07638,
+            "lambda_cat": 2.2748,
+            "f_lambda1_hz": 17.0509,
+            "f_lambda2_hz": 18.0175,
+            "f_lambda3_hz": 20.7335,
+            "f_lambda_cat_hz": 30.1412,
+            "f_modes_sorted_hz": [
+              17.0509,
+              18.0175,
+              20.7335,
+              30.1412
+            ],
+            "f_range_hz": [
+              17.0509,
+              30.1412
+            ],
+            "f_centroid_hz": 21.4858
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.55,
+            "lambda_1": 0.92992,
+            "lambda_2": 1.01975,
+            "lambda_3": 1.34905,
+            "lambda_cat": 5.62707,
+            "f_lambda1_hz": 19.2713,
+            "f_lambda2_hz": 20.1807,
+            "f_lambda3_hz": 23.2115,
+            "f_lambda_cat_hz": 23.7028,
+            "f_modes_sorted_hz": [
+              19.2713,
+              20.1807,
+              23.2115,
+              23.7028
+            ],
+            "f_range_hz": [
+              19.2713,
+              23.7028
+            ],
+            "f_centroid_hz": 21.5916
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.58,
+            "lambda_1": 1.18795,
+            "lambda_2": 1.25942,
+            "lambda_3": 1.68443,
+            "lambda_cat": 4.28315,
+            "f_lambda1_hz": 21.7815,
+            "f_lambda2_hz": 22.4272,
+            "f_lambda3_hz": 25.9367,
+            "f_lambda_cat_hz": 20.6795,
+            "f_modes_sorted_hz": [
+              20.6795,
+              21.7815,
+              22.4272,
+              25.9367
+            ],
+            "f_range_hz": [
+              20.6795,
+              25.9367
+            ],
+            "f_centroid_hz": 22.7062
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.96,
+            "lambda_1": 1.50836,
+            "lambda_2": 1.58933,
+            "lambda_3": 2.16338,
+            "lambda_cat": 5.29951,
+            "f_lambda1_hz": 24.5438,
+            "f_lambda2_hz": 25.194,
+            "f_lambda3_hz": 29.3937,
+            "f_lambda_cat_hz": 23.0026,
+            "f_modes_sorted_hz": [
+              23.0026,
+              24.5438,
+              25.194,
+              29.3937
+            ],
+            "f_range_hz": [
+              23.0026,
+              29.3937
+            ],
+            "f_centroid_hz": 25.5335
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-020",
+        "vi_name": "Superoxide Dismutase",
+        "uniprot_id": "P00441",
+        "cif_file": "1PU0.cif",
+        "n_ca": 153,
+        "vi_catalog_beta_hz": 25.92,
+        "nearest_3d_mode_hz": 27.6567,
+        "abs_delta_nearest_hz": 1.7367,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 31.767,
+          "7.0A": 18.2269,
+          "7.5A": 20.9335,
+          "8.0A": 23.2214,
+          "8.5A": 26.1489
+        },
+        "f_cat_by_rc": {
+          "6.5A": 21.324,
+          "7.0A": 24.8855,
+          "7.5A": 28.0188,
+          "8.0A": 31.1013,
+          "8.5A": 17.5091
+        },
+        "f_lambda1_mean_hz": 24.0595,
+        "f_lambda1_sd_hz": 5.2025,
+        "f_lambda1_cv_pct": 21.62,
+        "f_cat_mean_hz": 24.5677,
+        "f_cat_sd_hz": 5.3629,
+        "f_cat_cv_pct": 21.83,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.07,
+            "lambda_1": 0.6317,
+            "lambda_2": 0.85475,
+            "lambda_3": 1.13646,
+            "lambda_cat": 4.55428,
+            "f_lambda1_hz": 31.767,
+            "f_lambda2_hz": 18.476,
+            "f_lambda3_hz": 21.3043,
+            "f_lambda_cat_hz": 21.324,
+            "f_modes_sorted_hz": [
+              18.476,
+              21.3043,
+              21.324,
+              31.767
+            ],
+            "f_range_hz": [
+              18.476,
+              31.767
+            ],
+            "f_centroid_hz": 23.2178
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.44,
+            "lambda_1": 0.83186,
+            "lambda_2": 1.13544,
+            "lambda_3": 1.48717,
+            "lambda_cat": 6.20261,
+            "f_lambda1_hz": 18.2269,
+            "f_lambda2_hz": 21.2946,
+            "f_lambda3_hz": 24.3708,
+            "f_lambda_cat_hz": 24.8855,
+            "f_modes_sorted_hz": [
+              18.2269,
+              21.2946,
+              24.3708,
+              24.8855
+            ],
+            "f_range_hz": [
+              18.2269,
+              24.8855
+            ],
+            "f_centroid_hz": 22.1944
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 9.63,
+            "lambda_1": 1.09725,
+            "lambda_2": 1.42905,
+            "lambda_3": 1.91524,
+            "lambda_cat": 7.86285,
+            "f_lambda1_hz": 20.9335,
+            "f_lambda2_hz": 23.8898,
+            "f_lambda3_hz": 27.6567,
+            "f_lambda_cat_hz": 28.0188,
+            "f_modes_sorted_hz": [
+              20.9335,
+              23.8898,
+              27.6567,
+              28.0188
+            ],
+            "f_range_hz": [
+              20.9335,
+              28.0188
+            ],
+            "f_centroid_hz": 25.1247
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 10.82,
+            "lambda_1": 1.3502,
+            "lambda_2": 1.78814,
+            "lambda_3": 2.47914,
+            "lambda_cat": 9.68814,
+            "f_lambda1_hz": 23.2214,
+            "f_lambda2_hz": 26.7233,
+            "f_lambda3_hz": 31.4659,
+            "f_lambda_cat_hz": 31.1013,
+            "f_modes_sorted_hz": [
+              23.2214,
+              26.7233,
+              31.1013,
+              31.4659
+            ],
+            "f_range_hz": [
+              23.2214,
+              31.4659
+            ],
+            "f_centroid_hz": 28.128
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 12.38,
+            "lambda_1": 1.7121,
+            "lambda_2": 2.22276,
+            "lambda_3": 3.17473,
+            "lambda_cat": 12.28207,
+            "f_lambda1_hz": 26.1489,
+            "f_lambda2_hz": 29.7944,
+            "f_lambda3_hz": 17.8038,
+            "f_lambda_cat_hz": 17.5091,
+            "f_modes_sorted_hz": [
+              17.5091,
+              17.8038,
+              26.1489,
+              29.7944
+            ],
+            "f_range_hz": [
+              17.5091,
+              29.7944
+            ],
+            "f_centroid_hz": 22.8141
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-015",
+        "vi_name": "Salmonella Surface Antigen Protein",
+        "uniprot_id": "P06179",
+        "cif_file": "1UCU.cif",
+        "n_ca": 494,
+        "vi_catalog_beta_hz": 25.1,
+        "nearest_3d_mode_hz": 24.9945,
+        "abs_delta_nearest_hz": 0.1055,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 22.7707,
+          "7.0A": 25.7107,
+          "7.5A": 28.4665,
+          "8.0A": 31.2007,
+          "8.5A": 17.5898
+        },
+        "f_cat_by_rc": {
+          "6.5A": 19.6523,
+          "7.0A": 22.3394,
+          "7.5A": 24.9945,
+          "8.0A": 28.5484,
+          "8.5A": 31.8739
+        },
+        "f_lambda1_mean_hz": 25.1477,
+        "f_lambda1_sd_hz": 5.2617,
+        "f_lambda1_cv_pct": 20.92,
+        "f_cat_mean_hz": 25.4817,
+        "f_cat_sd_hz": 4.8569,
+        "f_cat_cv_pct": 19.06,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.91,
+            "lambda_1": 0.02029,
+            "lambda_2": 0.05266,
+            "lambda_3": 0.13281,
+            "lambda_cat": 0.96705,
+            "f_lambda1_hz": 22.7707,
+            "f_lambda2_hz": 18.3431,
+            "f_lambda3_hz": 29.1318,
+            "f_lambda_cat_hz": 19.6523,
+            "f_modes_sorted_hz": [
+              18.3431,
+              19.6523,
+              22.7707,
+              29.1318
+            ],
+            "f_range_hz": [
+              18.3431,
+              29.1318
+            ],
+            "f_centroid_hz": 22.4745
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.8,
+            "lambda_1": 0.02586,
+            "lambda_2": 0.06883,
+            "lambda_3": 0.17087,
+            "lambda_cat": 1.24959,
+            "f_lambda1_hz": 25.7107,
+            "f_lambda2_hz": 20.9718,
+            "f_lambda3_hz": 16.5214,
+            "f_lambda_cat_hz": 22.3394,
+            "f_modes_sorted_hz": [
+              16.5214,
+              20.9718,
+              22.3394,
+              25.7107
+            ],
+            "f_range_hz": [
+              16.5214,
+              25.7107
+            ],
+            "f_centroid_hz": 21.3858
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.55,
+            "lambda_1": 0.0317,
+            "lambda_2": 0.08508,
+            "lambda_3": 0.2092,
+            "lambda_cat": 1.56427,
+            "f_lambda1_hz": 28.4665,
+            "f_lambda2_hz": 23.3163,
+            "f_lambda3_hz": 18.2812,
+            "f_lambda_cat_hz": 24.9945,
+            "f_modes_sorted_hz": [
+              18.2812,
+              23.3163,
+              24.9945,
+              28.4665
+            ],
+            "f_range_hz": [
+              18.2812,
+              28.4665
+            ],
+            "f_centroid_hz": 23.7646
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.33,
+            "lambda_1": 0.03809,
+            "lambda_2": 0.10384,
+            "lambda_3": 0.2541,
+            "lambda_cat": 2.04073,
+            "f_lambda1_hz": 31.2007,
+            "f_lambda2_hz": 25.7588,
+            "f_lambda3_hz": 20.1476,
+            "f_lambda_cat_hz": 28.5484,
+            "f_modes_sorted_hz": [
+              20.1476,
+              25.7588,
+              28.5484,
+              31.2007
+            ],
+            "f_range_hz": [
+              20.1476,
+              31.2007
+            ],
+            "f_centroid_hz": 26.4139
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.66,
+            "lambda_1": 0.04842,
+            "lambda_2": 0.13282,
+            "lambda_3": 0.32179,
+            "lambda_cat": 2.54385,
+            "f_lambda1_hz": 17.5898,
+            "f_lambda2_hz": 29.1327,
+            "f_lambda3_hz": 22.673,
+            "f_lambda_cat_hz": 31.8739,
+            "f_modes_sorted_hz": [
+              17.5898,
+              22.673,
+              29.1327,
+              31.8739
+            ],
+            "f_range_hz": [
+              17.5898,
+              31.8739
+            ],
+            "f_centroid_hz": 25.3173
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-017",
+        "vi_name": "Candida Albicans Mannoprotein",
+        "uniprot_id": "Q59XX2",
+        "cif_file": "5MHT.cif",
+        "n_ca": 327,
+        "vi_catalog_beta_hz": 25.45,
+        "nearest_3d_mode_hz": 24.086,
+        "abs_delta_nearest_hz": 1.364,
+        "within_3d_span_at_7_5A": false,
+        "f_lambda1_by_rc": {
+          "6.5A": 16.682,
+          "7.0A": 19.6501,
+          "7.5A": 22.1547,
+          "8.0A": 24.8855,
+          "8.5A": 27.3439
+        },
+        "f_cat_by_rc": {
+          "6.5A": 18.5802,
+          "7.0A": 21.7405,
+          "7.5A": 24.086,
+          "8.0A": 19.8058,
+          "8.5A": 21.5887
+        },
+        "f_lambda1_mean_hz": 22.1432,
+        "f_lambda1_sd_hz": 4.2014,
+        "f_lambda1_cv_pct": 18.97,
+        "f_cat_mean_hz": 21.1602,
+        "f_cat_sd_hz": 2.0959,
+        "f_cat_cv_pct": 9.9,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.17,
+            "lambda_1": 0.1742,
+            "lambda_2": 0.44862,
+            "lambda_3": 0.50383,
+            "lambda_cat": 0.86441,
+            "f_lambda1_hz": 16.682,
+            "f_lambda2_hz": 26.7707,
+            "f_lambda3_hz": 28.3702,
+            "f_lambda_cat_hz": 18.5802,
+            "f_modes_sorted_hz": [
+              16.682,
+              18.5802,
+              26.7707,
+              28.3702
+            ],
+            "f_range_hz": [
+              16.682,
+              28.3702
+            ],
+            "f_centroid_hz": 22.6008
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.5,
+            "lambda_1": 0.24171,
+            "lambda_2": 0.58199,
+            "lambda_3": 0.6907,
+            "lambda_cat": 1.18348,
+            "f_lambda1_hz": 19.6501,
+            "f_lambda2_hz": 30.4913,
+            "f_lambda3_hz": 16.6086,
+            "f_lambda_cat_hz": 21.7405,
+            "f_modes_sorted_hz": [
+              16.6086,
+              19.6501,
+              21.7405,
+              30.4913
+            ],
+            "f_range_hz": [
+              16.6086,
+              30.4913
+            ],
+            "f_centroid_hz": 22.1226
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.42,
+            "lambda_1": 0.30725,
+            "lambda_2": 0.71983,
+            "lambda_3": 0.84124,
+            "lambda_cat": 1.45262,
+            "f_lambda1_hz": 22.1547,
+            "f_lambda2_hz": 16.9552,
+            "f_lambda3_hz": 18.3295,
+            "f_lambda_cat_hz": 24.086,
+            "f_modes_sorted_hz": [
+              16.9552,
+              18.3295,
+              22.1547,
+              24.086
+            ],
+            "f_range_hz": [
+              16.9552,
+              24.086
+            ],
+            "f_centroid_hz": 20.3813
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.36,
+            "lambda_1": 0.38766,
+            "lambda_2": 0.87954,
+            "lambda_3": 1.05497,
+            "lambda_cat": 3.92887,
+            "f_lambda1_hz": 24.8855,
+            "f_lambda2_hz": 18.7421,
+            "f_lambda3_hz": 20.5263,
+            "f_lambda_cat_hz": 19.8058,
+            "f_modes_sorted_hz": [
+              18.7421,
+              19.8058,
+              20.5263,
+              24.8855
+            ],
+            "f_range_hz": [
+              18.7421,
+              24.8855
+            ],
+            "f_centroid_hz": 20.9899
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.29,
+            "lambda_1": 0.46804,
+            "lambda_2": 1.07026,
+            "lambda_3": 1.29185,
+            "lambda_cat": 4.66804,
+            "f_lambda1_hz": 27.3439,
+            "f_lambda2_hz": 20.6745,
+            "f_lambda3_hz": 22.714,
+            "f_lambda_cat_hz": 21.5887,
+            "f_modes_sorted_hz": [
+              20.6745,
+              21.5887,
+              22.714,
+              27.3439
+            ],
+            "f_range_hz": [
+              20.6745,
+              27.3439
+            ],
+            "f_centroid_hz": 23.0803
+          }
+        }
+      },
+      {
+        "vi_id": "DEMO-010",
+        "vi_name": "Helicobacter Pylori Urease",
+        "uniprot_id": "P69996",
+        "cif_file": "1E9Z.cif",
+        "n_ca": 568,
+        "vi_catalog_beta_hz": 24.27,
+        "nearest_3d_mode_hz": 21.6559,
+        "abs_delta_nearest_hz": 2.6141,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 16.8822,
+          "7.0A": 19.2822,
+          "7.5A": 21.6559,
+          "8.0A": 24.4275,
+          "8.5A": 27.6113
+        },
+        "f_cat_by_rc": {
+          "6.5A": 21.7078,
+          "7.0A": 25.0469,
+          "7.5A": 28.0016,
+          "8.0A": 31.4418,
+          "8.5A": 18.1783
+        },
+        "f_lambda1_mean_hz": 21.9718,
+        "f_lambda1_sd_hz": 4.2152,
+        "f_lambda1_cv_pct": 19.18,
+        "f_cat_mean_hz": 24.8753,
+        "f_cat_sd_hz": 5.1915,
+        "f_cat_cv_pct": 20.87,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.12,
+            "lambda_1": 0.17841,
+            "lambda_2": 0.30991,
+            "lambda_3": 0.42022,
+            "lambda_cat": 1.17993,
+            "f_lambda1_hz": 16.8822,
+            "f_lambda2_hz": 22.2502,
+            "f_lambda3_hz": 25.9095,
+            "f_lambda_cat_hz": 21.7078,
+            "f_modes_sorted_hz": [
+              16.8822,
+              21.7078,
+              22.2502,
+              25.9095
+            ],
+            "f_range_hz": [
+              16.8822,
+              25.9095
+            ],
+            "f_centroid_hz": 21.6874
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.57,
+            "lambda_1": 0.23274,
+            "lambda_2": 0.41045,
+            "lambda_3": 0.5609,
+            "lambda_cat": 1.57084,
+            "f_lambda1_hz": 19.2822,
+            "f_lambda2_hz": 25.6065,
+            "f_lambda3_hz": 29.9337,
+            "f_lambda_cat_hz": 25.0469,
+            "f_modes_sorted_hz": [
+              19.2822,
+              25.0469,
+              25.6065,
+              29.9337
+            ],
+            "f_range_hz": [
+              19.2822,
+              29.9337
+            ],
+            "f_centroid_hz": 24.9673
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 9.68,
+            "lambda_1": 0.29357,
+            "lambda_2": 0.50612,
+            "lambda_3": 0.70331,
+            "lambda_cat": 1.96331,
+            "f_lambda1_hz": 21.6559,
+            "f_lambda2_hz": 28.4345,
+            "f_lambda3_hz": 16.7596,
+            "f_lambda_cat_hz": 28.0016,
+            "f_modes_sorted_hz": [
+              16.7596,
+              21.6559,
+              28.0016,
+              28.4345
+            ],
+            "f_range_hz": [
+              16.7596,
+              28.4345
+            ],
+            "f_centroid_hz": 23.7129
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 10.96,
+            "lambda_1": 0.37352,
+            "lambda_2": 0.61462,
+            "lambda_3": 0.88059,
+            "lambda_cat": 2.47535,
+            "f_lambda1_hz": 24.4275,
+            "f_lambda2_hz": 31.3344,
+            "f_lambda3_hz": 18.7532,
+            "f_lambda_cat_hz": 31.4418,
+            "f_modes_sorted_hz": [
+              18.7532,
+              24.4275,
+              31.3344,
+              31.4418
+            ],
+            "f_range_hz": [
+              18.7532,
+              31.4418
+            ],
+            "f_centroid_hz": 26.4892
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 13.02,
+            "lambda_1": 0.47724,
+            "lambda_2": 0.77846,
+            "lambda_3": 1.12621,
+            "lambda_cat": 3.30969,
+            "f_lambda1_hz": 27.6113,
+            "f_lambda2_hz": 17.6322,
+            "f_lambda3_hz": 21.208,
+            "f_lambda_cat_hz": 18.1783,
+            "f_modes_sorted_hz": [
+              17.6322,
+              18.1783,
+              21.208,
+              27.6113
+            ],
+            "f_range_hz": [
+              17.6322,
+              27.6113
+            ],
+            "f_centroid_hz": 21.1575
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-018",
+        "vi_name": "Chlorophyll Synthesis Enzyme",
+        "uniprot_id": "Q42536",
+        "cif_file": "6R48.cif",
+        "n_ca": 294,
+        "vi_catalog_beta_hz": 25.8,
+        "nearest_3d_mode_hz": 28.0242,
+        "abs_delta_nearest_hz": 2.2242,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 22.1934,
+          "7.0A": 25.1122,
+          "7.5A": 28.0242,
+          "8.0A": 30.9826,
+          "8.5A": 17.2205
+        },
+        "f_cat_by_rc": {
+          "6.5A": 16.9398,
+          "7.0A": 18.9224,
+          "7.5A": 30.3378,
+          "8.0A": 23.5928,
+          "8.5A": 26.8099
+        },
+        "f_lambda1_mean_hz": 24.7066,
+        "f_lambda1_sd_hz": 5.3131,
+        "f_lambda1_cv_pct": 21.5,
+        "f_cat_mean_hz": 23.3205,
+        "f_cat_sd_hz": 5.5125,
+        "f_cat_cv_pct": 23.64,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 7.13,
+            "lambda_1": 0.30832,
+            "lambda_2": 0.40489,
+            "lambda_3": 0.71852,
+            "lambda_cat": 0.71852,
+            "f_lambda1_hz": 22.1934,
+            "f_lambda2_hz": 25.4325,
+            "f_lambda3_hz": 16.9398,
+            "f_lambda_cat_hz": 16.9398,
+            "f_modes_sorted_hz": [
+              16.9398,
+              16.9398,
+              22.1934,
+              25.4325
+            ],
+            "f_range_hz": [
+              16.9398,
+              25.4325
+            ],
+            "f_centroid_hz": 20.3764
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 8.07,
+            "lambda_1": 0.39476,
+            "lambda_2": 0.53197,
+            "lambda_3": 0.89655,
+            "lambda_cat": 0.89655,
+            "f_lambda1_hz": 25.1122,
+            "f_lambda2_hz": 29.1515,
+            "f_lambda3_hz": 18.9224,
+            "f_lambda_cat_hz": 18.9224,
+            "f_modes_sorted_hz": [
+              18.9224,
+              18.9224,
+              25.1122,
+              29.1515
+            ],
+            "f_range_hz": [
+              18.9224,
+              29.1515
+            ],
+            "f_centroid_hz": 23.0271
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.91,
+            "lambda_1": 0.49162,
+            "lambda_2": 0.66295,
+            "lambda_3": 1.11717,
+            "lambda_cat": 2.30457,
+            "f_lambda1_hz": 28.0242,
+            "f_lambda2_hz": 16.2716,
+            "f_lambda3_hz": 21.1226,
+            "f_lambda_cat_hz": 30.3378,
+            "f_modes_sorted_hz": [
+              16.2716,
+              21.1226,
+              28.0242,
+              30.3378
+            ],
+            "f_range_hz": [
+              16.2716,
+              30.3378
+            ],
+            "f_centroid_hz": 23.9391
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 10.0,
+            "lambda_1": 0.60089,
+            "lambda_2": 0.83046,
+            "lambda_3": 1.39373,
+            "lambda_cat": 1.39373,
+            "f_lambda1_hz": 30.9826,
+            "f_lambda2_hz": 18.2116,
+            "f_lambda3_hz": 23.5928,
+            "f_lambda_cat_hz": 23.5928,
+            "f_modes_sorted_hz": [
+              18.2116,
+              23.5928,
+              23.5928,
+              30.9826
+            ],
+            "f_range_hz": [
+              18.2116,
+              30.9826
+            ],
+            "f_centroid_hz": 24.095
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 11.59,
+            "lambda_1": 0.74253,
+            "lambda_2": 1.08258,
+            "lambda_3": 1.79975,
+            "lambda_cat": 1.79975,
+            "f_lambda1_hz": 17.2205,
+            "f_lambda2_hz": 20.7931,
+            "f_lambda3_hz": 26.8099,
+            "f_lambda_cat_hz": 26.8099,
+            "f_modes_sorted_hz": [
+              17.2205,
+              20.7931,
+              26.8099,
+              26.8099
+            ],
+            "f_range_hz": [
+              17.2205,
+              26.8099
+            ],
+            "f_centroid_hz": 22.9083
+          }
+        }
+      },
+      {
+        "vi_id": "SUB-006",
+        "vi_name": "L-Tyrosine",
+        "uniprot_id": "P07101",
+        "cif_file": "2XSN.cif",
+        "n_ca": 335,
+        "vi_catalog_beta_hz": 24.32,
+        "nearest_3d_mode_hz": 30.6344,
+        "abs_delta_nearest_hz": 6.3144,
+        "within_3d_span_at_7_5A": true,
+        "f_lambda1_by_rc": {
+          "6.5A": 27.064,
+          "7.0A": 30.0832,
+          "7.5A": 16.7032,
+          "8.0A": 18.4961,
+          "8.5A": 20.8482
+        },
+        "f_cat_by_rc": {
+          "6.5A": 27.0027,
+          "7.0A": 30.7926,
+          "7.5A": 17.2818,
+          "8.0A": 19.5162,
+          "8.5A": 20.9951
+        },
+        "f_lambda1_mean_hz": 22.6389,
+        "f_lambda1_sd_hz": 5.714,
+        "f_lambda1_cv_pct": 25.24,
+        "f_cat_mean_hz": 23.1177,
+        "f_cat_sd_hz": 5.602,
+        "f_cat_cv_pct": 24.23,
+        "rc_sweep_detail": {
+          "6.5": {
+            "rc_angstrom": 6.5,
+            "mean_contacts": 6.8,
+            "lambda_1": 0.11463,
+            "lambda_2": 0.35992,
+            "lambda_3": 0.45643,
+            "lambda_cat": 0.45643,
+            "f_lambda1_hz": 27.064,
+            "f_lambda2_hz": 23.9786,
+            "f_lambda3_hz": 27.0027,
+            "f_lambda_cat_hz": 27.0027,
+            "f_modes_sorted_hz": [
+              23.9786,
+              27.0027,
+              27.0027,
+              27.064
+            ],
+            "f_range_hz": [
+              23.9786,
+              27.064
+            ],
+            "f_centroid_hz": 26.262
+          },
+          "7.0": {
+            "rc_angstrom": 7.0,
+            "mean_contacts": 7.77,
+            "lambda_1": 0.14163,
+            "lambda_2": 0.46605,
+            "lambda_3": 0.57896,
+            "lambda_cat": 2.37419,
+            "f_lambda1_hz": 30.0832,
+            "f_lambda2_hz": 27.2858,
+            "f_lambda3_hz": 30.4119,
+            "f_lambda_cat_hz": 30.7926,
+            "f_modes_sorted_hz": [
+              27.2858,
+              30.0832,
+              30.4119,
+              30.7926
+            ],
+            "f_range_hz": [
+              27.2858,
+              30.7926
+            ],
+            "f_centroid_hz": 29.6434
+          },
+          "7.5": {
+            "rc_angstrom": 7.5,
+            "mean_contacts": 8.62,
+            "lambda_1": 0.17465,
+            "lambda_2": 0.58746,
+            "lambda_3": 0.71551,
+            "lambda_cat": 2.9913,
+            "f_lambda1_hz": 16.7032,
+            "f_lambda2_hz": 30.6344,
+            "f_lambda3_hz": 16.9043,
+            "f_lambda_cat_hz": 17.2818,
+            "f_modes_sorted_hz": [
+              16.7032,
+              16.9043,
+              17.2818,
+              30.6344
+            ],
+            "f_range_hz": [
+              16.7032,
+              30.6344
+            ],
+            "f_centroid_hz": 20.3809
+          },
+          "8.0": {
+            "rc_angstrom": 8.0,
+            "mean_contacts": 9.56,
+            "lambda_1": 0.21415,
+            "lambda_2": 0.73159,
+            "lambda_3": 0.88911,
+            "lambda_cat": 3.8148,
+            "f_lambda1_hz": 18.4961,
+            "f_lambda2_hz": 17.0931,
+            "f_lambda3_hz": 18.8437,
+            "f_lambda_cat_hz": 19.5162,
+            "f_modes_sorted_hz": [
+              17.0931,
+              18.4961,
+              18.8437,
+              19.5162
+            ],
+            "f_range_hz": [
+              17.0931,
+              19.5162
+            ],
+            "f_centroid_hz": 18.4873
+          },
+          "8.5": {
+            "rc_angstrom": 8.5,
+            "mean_contacts": 10.85,
+            "lambda_1": 0.27208,
+            "lambda_2": 0.908,
+            "lambda_3": 1.10372,
+            "lambda_cat": 1.10372,
+            "f_lambda1_hz": 20.8482,
+            "f_lambda2_hz": 19.0428,
+            "f_lambda3_hz": 20.9951,
+            "f_lambda_cat_hz": 20.9951,
+            "f_modes_sorted_hz": [
+              19.0428,
+              20.8482,
+              20.9951,
+              20.9951
+            ],
+            "f_range_hz": [
+              19.0428,
+              20.9951
+            ],
+            "f_centroid_hz": 20.4703
+          }
+        }
+      }
+    ]
+  },
+  "reproducibility_manifest": {
+    "solver_script": "scratch/compute_gnm_3d_modes.py",
+    "validation_script": "scratch/run_peer_review_validation.py",
+    "force_constant_k_eff_N_per_m": 0.85,
+    "residue_mass_kg": 1.82659297326e-25,
+    "canonical_cutoff_rc_angstrom": 7.5,
+    "long_range_tether_cutoff_angstrom": 15.0,
+    "long_range_tether_weight": 0.08,
+    "octave_normalization_band_hz": [
+      16.0,
+      32.0
+    ],
+    "cif_artifacts_sha256": {
+      "2FY2.cif": {
+        "sha256": "0e6571e9bf569f018f42de61618a5fddb69df49c0fc13493c874025815e8219a",
+        "size_bytes": 568159
+      },
+      "5O3L.cif": {
+        "sha256": "bb49bd2bbbe08b8b3232619d3aa73d8472fd64ff3dd5502bf205eae20f7fbc32",
+        "size_bytes": 1068872
+      },
+      "1IYT.cif": {
+        "sha256": "ad1d5f1b978cc81c931ff2deed6420eb643b9adb8a1ae289c7779beb0a599079",
+        "size_bytes": 586915
+      },
+      "1XQ8.cif": {
+        "sha256": "d68a45d47b04a66ce3058db16526cec198af5a078251f269d6e0a8941ece3f26",
+        "size_bytes": 221391
+      },
+      "2F8A.cif": {
+        "sha256": "d2193ce42d17b30e5720ef340a0409b19f707403b09e587e45e7e25a289f24b3",
+        "size_bytes": 395615
+      },
+      "1PU0.cif": {
+        "sha256": "32cb21ed66f9491547ceed6f1f19ad02e8eb6e101ff50a38a2a261007b6fbe1d",
+        "size_bytes": 1335089
+      },
+      "1UCU.cif": {
+        "sha256": "b3ccb308371210b2c6c4fdd7d452d8c865c854faf67f05b7c183a31dcae26068",
+        "size_bytes": 391726
+      },
+      "5MHT.cif": {
+        "sha256": "73c278624822ce093a0820f83d5d10090f2e898bdfede27cb37b1a919821742a",
+        "size_bytes": 419592
+      },
+      "1E9Z.cif": {
+        "sha256": "32793835b41d6d4d89c00ae71403409fb2d732b8b1485cacc7168557c3c9e3ab",
+        "size_bytes": 689788
+      },
+      "6R48.cif": {
+        "sha256": "0a449f47a285785dd3dc4f028c7e54df987e809b81fceb124878837bc1627bbd",
+        "size_bytes": 988233
+      },
+      "2XSN.cif": {
+        "sha256": "42be089659957330687d292e512b0e0d13888eb655cd53c545afeb56556c014d",
+        "size_bytes": 2071289
+      }
+    }
+  }
+}

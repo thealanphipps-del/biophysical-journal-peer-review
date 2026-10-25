@@ -1,0 +1,238 @@
+{
+  "package_id": "BIOPHYSICAL_JOURNAL_FULL_SUBMISSION_PACKAGE_RC2",
+  "release_id": "SOV-BIOPHYS-N1040-RC2-20261019",
+  "git_release_tag": "v4.0.0-court-authority",
+  "total_files": 46,
+  "files": [
+    {
+      "relative_path": "01_Manuscript_and_Editorial/Cover_Letter_Biophysical_Journal.pdf",
+      "size_bytes": 58241,
+      "sha256": "10925EDCE04E8A56E4CA8BC254A5C2179F5E3BAF220247A447BBAADB8B936C08"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/Supporting_Information.pdf",
+      "size_bytes": 87319,
+      "sha256": "C821DD23E8A76A4B8301D4A7CA8C9CFC20F146281D586F4753F4CBB839802B07"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/biophysical_journal_manuscript.pdf",
+      "size_bytes": 939779,
+      "sha256": "09785EB7FB3119304F85387C6217E6DC62593D34E993CC67007F13FDE9FE4F2B"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/biophysical_journal_manuscript_LOCKED_RC1_SOURCE.tex",
+      "size_bytes": 31138,
+      "sha256": "6651AB2FED65C65778051B244057B00FD716A19220D3BECD54F5D26695240AAF"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/biophysical_journal_manuscript_RC2_EDITORIAL_MANAGER.tex",
+      "size_bytes": 31369,
+      "sha256": "2977E309D5E6569B5320B7C9A05175997F42D147C05A47DF05A60F6228D4C973"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/biophysical_journal_submission_bundle.md",
+      "size_bytes": 12442,
+      "sha256": "8BB9B56065B136E11C3515F4BE7B437A82ADCACFCC327BF08FEF48099B7645F1"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/hometree_vocal_imaging_protein_mapping.md",
+      "size_bytes": 35883,
+      "sha256": "DD7B524B3A920CD47858D0364B2D08C016978C7ED1462499A408BFA6658E2753"
+    },
+    {
+      "relative_path": "01_Manuscript_and_Editorial/meyer_octave_null_enrichment_audit.pdf",
+      "size_bytes": 959768,
+      "sha256": "D47939C8A9942D1B6C91B099DC31BC8D6662FEFCFCFE060701B92ABBBBE4DF8C"
+    },
+    {
+      "relative_path": "02_Figures/fig1_n1040_headline_scaling_law.pdf",
+      "size_bytes": 99614,
+      "sha256": "17FAE5EDEA32AAE7203803665F3A3E9F5C53D0AF504BE1C32981C35B28B75A7E"
+    },
+    {
+      "relative_path": "02_Figures/fig1_n1040_headline_scaling_law.png",
+      "size_bytes": 3626086,
+      "sha256": "AB2A8A59089543BA7B6A328873E320668BA26FDB2612D44B41A86AF619D5AAAC"
+    },
+    {
+      "relative_path": "02_Figures/fig1_n1040_headline_scaling_law.tif",
+      "size_bytes": 276480206,
+      "sha256": "DE00BED6033CCE20F48029B59E76AA844C472D412F8122DD55CBB4708F67DAD5"
+    },
+    {
+      "relative_path": "02_Figures/fig_meyer_octave_null_audit.png",
+      "size_bytes": 897179,
+      "sha256": "5F5535602D7461C312C9DD2CE8DB8C4C29CCF7603B3B25AC0187B0BFF1F829C4"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/hometree_vi_protein_crosslink.json",
+      "size_bytes": 100356,
+      "sha256": "00FD44A705191E3382AA55E086465B7CB1E222DDDED030A3750429E4E57D2EFD"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/meyer_octave_null_enrichment_audit.json",
+      "size_bytes": 32451,
+      "sha256": "C48DA4218CF9A76745DDDA204206D91219ACA5FE9ECE0B648AC5EFE38EFA03D3"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/meyer_octave_null_enrichment_dataset.csv",
+      "size_bytes": 2746,
+      "sha256": "D921683F7461A8F1CB086E7353C5107E0BCD7616E5A322BCF26FBCC3C81C1A7C"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/pdb_1000_cohort_dataset.csv",
+      "size_bytes": 211163,
+      "sha256": "BACC312957020463F51869410CCA5553974DCB56A3605AFC7F5F2DA6D146C330"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/pdb_1000_cohort_validation.json",
+      "size_bytes": 816011,
+      "sha256": "6481453E1C2BA56B7272249F1696587ADC0BA0FC689E1517567AF6C679B1DFB4"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/pdb_104_cohort_validation.json",
+      "size_bytes": 99880,
+      "sha256": "9D03205A65FDC5C74AA1DD1FF7A6F83B92529D86A329A704967A93A46F937266"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/pdb_115_cohort_dataset.csv",
+      "size_bytes": 27643,
+      "sha256": "E992BFB4C122FDEC3CB9CDDD5B877CABD3B2FFDBAB95B0339973EA3725855476"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/peer_review_validation_package.json",
+      "size_bytes": 59425,
+      "sha256": "82415F267D3FB109B37A0B47A047E8B03B0651951D4DFBD07D206413A591D99C"
+    },
+    {
+      "relative_path": "03_Datasets_and_Validation/release_manifest_sha256.json",
+      "size_bytes": 2087,
+      "sha256": "8F19B57B08DE81FEC0FB4D4D473886673ABD17A262846157F44112531A037DD8"
+    },
+    {
+      "relative_path": "04_Reproducibility_Scripts/evaluate_hinge_and_controls.py",
+      "size_bytes": 11664,
+      "sha256": "FFA04DDBA2DD8275CD65E6437CA957C64328DB20BF190F970711DE4E3DE9ABF0"
+    },
+    {
+      "relative_path": "04_Reproducibility_Scripts/generate_figure1_scaling.py",
+      "size_bytes": 10946,
+      "sha256": "A01994F7C66D0BB108DEEFCEC5569DC093FCE7782A1A50F0638D385BC6885D6B"
+    },
+    {
+      "relative_path": "04_Reproducibility_Scripts/kirchhoff_laplacian_solver.py",
+      "size_bytes": 12937,
+      "sha256": "C9FCAEDEF1B549490480F062DF820E2F88A1E0917E9FB47B0A21305A56F4E8B0"
+    },
+    {
+      "relative_path": "04_Reproducibility_Scripts/run_proteome_validation.py",
+      "size_bytes": 23947,
+      "sha256": "2765BF9F81C7D9313F312BA0471B6ABDC4435733DDBDF706D49D251B4FD670ED"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/1E9Z.cif",
+      "size_bytes": 689788,
+      "sha256": "32793835B41D6D4D89C00AE71403409FB2D732B8B1485CACC7168557C3C9E3AB"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/1IYT.cif",
+      "size_bytes": 586915,
+      "sha256": "AD1D5F1B978CC81C931FF2DEED6420EB643B9ADB8A1AE289C7779BEB0A599079"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/1PU0.cif",
+      "size_bytes": 1335089,
+      "sha256": "32CB21ED66F9491547CEED6F1F19AD02E8EB6E101FF50A38A2A261007B6FBE1D"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/1UCU.cif",
+      "size_bytes": 391726,
+      "sha256": "B3CCB308371210B2C6C4FDD7D452D8C865C854FAF67F05B7C183A31DCAE26068"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/1XQ8.cif",
+      "size_bytes": 221391,
+      "sha256": "D68A45D47B04A66CE3058DB16526CEC198AF5A078251F269D6E0A8941ECE3F26"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/2F8A.cif",
+      "size_bytes": 395615,
+      "sha256": "D2193CE42D17B30E5720EF340A0409B19F707403B09E587E45E7E25A289F24B3"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/2FY2.cif",
+      "size_bytes": 568159,
+      "sha256": "0E6571E9BF569F018F42DE61618A5FDDB69DF49C0FC13493C874025815E8219A"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/2XSN.cif",
+      "size_bytes": 2071289,
+      "sha256": "42BE089659957330687D292E512B0E0D13888EB655CD53C545AFEB56556C014D"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/5MHT.cif",
+      "size_bytes": 419592,
+      "sha256": "73C278624822CE093A0820F83D5D10090F2E898BDFEDE27CB37B1A919821742A"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/5O3L.cif",
+      "size_bytes": 1068872,
+      "sha256": "BB49BD2BBBE08B8B3232619D3AA73D8472FD64FF3DD5502BF205EAE20F7FBC32"
+    },
+    {
+      "relative_path": "05_Benchmark_CIF_Structures/6R48.cif",
+      "size_bytes": 988233,
+      "sha256": "0A449F47A285785DD3DC4F028C7E54DF987E809B81FCEB124878837BC1627BBD"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/DATA_PROVENANCE_SNAPSHOT_AUDIT.json",
+      "size_bytes": 3521,
+      "sha256": "319CAD7C38CE4BEFD4A70212432C21810F6E30C4497066A7AF77EABC46E42BB6"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/DOCMESH_SYNC_RECEIPT_V4_0_0.json",
+      "size_bytes": 2380,
+      "sha256": "9ACCF227284976095BE5F586A6052BA9A65F1BD1CC7D7427D2AEBC4D7A675866"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/FORMAL_RELEASE_REPORT_V4_0_0.md",
+      "size_bytes": 2501,
+      "sha256": "4A8210E450E62733E3D24C0EB01BAF30A38614C525568FCC4D0DF295E516532A"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/GEMINI_PUBLICATION_READINESS_AUDIT.md",
+      "size_bytes": 7276,
+      "sha256": "2C12A8D72AE8D0EF5F4BA92D5D2903DEF1228518D575F3708030641CAC945E97"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/GEMMA_PUBLICATION_READINESS_AUDIT.md",
+      "size_bytes": 7560,
+      "sha256": "81CC86980B55CD1C131B9D544A1E8A3748A23D042F579CB8544FC855A00ECB4C"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/GOVERNANCE_MEMORANDUM_RULE_VI_27.md",
+      "size_bytes": 6886,
+      "sha256": "EB46FE3C0B09DF4A16C5D19665315A77F8ACB976CF6E9CA4AEEE0CA48E22F13E"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/RELEASE_MANIFEST_V4_0_0.json",
+      "size_bytes": 15106,
+      "sha256": "A66342D90226AC44FF64DC737D78DCC75D1DEA440D8E793F76557688C7183161"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/RFC-VI-0004_spectral_governance_and_rule_vi_27_spec.md",
+      "size_bytes": 4657,
+      "sha256": "66EC19668841D6301975F0E9FAAB073E3F2832CA6303CF74217215A21B4DEA59"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/SCIENTIFIC_VALIDATION_SEPARATION.md",
+      "size_bytes": 7341,
+      "sha256": "F337F808F4CAAA6EDA126AE3B947B1C31EEFC85E05930F8B68B8162C01D74169"
+    },
+    {
+      "relative_path": "06_Governance_and_Peer_Reviews/docmesh_artifact_v4_0_0.yaml",
+      "size_bytes": 4839,
+      "sha256": "3E49BF69EFACA5C73B59C1BFB391A9740A935492CAA1A4B7E250B8FDC9B9EEC0"
+    }
+  ]
+}

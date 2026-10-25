@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at_utc": "2026-10-20T09:42:00Z",
+  "governance_statement": "Release candidate archived, provenance locked, manifest synchronized, and internal verification completed pending independent reproducibility confirmation.",
+  "external_database_snapshots": [
+    {
+      "database": "RCSB Protein Data Bank (PDB)",
+      "snapshot_release": "RCSB PDB 2026-10 Frozen Cohort (N = 1,040 non-redundant structures + N = 115 core benchmark)",
+      "local_artifacts": [
+        {
+          "file": "pdb_1000_cohort_dataset.csv",
+          "sha256": "BACC312957020463F51869410CCA5553974DCB56A3605AFC7F5F2DA6D146C330"
+        },
+        {
+          "file": "pdb_115_cohort_dataset.csv",
+          "sha256": "E992BFB4C122FDEC3CB9CDDD5B877CABD3B2FFDBAB95B0339973EA3725855476"
+        },
+        {
+          "file": "catalog/pdb_kirchhoff_index.json",
+          "sha256": "7D6575E099DA2593FA783DF607DD0C17CBDE22FA559986FE4F5E98EAA9593588"
+        }
+      ],
+      "cutoff_parameters": {
+        "c_alpha_cutoff_angstrom": 7.5,
+        "kirchhoff_scaling_law": "nu_1(THz) = 0.42338 * (<z> / R_g)^1.1194",
+        "unfolded_r2": 0.8048,
+        "modulo2_folded_r2": 0.0006
+      }
+    },
+    {
+      "database": "UniProtKB / Swiss-Prot",
+      "snapshot_release": "UniProt Release 2026_04 (Reviewed Human & Canonical Enzyme Entries)",
+      "local_artifacts": [
+        {
+          "file": "catalog/audited_marker_registry.json",
+          "sha256": "CD92FFCEED32200EC3A047A25BF77DFA0E739329C19CC5111B045A0FD499247A"
+        }
+      ],
+      "verified_accessions": [
+        "P28329 (CHAT / Choline O-acetyltransferase)",
+        "P07203 (GPX1 / Glutathione peroxidase 1)",
+        "P00441 (SOD1 / Superoxide dismutase [Cu-Zn])",
+        "Q9UJM8 (HAO1 / Hydroxyacid oxidase 1)",
+        "P21397 (MAOA / Amine oxidase [flavin-containing] A)"
+      ]
+    },
+    {
+      "database": "NCBI PubChem Compound Database",
+      "snapshot_release": "PubChem 2026-10 Exact Monoisotopic & Molecular Weight Snapshot (319 Meyer 2003 Resolved Compounds + 20 VI Primary Catalog Compounds)",
+      "local_artifacts": [
+        {
+          "file": "meyer_octave_null_enrichment_dataset.csv",
+          "sha256": "D921683F7461A8F1CB086E7353C5107E0BCD7616E5A322BCF26FBCC3C81C1A7C"
+        },
+        {
+          "file": "meyer_octave_null_enrichment_audit.json",
+          "sha256": "C48DA4218CF9A76745DDDA204206D91219ACA5FE9ECE0B648AC5EFE38EFA03D3"
+        }
+      ],
+      "null_audit_metrics": {
+        "meyer_resolved_compounds": 319,
+        "window_saturation_pm_0_04_hz": 0.6839,
+        "vi_catalog_pubchem_exact_matches": "0 / 12 (0.0%)"
+      }
+    },
+    {
+      "database": "Human Protein Atlas (HPA)",
+      "snapshot_release": "HPA v23.0 Consensus Transcriptomics (50-Tissue Consensus nTPM >= 1.0)",
+      "local_artifacts": [
+        {
+          "file": "integration/hometree_vi_protein_crosslink_v3_4.json",
+          "sha256": "0BD45DD58EAC2DD2543B7FEB12643ED570092B0DE850E98A744C8A1DA7EA8F51"
+        }
+      ]
+    },
+    {
+      "database": "USPTO Patent Prior-Art Corpus",
+      "snapshot_release": "US 8,346,559 B2 (Jan 1, 2013) & US 9,223,863 B2 (Dec 29, 2015) Full-Text & FIG. 11 Tables",
+      "local_artifacts": [
+        {
+          "file": "catalog/patent_prior_art_frequencies.json",
+          "sha256": "5F73D03D83AC7D021A9502C142A11F8362E54FFE2A6AB8370B7FF4B8D79AEAD9"
+        }
+      ]
+    }
+  ]
+}

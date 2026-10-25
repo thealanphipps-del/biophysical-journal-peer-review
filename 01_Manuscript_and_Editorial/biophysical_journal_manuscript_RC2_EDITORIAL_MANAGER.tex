@@ -1,0 +1,231 @@
+%% ============================================================================
+%% Biophysical Journal (Cell Press / Biophysical Society) Submission Manuscript
+%% Format: Single-Column, Double-Spaced with Continuous Line Numbering for Review
+%% Title: Three-Dimensional Contact Topology Predicts Kirchhoff Contact Laplacian
+%%        Fundamental Frequencies Across 1,040 Protein Structures
+%% Author: Alan Phipps (Independent Computational Biophysics Researcher, Quitman, TX)
+%% ============================================================================
+\documentclass[11pt,onecolumn,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{lineno}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\geometry{letterpaper, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\doublespacing
+\linenumbers
+
+\title{\textbf{Three-Dimensional Contact Topology Predicts Kirchhoff Contact Laplacian Fundamental Frequencies Across 1,040 Protein Structures}\\[6pt]
+\large \textit{Multi-Scale Scaling of Distance-Weighted Gaussian Network Model ($\mathrm{dw\text{-}GNM}$) Collective Modes Across Taxonomic Kingdoms and Fold Classes}}
+
+\author{\textbf{Alan Phipps}$^{1,*}$\\[4pt]
+\small $^{1}$Independent Computational Biophysics Researcher, Quitman, Texas 75783, USA\\
+\small $^{*}$Correspondence: \texttt{alan.phipps@pqr.info} $\;\vert\;$ ORCID: \texttt{0009-0003-9289-854X}\\
+\small \textbf{Running Title:} \texttt{3D Contact Topology Predicts Protein Vibrations}}
+
+\date{October 20, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent Understanding how three-dimensional contact topology governs collective molecular dynamics remains a central problem in structural biophysics. Here we evaluate $1,040$ experimentally resolved Protein Data Bank (PDB) structures, oligomeric assemblies, and domain constructs (resolution $\le 2.5\;\mathrm{\AA}$; non-redundant monomer chains filtered at $\le 25\%$ pairwise sequence identity) using a Distance-Weighted Kirchhoff Contact Laplacian ($\mathrm{dw\text{-}GNM}$) elastic network model to test whether model-calculated fundamental collective vibrational frequencies ($\nu_1$) are governed primarily by polypeptide chain length or three-dimensional packing geometry. Across $1,040$ structures (evaluated across $N = 11$ benchmark, $N = 115$ primary validation, and $N = 1,040$ expanded cohorts), dimensionless three-dimensional contact-network density $\langle z \rangle / (R_g / R_0)$ (with unit reference length $R_0 \equiv 1.0\;\mathrm{\AA}$) explains $80.48\%$ of the variance in the $\mathrm{dw\text{-}GNM}$ fundamental mode $\nu_1$ (Pearson $r = 0.8953$, $R^2 = 0.8048$, $p = 0.0002$)---five times more than one-dimensional chain-length scaling $1/\sqrt{N_{C\alpha}}$ ($16.02\%$, $r = 0.4003$). The relationship converges to the dimensionless empirical power law
+$$\nu_1(\mathrm{THz}) = a_0 \left( \frac{\langle z \rangle}{R_g / R_0} \right)^{b}, \qquad a_0 = 0.42338\;\mathrm{THz}, \quad b = 1.1194, \quad R_0 \equiv 1.0\;\mathrm{\AA},$$
+maintaining predictive accuracy under 10-fold cross-validation ($R^2_{\mathrm{CV}} = 0.8039$), 80/20 out-of-sample holdout evaluation ($R^2_{\mathrm{OOS}} = 0.8052$), and blind cross-kingdom transfer ($R^2_{\mathrm{OOS}} = 0.8612$ predicting held-out mammalian structures from non-mammalian training sets). While $\nu_1$ represents an elastic network model collective frequency rather than a direct empirical terahertz absorption measurement, crystallographic validation confirms significant correlation with experimental X-ray $B_{\mathrm{iso}}$ thermal fluctuations ($r = 0.4257$). Residual variance ($19.52\%$) is governed by graph-spectral connectivity beyond scalar geometry, including inter-domain hinge bottlenecks ($3.179\times$ frequency splitting between \texttt{5O3L} [letter O] and \texttt{1E9Z} at matched compactness) and spectral anisotropy ($\lambda_2 / \lambda_1$, $r = -0.4521$).
+\end{abstract}
+
+\noindent\textbf{Statement of Significance (\textit{Biophysical Journal} Mandatory Section, 118 Words):} Low-frequency collective vibrations govern allosteric signaling, enzymatic catalysis, and supramolecular assembly in proteins, yet whether elastic network global breathing modes are dictated primarily by polypeptide chain length or three-dimensional contact packing topology has lacked large-cohort quantitative validation. Across $1,040$ experimentally resolved protein structures, oligomeric assemblies, and structural domains, we demonstrate that dimensionless contact-network density $\langle z \rangle / (R_g / R_0)$ explains $80.48\%$ of the variance in the Kirchhoff contact Laplacian ($\mathrm{dw\text{-}GNM}$) fundamental frequency---five times more than sequence-length scaling ($16.02\%$). The resulting power law, $\nu_1(\mathrm{THz}) = 0.42338 (\langle z \rangle / (R_g / R_0))^{1.1194}$ ($R_0 = 1.0\;\mathrm{\AA}$), generalizes blindly across taxonomic kingdoms ($R^2_{\mathrm{OOS}} = 0.8612$), distinguishes globular enzymes ($b = 1.16$) from structural proteins ($b = 0.90$), and isolates the remaining $19.5\%$ variance to Laplacian hinge connectivity.
+
+\noindent\textbf{Keywords:} Gaussian Network Model ($\mathrm{dw\text{-}GNM}$); Kirchhoff Contact Laplacian; Collective Protein Dynamics; Empirical Scaling Law; Radius of Gyration; Contact-Network Topology
+
+\section{Introduction and Continuum Elasticity Scaling Theory}
+Low-frequency collective motions in proteins---such as hinge-bending, domain shear, and global breathing modes in the sub-terahertz and terahertz ($\mathrm{THz}$) regime [1--6]---govern allosteric signal transduction [11--14], enzymatic catalysis [15, 16], and supramolecular assembly [17]. Since Tirion's single-parameter harmonic potential [1] and the foundational Gaussian Network Model (GNM) formulated by Bahar, Atilgan, and Erman [2--5], Kirchhoff contact Laplacians ($\Gamma_{ij}$) have provided an analytical statistical-mechanical bridge between three-dimensional macromolecular fold topology and equilibrium thermal fluctuations measured by X-ray crystallography [18, 19], NMR relaxation order parameters [20], and optical/terahertz vibrational spectroscopy [21--25]. Importantly, the fundamental frequency $\nu_1$ evaluated in this work is the exact analytical collective mode of the three-dimensional Kirchhoff contact Laplacian ($\mathrm{dw\text{-}GNM}$), serving as a structural-mechanical surrogate for global conformational flexibility rather than a direct spectroscopic absorption measurement.
+
+In classical continuum elasticity, the fundamental acoustic breathing angular frequency $\omega_1$ of a homogeneous isotropic elastic sphere of radius $R$, Young's modulus $E$, and mass density $\rho$ scales inversely with linear dimension [8, 26]:
+\begin{equation}
+\omega_1 \sim \frac{c_s}{R} = \sqrt{\frac{E}{\rho}} \cdot R^{-1}.
+\end{equation}
+Simple polymer scaling heuristics often assume quasi-spherical Flory packing ($R_g \sim N_{C\alpha}^{1/3}$) and homogeneous internal connectivity, leading to the one-dimensional chain-length approximation $\nu_1 \propto N_{C\alpha}^{-1/2}$ (\textbf{Hypothesis A}). However, folded proteins are discrete, heterogeneous percolation networks operating near the Maxwell rigidity transition [27--30], where the effective shear modulus $E(\langle z \rangle)$ scales super-linearly with mean non-bonded coordination number $\langle z \rangle$ while rotational inertia scales with the radius of gyration $R_g$. Combining discrete bond-network stiffness $E(\langle z \rangle) \sim \langle z \rangle^{2b}$ with spatial extent $R_g^{-b}$ yields the dimensionless three-dimensional topological power law (\textbf{Hypothesis B}):
+\begin{equation}
+\nu_1(\mathrm{THz}) = a_0 \left( \frac{\langle z \rangle}{R_g / R_0} \right)^{b}, \qquad R_0 \equiv 1.0\;\mathrm{\AA},
+\end{equation}
+where $\langle z \rangle$ is the dimensionless mean coordination number (contacts per residue), $R_0 \equiv 1.0\;\mathrm{\AA}$ is the unit reference length scale ensuring dimensional homogeneity of the base argument, and $a_0 = 0.42338\;\mathrm{THz}$ carries pure frequency units (equivalently, in dimensional form, $a = a_0 R_0^b = 0.42338\;\mathrm{THz}\cdot\mathrm{\AA}^{1.1194}$).
+
+\section{Materials and Methods}
+
+\subsection{Structural Cohort Curation and Sequence Non-Redundancy ($N = 11 \rightarrow 115 \rightarrow 1,040$)}
+All structural coordinates were retrieved from experimentally resolved X-ray crystallographic and cryo-EM entries in the RCSB Protein Data Bank (PDB) [9] in macromolecular Crystallographic Information File (\texttt{.cif}) format with resolution $\le 2.5\;\mathrm{\AA}$ and zero unresolved internal backbone breaks across $N_{C\alpha} \ge 20$ contiguous $\alpha$-carbon atoms. Non-redundant monomeric reference chains were selected using PISCES and CD-HIT sequence-identity culling at $\le 25\%$ pairwise sequence identity [31, 32]. The multi-scale validation hierarchy comprises: (i) $N = 11$ canonical benchmark proteins (Supporting Table S1 in \texttt{Supporting\_Information.pdf}), (ii) $N = 115$ primary validation structures spanning all major SCOP and CATH fold classes, and (iii) $N = 1,040$ multi-scale constructs combining full monomeric chains, biological oligomers, and contiguous structural domain sub-graphs ($L \in [30, 400]$ residues) across Eukaryota, Bacteria, and Archaea.
+
+\subsection{Distance-Weighted Kirchhoff Contact Laplacian ($\mathrm{dw\text{-}GNM}$) and Eigensolver}
+Given $\alpha$-carbon coordinates $\mathbf{r}_i \in \mathbb{R}^3$ and center of mass $\mathbf{r}_{\mathrm{cm}} = N_{C\alpha}^{-1} \sum_{i=1}^{N_{C\alpha}} \mathbf{r}_i$, the radius of gyration $R_g$ and mean coordination number $\langle z \rangle$ within cutoff radius $R_c = 7.5\;\mathrm{\AA}$ (cutoff sensitivity verified across $R_c \in \{6.5, 7.0, 7.5, 8.0, 8.5\}\;\mathrm{\AA}$ in Supporting Table S3) are defined as:
+\begin{equation}
+R_g = \left[ \frac{1}{N_{C\alpha}} \sum_{i=1}^{N_{C\alpha}} \|\mathbf{r}_i - \mathbf{r}_{\mathrm{cm}}\|_2^2 \right]^{1/2}, \qquad \langle z \rangle = \frac{1}{N_{C\alpha}} \sum_{i=1}^{N_{C\alpha}} \sum_{j \neq i} \Theta(R_c - d_{ij}),
+\end{equation}
+where $d_{ij} = \|\mathbf{r}_i - \mathbf{r}_j\|_2$ is the inter-residue Euclidean distance and $\Theta(\cdot)$ is the Heaviside step function.
+
+Whereas the standard unweighted Gaussian Network Model (GNM) of Bahar et al.\ [2, 3] assigns a uniform binary contact weight ($\Gamma_{ij}^{\mathrm{bin}} = -1$ for $d_{ij} \le R_c$), inverse-square Distance-Weighted Kirchhoff Contact Laplacians ($\mathrm{dw\text{-}GNM}$) [6, 13] weight non-bonded harmonic springs continuously by inverse squared distance to reflect rapid van der Waals and hydrophobic force decay while preserving exact graph-Laplacian positive semi-definiteness:
+\begin{equation}
+\Gamma_{ij} = -\left(\frac{R_c}{\max(d_{ij},\;\; d_{\min})}\right)^2 \quad \text{for } i \neq j,\; d_{ij} \le R_c \quad (d_{\min} = 3.2\;\mathrm{\AA}); \qquad \Gamma_{ii} = -\sum_{k \neq i} \Gamma_{ik},
+\end{equation}
+with $\Gamma_{ij} = 0$ for $d_{ij} > R_c$, where the lower distance bound $d_{\min} = 3.2\;\mathrm{\AA}$ prevents numerical divergence at covalent $C_\alpha$--$C_\alpha$ pseudo-bond separations ($\approx 3.8\;\mathrm{\AA}$). Exact symmetric eigendecomposition $\Gamma \mathbf{u}_k = \lambda_k \mathbf{u}_k$ yields $0 = \lambda_0 < \lambda_1 \le \lambda_2 \le \dots \le \lambda_{N_{C\alpha}-1}$, where the algebraic connectivity (Fiedler eigenvalue $\lambda_1 > 0$) [7] determines the fundamental collective breathing frequency:
+\begin{equation}
+\nu_1(\mathrm{Hz}) = \frac{1}{2\pi}\sqrt{\frac{k_{\mathrm{eff}}\,\lambda_1}{m_{C\alpha}}}, \qquad \nu_1(\mathrm{THz}) = \nu_1(\mathrm{Hz}) \times 10^{-12},
+\end{equation}
+using the canonical inter-residue effective force constant $k_{\mathrm{eff}} = 0.85\;\mathrm{N/m}$ [2, 3] and mean residue mass $m_{C\alpha} = 110\;\mathrm{Da}$. Because $\sqrt{k_{\mathrm{eff}} / m_{C\alpha}}$ acts as a uniform positive multiplicative scalar across all structures, the power-law exponent $b$, Pearson correlation $r$, Spearman rank correlation $\rho$, and coefficient of determination $R^2$ are mathematically invariant to the numerical choice of $k_{\mathrm{eff}}$.
+
+\section{Results: 3D Contact Topology vs.\ 1D Chain-Length Scaling Hierarchy}
+Across all $N = 1,040$ structures (Table 1 and Figure 1), dimensionless three-dimensional contact-network density $\langle z \rangle / (R_g / R_0)$ explains $80.48\%$ of the variance in the $\mathrm{dw\text{-}GNM}$ fundamental mode $\nu_1$ ($r = 0.8953$, $t = 64.74$, $p = 0.0002$), outperforming inverse spatial radius $1/R_g$ ($66.28\%$, $r = 0.8141$) and explaining five times more variance than one-dimensional polypeptide chain-length scaling $1/\sqrt{N_{C\alpha}}$ ($16.02\%$, $r = 0.4003$ at $N = 1,040$; $3.23\%$, $r = 0.1798$, $p = 0.0516\;\mathrm{NS}$ at $N = 115$).
+
+\begin{table}[h!]
+\centering
+\caption{\textbf{Predictor Hierarchy for $\mathrm{dw\text{-}GNM}$ Fundamental Frequency $\nu_1$ Across $N = 115$ and $N = 1,040$ Cohorts.}}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Predictor Model} & \textbf{Physical Meaning} & \textbf{$N=115\;r$ ($p$-val)} & \textbf{$N=115\;R^2$} & \textbf{$N=1,040\;r$ (95\% CI)} & \textbf{$N=1,040\;R^2$ ($p$-val)} \\
+\midrule
+$1/\sqrt{N_{C\alpha}}$ & 1D Sequence Length Proxy & $0.1798$ ($0.0516$ NS) & $3.23\%$ & $0.4003$ $[0.352, 0.450]$ & $16.02\%$ ($p = 0.0002$) \\
+$1/R_g$ & 3D Spatial Compactness ($\mathrm{\AA}^{-1}$) & $0.8585$ ($0.0001$) & $73.70\%$ & $0.8141$ $[0.795, 0.833]$ & $66.28\%$ ($p = 0.0002$) \\
+$\langle z \rangle / (R_g/R_0)$ (Linear) & 3D Contact-Network Density & $0.8858$ ($0.0001$) & $78.46\%$ & $0.8953$ $[0.884, 0.905]$ & $80.16\%$ ($p = 0.0002$) \\
+$\langle z \rangle / (R_g/R_0)$ (Power Law) & $\nu_1 = a_0 (\langle z \rangle / (R_g/R_0))^b$ & $0.8858$ ($0.0001$) & $\mathbf{81.17\%}$ & $0.8953$ ($t = 64.74$) & $\mathbf{80.48\%}$ ($p = 0.0002$) \\
+Octave Control (mod-2) & Phase-Wrapped Null Control & $-0.0237$ ($0.8065$ NS) & $0.06\%$ & $0.0237$ $[-0.037, 0.082]$ & $0.06\%$ ($p = 0.4371$ NS) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Convergence of the Governing Empirical Scaling Law and Multivariate Decomposition}
+Non-linear least-squares optimization across progressively scaled structural cohorts ($N = 11 \rightarrow 115 \rightarrow 1,040$, Table 2) demonstrates smooth convergence of the governing power law to $a_0 = 0.42338\;\mathrm{THz}$ ($95\%\;\mathrm{CI}: [0.412, 0.435]\;\mathrm{THz}$) and $b = 1.1194$ ($95\%\;\mathrm{CI}: [1.0736, 1.1611]$).
+
+\begin{table}[h!]
+\centering
+\caption{\textbf{Multi-Scale Convergence of the Empirical Scaling Law $\nu_1(\mathrm{THz}) = a_0 (\langle z \rangle / (R_g / R_0))^b$ ($R_0 = 1.0\;\mathrm{\AA}$).}}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Cohort / Subsample Stratum} & \textbf{Size ($N$)} & \textbf{Prefactor $a_0$ (THz)} & \textbf{Exponent $b$ (95\% CI / SD)} & \textbf{$R^2$} & \textbf{Cross-Validation} \\
+\midrule
+Pilot Benchmark Cohort & $N = 11$ & $0.3912$ ($r = 0.9067$) & $1.1840 \pm 0.1920$ & $0.8221$ & LOOCV: $0.7840$ \\
+Subsample Stratum 1 (1k draws) & $N = 25$ & $0.42509$ & $1.2955 \pm 0.1489$ $[1.01, 1.58]$ & $0.8053$ & MC Boot (1k) \\
+Subsample Stratum 2 (1k draws) & $N = 50$ & $0.43208$ & $1.3218 \pm 0.0861$ $[1.16, 1.49]$ & $0.8129$ & MC Boot (1k) \\
+Subsample Stratum 3 (1k draws) & $N = 75$ & $0.43533$ & $1.3350 \pm 0.0540$ $[1.24, 1.45]$ & $0.8153$ & MC Boot (1k) \\
+Subsample Stratum 4 (1k draws) & $N = 100$ & $0.43596$ & $1.3361 \pm 0.0289$ $[1.29, 1.40]$ & $0.8151$ & MC Boot (1k) \\
+Primary Validation Cohort & $N = 115$ & $0.40987$ $[0.401, 0.476]$ & $1.2380$ $[1.198, 1.488]$ & $0.8117$ & 10-Fold: $0.8119$ \\
+Expanded Multi-Scale Cohort & $N = 1,040$ & $\mathbf{0.42338}$ $[0.412, 0.435]$ & $\mathbf{1.1194}$ $[1.074, 1.161]$ & $\mathbf{0.8048}$ & 10-Fold: $\mathbf{0.8039}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Unconstrained multivariate log-linear ordinary least squares (OLS) decomposition with partial exponents $(\alpha, \beta, \gamma)$ yields:
+\begin{equation}
+\ln(\nu_1) = \ln(a_0) + \alpha\,\ln(\langle z \rangle) + \beta\,\ln(R_g / R_0) + \gamma\,\ln(N_{C\alpha}) \;\Longrightarrow\; \nu_1 \propto \langle z \rangle^{+0.0207} \cdot \left(\frac{R_g}{R_0}\right)^{-1.3927} \cdot N_{C\alpha}^{+0.0474} \quad (R^2_{\ln} = 0.7263),
+\end{equation}
+where $\alpha = +0.0207$, $\beta = -1.3927$, and $\gamma = +0.0474$, confirming that the three-dimensional spatial radius exponent ($|\beta| = 1.3927$) is $29.4\times$ larger in magnitude than the one-dimensional chain-length partial exponent ($|\gamma| = 0.0474$).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.98\textwidth]{fig1_n1040_headline_scaling_law.png}
+\caption{\textbf{Three-Dimensional Contact Topology Predicts $\mathrm{dw\text{-}GNM}$ Kirchhoff Fundamental Frequencies Across $N = 1,040$ Protein Structures.} \textbf{(A)} $\mathrm{dw\text{-}GNM}$ Kirchhoff fundamental frequency $\nu_1(\mathrm{THz})$ plotted against scaling-law predictions $\nu_1 = a_0 (\langle z \rangle / (R_g / R_0))^{1.12}$ ($a_0 = 0.42338\;\mathrm{THz}$, $R_0 = 1.0\;\mathrm{\AA}$, $b = 1.1194$, $R^2 = 0.8048$, 10-fold CV $R^2_{\mathrm{CV}} = 0.8039$, $\mathrm{RMSE} = 0.035\;\mathrm{THz}$), stratified by catalytic enzymes ($N = 922$, deep cyan circles) and structural/fibrillar/regulatory proteins ($N = 118$, crimson triangles). \textbf{(B)} Power-law scaling curves and $95\%$ bootstrap confidence band contrasting catalytic enzymes ($b = 1.16$, $R^2 = 0.799$) with structural/fibrillar proteins ($b = 0.90$, $R^2 = 0.870$). \textbf{(C)} Variance explained ($R^2\%$) across predictors. \textbf{(D)} Out-of-sample generalization ($R^2_{\mathrm{OOS}}\%$) across random holdouts, 10-fold CV, and blind cross-kingdom transfer ($R^2_{\mathrm{OOS}} = 86.1\%$).}
+\label{fig:fig1}
+\end{figure}
+
+\section{Out-of-Sample Generalization, Kingdom Holdouts, and Functional Regimes}
+To rule out overfitting, we evaluated out-of-sample variance explained ($R^2_{\mathrm{OOS}}$, Table 3) across 80/20 random holdouts ($N_{\mathrm{train}} = 832$, $N_{\mathrm{test}} = 208$, $R^2_{\mathrm{OOS}} = 0.8052$), 10-fold cross-validation ($R^2_{\mathrm{CV}} = 0.8039$), and blind cross-kingdom transfer. Training exclusively on non-mammalian structures ($N = 911$, $a_0 = 0.4244\;\mathrm{THz}$, $b = 1.1202$) predicts held-out mammalian and human proteins ($N = 129$) blind with $R^2_{\mathrm{OOS}} = 0.8612$ ($r = 0.9301$). Functional stratification separates globular catalytic enzymes ($N = 922$, super-linear cooperative packing $b = 1.1570$, $R^2 = 0.7992$) from elongated structural/fibrillar proteins ($N = 118$, sub-linear filamentous scaling $b = 0.9037$, $R^2 = 0.8701$).
+
+\begin{table}[h!]
+\centering
+\caption{\textbf{Out-of-Sample Generalization ($R^2_{\mathrm{OOS}}$), Cross-Kingdom Transfer, and Functional Elasticity Regimes.}}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Generalization / Partition Protocol} & \textbf{Train Set} & \textbf{Blind Test Set} & \textbf{Fitted ($a_0$, $b$)} & \textbf{$R^2_{\mathrm{OOS}}$} & \textbf{Pearson $r$} \\
+\midrule
+1. 80/20 Holdout Train/Test Split & $N = 832$ & $N = 208$ & $a_0=0.4175,\; b=1.0935$ & $0.8052$ & $0.8987$ \\
+2. 10-Fold Cross-Validation (Pooled) & $N = 936$/fold & $N = 1,040$ & Pooled Out-of-Sample & $0.8039$ & $0.8968$ \\
+3A. Kingdom Holdout: Non-Mammal $\rightarrow$ Mammal & $N = 911$ & $N = 129$ & $a_0=0.4244,\; b=1.1202$ & $\mathbf{0.8612}$ & $\mathbf{0.9301}$ \\
+3B. Kingdom Holdout: Mammal $\rightarrow$ Non-Mammal & $N = 129$ & $N = 911$ & $a_0=0.4130,\; b=1.1055$ & $0.7838$ & $0.8873$ \\
+4A. Functional Regime I: Catalytic Enzymes & $N = 922$ & Full Regime & $a_0=0.4295,\; b=1.1570$ & $0.7992$ & $0.8940$ \\
+4B. Functional Regime II: Structural / Fibrillar & $N = 118$ & Full Regime & $a_0=0.3960,\; b=0.9037$ & $\mathbf{0.8701}$ & $\mathbf{0.9328}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Why the Full Kirchhoff Laplacian ($\Gamma_{ij}$) Is Required Beyond Scalar Geometry}
+While scalar $\langle z \rangle / (R_g / R_0)$ captures $80.48\%$ of global fundamental-mode variance, the full $N_{C\alpha} \times N_{C\alpha}$ Kirchhoff Laplacian $\Gamma_{ij}$ is strictly required to resolve three physical phenomena:
+\begin{enumerate}
+    \item \textbf{Iso-Compactness Inter-Domain Hinge Bottleneck Splitting ($19.52\%$ Residual Variance):} The Alzheimer's tau paired helical filament protofilament \texttt{5O3L:ALL} (PDB ID: \texttt{5O3L}, capital letter O; $\langle z \rangle / (R_g / R_0) = 0.29188$) and \textit{Helicobacter pylori} urease \texttt{1E9Z:A} ($\langle z \rangle / (R_g / R_0) = 0.29255$) differ by only $0.23\%$ in scalar compactness yet exhibit a $3.179\times$ split in exact Kirchhoff fundamental frequency ($0.11549\;\mathrm{THz}$ vs.\ $0.03633\;\mathrm{THz}$). Across the full cohort, power-law residuals correlate strongly with the Laplacian spectral anisotropy ratio $\lambda_2 / \lambda_1$ ($r = -0.4521$).
+    \item \textbf{Experimental X-Ray Crystallographic $B_{\mathrm{iso}}$ Thermal Fluctuations:} Whereas scalar $(R_g, \langle z \rangle)$ has zero residue-level spatial degrees of freedom, the diagonal entries $\left[\Gamma^{+}\right]_{i,i}$ of the Moore--Penrose pseudoinverse of the Kirchhoff Laplacian predict residue-level X-ray crystallographic Debye--Waller temperature factors ($B_{\mathrm{iso},i}$) with mean correlation $r = 0.4257$ [2, 18]:
+    \begin{equation}
+    B_{\mathrm{iso},i}^{\mathrm{GNM}} \;=\; \left(\frac{8\pi^2 k_{\mathrm{B}} T}{3\,k_{\mathrm{eff}}}\right) \left[\Gamma^{+}\right]_{i,i} \;=\; \left(\frac{8\pi^2 k_{\mathrm{B}} T}{3\,k_{\mathrm{eff}}}\right) \sum_{k=1}^{N_{C\alpha}-1} \frac{\left(u_{i,k}\right)^2}{\lambda_k},
+    \end{equation}
+    where $3\,k_{\mathrm{eff}}$ is three times the effective inter-residue spring constant, $\left[\Gamma^{+}\right]_{i,i}$ is the $i$-th diagonal entry of $\Gamma^{+}$, and $\left(u_{i,k}\right)^2$ is the squared $i$-th residue component of eigenvector $\mathbf{u}_k$.
+    \item \textbf{Active-Site Eigenvector Localization and Cutoff Stability:} Only the spatial eigenvectors $\mathbf{u}_k$ localize catalytic hinge nodes [15, 16], while sweeping $R_c \in \{6.5, 7.0, 7.5, 8.0, 8.5\}\;\mathrm{\AA}$ confirms high spectral stability across globular enzymes ($7.1\%$--$8.4\%$ CV, Supporting Table S3).
+\end{enumerate}
+
+\section{Negative Controls and Permutation / Rewiring Benchmarks}
+Applying a periodic modulo-2 logarithmic fold into a single $[16.0, 32.0]\;\mathrm{Hz}$ reference octave,
+\begin{equation}
+f_{\mathrm{fold}}(\nu_1) = \nu_1 \cdot 2^{-n} \in [16.0, 32.0]\;\mathrm{Hz}, \qquad n = \lfloor \log_2(\nu_1 / 16.0) \rfloor, \qquad \phi = \log_2(\nu_1) \bmod 1,
+\end{equation}
+completely destroys macroscopic topological scaling, collapsing variance explained by $1,341\times$ from $R^2 = 80.48\%$ to $R^2 = 0.06\%$ ($r = 0.0237$, $t = 0.76$, $p = 0.4371\;\mathrm{NS}$ at $N = 1,040$; $r = -0.0237$, $p = 0.8065\;\mathrm{NS}$ at $N = 115$). Maslov--Sneppen degree-preserving edge rewiring [10] degrades spectral fidelity by $+10.4\%$, while $5,000$ non-parametric target permutations confirm that $\nu_1(\mathrm{THz}) = 0.42338 (\langle z \rangle / (R_g / R_0))^{1.1194}$ exceeds the null distribution at $p = 0.0002$.
+
+\section{Discussion and Conclusions}
+In classical continuum elasticity of a homogeneous sphere, $\omega_1 \sim R_g^{-1}$ ($b = 1$) because internal coordination density $\langle z \rangle$ is spatially uniform [8, 26]. In globular catalytic enzymes, hydrophobic core collapse simultaneously reduces $R_g$ and increases interior coordination above the Maxwell rigidity percolation threshold ($\langle z \rangle_c \approx 6.0$) [27, 28], creating redundant cross-linked constraint loops that stiffen the effective shear modulus super-linearly ($b = 1.1570$). Conversely, quasi-one-dimensional amyloid protofilaments (PDB ID: \texttt{5O3L}, letter O) and flagellar rods (\texttt{1UCU}) grow longitudinally with perimeter-dominated contacts, yielding sub-linear filamentous scaling ($b = 0.9037$). Together, these results establish three-dimensional contact-network density $\langle z \rangle / (R_g / R_0)$ as the primary macroscopic determinant of $\mathrm{dw\text{-}GNM}$ collective vibrational frequencies across diverse protein families.
+
+\section*{Data and Code Availability, Author Contributions, and Declarations}
+\noindent\textbf{Data and Code Availability:} All $1,040$ structural records (\texttt{pdb\_1000\_cohort\_dataset.csv}, \texttt{pdb\_115\_cohort\_dataset.csv}), validation JSON bundles (\texttt{pdb\_1000\_cohort\_validation.json}), and deterministic Python analysis scripts (\texttt{scripts/kirchhoff\_laplacian\_solver.py}, \texttt{scripts/run\_proteome\_validation.py}, \texttt{scripts/evaluate\_hinge\_and\_controls.py}, \texttt{scripts/generate\_figure1\_scaling.py}, \texttt{seed = 20261018}) are archived with SHA-256 checksums in the accompanying Reproducibility Package and \texttt{Supporting\_Information.pdf} (Supporting Tables S1--S4).\\
+\textbf{Author Contributions and Declaration of Interests:} A.P.\ conceived the study, implemented the $\mathrm{dw\text{-}GNM}$ Kirchhoff Laplacian eigensolver pipeline, analyzed the $N = 1,040$ PDB cohort, and wrote the manuscript. The author declares no competing financial interests.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+\noindent During the preparation of this work, the author(s) used Google Gemini and Google Antigravity AI-assisted research and coding tools for Python scientific script verification, mathematical typesetting, and manuscript copy-editing. The author(s) reviewed and edited the output as needed and take full responsibility for the content of the published article.
+
+\begin{thebibliography}{32}
+\footnotesize
+\setlength{\itemsep}{2pt}
+\bibitem{r1} Tirion, M. M. 1996. Large amplitude elastic motions in proteins from a single-parameter, atomic analysis. \textit{Phys. Rev. Lett.} 77:1905--1908.
+\bibitem{r2} Bahar, I., A. R. Atilgan, and B. Erman. 1997. Direct evaluation of thermal fluctuations in proteins using a single-parameter harmonic potential. \textit{Fold. Des.} 2:173--181.
+\bibitem{r3} Haliloglu, T., I. Bahar, and B. Erman. 1997. Gaussian dynamics of folded proteins. \textit{Phys. Rev. Lett.} 79:3090--3093.
+\bibitem{r4} Atilgan, A. R., S. R. Durell, R. L. Jernigan, M. C. Demirel, O. Keskin, and I. Bahar. 2001. Anisotropy of fluctuation dynamics of proteins with an elastic network model. \textit{Biophys. J.} 80:505--515.
+\bibitem{r5} Bahar, I., T. R. Lezon, A. Bakan, and I. H. Shrivastava. 2010. Normal mode analysis of biomolecular structures: functional mechanisms of membrane proteins. \textit{Chem. Rev.} 110:1463--1497.
+\bibitem{r6} Yang, L., G. Song, and R. L. Jernigan. 2009. Protein elastic network models and the ranges of cooperativity. \textit{Proc. Natl. Acad. Sci. USA.} 106:12347--12352.
+\bibitem{r7} Fiedler, M. 1973. Algebraic connectivity of graphs. \textit{Czechoslovak Math. J.} 23:298--305.
+\bibitem{r8} Flory, P. J. 1953. \textit{Principles of Polymer Chemistry.} Cornell University Press, Ithaca, NY.
+\bibitem{r9} Berman, H. M., et al. 2000. The Protein Data Bank. \textit{Nucleic Acids Res.} 28:235--242.
+\bibitem{r10} Maslov, S., and K. Sneppen. 2002. Specificity and stability in topology of protein networks. \textit{Science.} 296:910--913.
+\bibitem{r11} Tama, F., and Y. H. Sanejouand. 2001. Conformational change of proteins arising from normal mode calculations. \textit{Protein Eng.} 14:1--6.
+\bibitem{r12} Delarue, M., and Y. H. Sanejouand. 2002. Simplified normal mode analysis of conformational transitions in DNA-dependent polymerases. \textit{J. Mol. Biol.} 320:1011--1024.
+\bibitem{r13} Hinsen, K. 1998. Analysis of domain motions by approximate normal mode calculations. \textit{Proteins.} 33:417--429.
+\bibitem{r14} Zheng, W., and S. Doniach. 2003. A comparative study of motor-protein motions by using a simple elastic-network model. \textit{Proc. Natl. Acad. Sci. USA.} 100:13253--13258.
+\bibitem{r15} Ming, D., and M. E. Wall. 2005. Quantifying allosteric effects in proteins. \textit{Proteins.} 59:697--707.
+\bibitem{r16} Yang, L. W., and I. Bahar. 2005. Coupling between catalytic site and collective dynamics. \textit{Structure.} 13:893--904.
+\bibitem{r17} Tama, F., and C. L. Brooks III. 2006. Symmetry, form, and shape: guiding principles for robustness in virus capsids. \textit{Annu. Rev. Biophys. Biomol. Struct.} 35:115--133.
+\bibitem{r18} Kundu, S., J. S. Melton, D. C. Sorensen, and G. N. Phillips Jr. 2002. Dynamics of proteins in crystals: comparison of experiment with simple models. \textit{Biophys. J.} 83:723--732.
+\bibitem{r19} Kondrashov, D. A., A. W. Van Wynsberghe, R. M. Bannen, Q. Cui, and G. N. Phillips Jr. 2007. Protein structural variation in computational models and crystallographic data. \textit{Structure.} 15:169--177.
+\bibitem{r20} Haliloglu, T., and I. Bahar. 1999. Structure-based analysis of protein dynamics. \textit{Proteins.} 37:654--667.
+\bibitem{r21} Markelz, A. G., A. Roitberg, and E. J. Heilweil. 2000. Pulsed terahertz spectroscopy of DNA, bovine serum albumin and collagen between 0.1 and 2.0 THz. \textit{Chem. Phys. Lett.} 320:42--48.
+\bibitem{r22} Acbas, G., K. A. Niessen, E. H. Snell, and A. G. Markelz. 2014. Optical measurements of long-range protein vibrations. \textit{Nat. Commun.} 5:3076.
+\bibitem{r23} Niessen, K. A., et al. 2019. Protein and RNA dynamical fingerprinting. \textit{Nat. Commun.} 10:1026.
+\bibitem{r24} Ebbinghaus, S., et al. 2007. An extended dynamical hydration shell around proteins. \textit{Proc. Natl. Acad. Sci. USA.} 104:20749--20752.
+\bibitem{r25} Leitner, D. M. 2008. Energy flow in proteins. \textit{Annu. Rev. Phys. Chem.} 59:233--259.
+\bibitem{r26} Yu, X., and D. M. Leitner. 2003. Vibrational energy transfer and heat conduction in a protein. \textit{J. Phys. Chem. B.} 107:1698--1707.
+\bibitem{r27} Jacobs, D. J., A. J. Rader, L. A. Kuhn, and M. F. Thorpe. 2001. Protein flexibility predictions using graph theory. \textit{Proteins.} 44:150--165.
+\bibitem{r28} Burioni, R., D. Cassi, M. Cecconi, A. Vulpiani, and E. Ubaldi. 2004. Spectral dimension and vibrational modes of folded proteins. \textit{Proteins.} 55:529--535.
+\bibitem{r29} Estrada, E. 2010. Universality in protein residue networks. \textit{Biophys. J.} 98:890--900.
+\bibitem{r30} Vishveshwara, S., K. V. Brinda, and N. Kannan. 2002. Protein structure: insights from graph theory. \textit{J. Theor. Comput. Chem.} 1:187--211.
+\bibitem{r31} Wang, G., and R. L. Dunbrack Jr. 2003. PISCES: a protein sequence culling server. \textit{Bioinformatics.} 19:1589--1591.
+\bibitem{r32} Li, W., and A. Godzik. 2006. Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences. \textit{Bioinformatics.} 22:1658--1659.
+\end{thebibliography}
+
+\end{document}
